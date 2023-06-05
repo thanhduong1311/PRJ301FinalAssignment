@@ -1,0 +1,38 @@
+<div class="toastMessage success">
+            <div class="toastIcon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toastBody">
+                <h3>Success</h3>
+                <p>You are success</p>
+            </div>
+            <div class="toastClose">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="toastMessage error">
+            <div class="toastIcon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="toastBody">
+                <h3>Error</h3>
+                <p>You are error</p>
+            </div>
+            <div class="toastClose">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="toastMessage warning">
+            <div class="toastIcon">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="toastBody">
+                <h3>Warning</h3>
+                <p>You are warning</p>
+            </div>
+            <div class="toastClose">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>

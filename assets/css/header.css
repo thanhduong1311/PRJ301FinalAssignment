@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto';
+}
+
+html a {
+    text-decoration: none;
+}
+#header{
+    padding: 0 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   z-index: 100;
+   background:#ffffff;
+}
+
+#header .left-side {
+    width: 70%;
+    display: flex;
+   align-items: center;
+
+}
+
+#header .logo {
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+#header .search-course {
+    display: block;
+    border: 3px solid seagreen;
+    border-radius: 18px;
+    padding: 10px;
+    margin-right: 40px;
+    background: #fff;
+    color: seagreen ;
+}
+
+#header .course-opption, #header .quesAndAns {
+    margin-right: 40px;
+    font-weight: bold;
+} 
+
+#header .right-side {
+    display: flex;
+    justify-content: right;
+   align-items: center;
+   color: #000;
+   width:30% ;
+
+   
+}
+#header .right-side .cart {
+    color: #000;
+    font-size: 22px;
+}
+
+#header .right-side .user a {
+    display: flex;
+    color: #000;
+    margin-left: 20px;
+
+}
+
+#header .right-side .user a img {
+    height: 60px;
+}
+
+#header .right-side .user a span {
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+#header .right-side .notification {
+    color: #000;
+    line-height: 60px;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 22px;
+
+}
+

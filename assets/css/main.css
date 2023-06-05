@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Muli',sans-serif;
+}
+
+html a {
+    text-decoration: none;
+}
+/* start body css */
+#body {
+    margin-top: 80px;
+}
+/* first ads */
+.advertisement {
+    background: #067351;
+    min-height: 400px;
+    padding: 20px 20px 0 20px;
+}
+
+.contentBox p {
+    padding: 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    margin: 100px auto 0;
+    max-width: 80%;
+    font-size: 28px;
+    background: linear-gradient(90deg,#0097B2, #7ED957);
+}
+
+.teamWorkImg img {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+/* second ads */
+.instructorAds {
+    min-height: 300px;
+    padding: 20px;
+}
+
+.instructorAds .AdsImg img{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.boxContent .content {
+    font-size: 26px;
+    margin: 100px auto 0;
+    max-width: 80%;
+}
+
+.popularCourse {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.popularCourse h2 {
+    text-align: center;
+}
+
+.courseSlider {
+    margin-top: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.courseSlider .courseList {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+}
+
+.courseSlider .listItem {
+    width: 30%;
+    display: block;
+    position: relative;
+    margin: 0 1.5%;
+}
+.courseSlider .rate {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: rgb(215, 215, 16);
+}
+
+.courseSlider .listItem a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    box-shadow: 1px 2px 2px 2px #cccccc;
+}
+
+.courseSlider .listItem a .courseImg{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.courseSlider .listItem a .courseName{
+    background-color: #60D2A4;
+    padding: 10px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.courseSlider .listItem a .courseDescription{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courseDescription .price {
+    font-weight: bold;
+}
+
+.courseDescription .type {
+    font-weight: bold;
+}
+.courseDescription .type span{
+    display: block;
+}
+
+.courseDescription .type span:first-child{
+    color:#60D2A4;
+    display: block;
+}
+
+.courseDescription .type span:nth-child(2){
+    display: block;
+    font-size: 14px;
+}
+
+
+
+
+.courseSlider .previousBtn,
+ .courseSlider .nextBtn, 
+ .feedBackSlider .nextBtn,
+ .feedBackSlider .previousBtn{
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.seperatePage {
+    width: 100%;
+    text-align: center;
+}
+
+.seperatePage i {
+    margin: 0 5px;
+    opacity: 40%;
+}
+
+i.active {
+    opacity: 100%;
+}
+
+.viewCourseBtn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.viewCourseBtn button {
+    background-color: #067351;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.viewCourseBtn a {
+    color: #ffffff;
+}
+
+/* third ads */
+
+.advantageAds .content {
+    background: linear-gradient(180deg,#0097B2, #7ED957);
+    color: #ffffff;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.advantageAds .content h4 {
+    font-size: 40px;
+}
+
+.advantageAds .ads {
+    padding: 0;margin: 0;
+}
+
+.advantageAds .ads {
+    max-height: 520px;
+    object-fit: cover;
+}
+
+/* feedback ads */
+
+.feedBack{
+    padding: 20px;
+    background-color: #DFF6ED;
+}
+
+.feedBack h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.feedBackSlider {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.feedbackListItem {
+    width: 100%;
+    display: flex;
+}
+
+.feedbackItem {
+    list-style-type: none;
+    background-color: #fff;
+    padding: 10px;
+    width: 25%;
+    margin: 0 5px;
+}
+
+.headerItem {
+    color: #067351;
+    font-size: 62px;
+}
+.bodyItem {
+    padding: 5px;
+    min-height: 180px;
+}
+
+.footerItem {
+    display: flex;
+    align-items: center;
+}
+
+.footerItem .userImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.footerItem .userInfor {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.collaborate p {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.collaborate p span {
+    color: #2970DB;
+}
+
+.collaborateLogos {
+    display: flex;
+    justify-content: center;
+}
+
+.collaborate img {
+    height: 60px;
+    margin: 0 10px;
+}
+
+.advertisement.ads2 {
+    background-color: #F2F6F8;
+}
+
+.contentBox.ads2 p{
+    background: unset;
+    color: #000000;
+}
+
+.copyright {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background: linear-gradient(90deg,#0097B2, #7ED957);
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    padding:10px 80px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name img {
+    width: 60px;
+}
+.logo-name h2 {
+    color: #067351;
+}
+
+.social-media {
+    color: #000000;
+    font-size: 24px;
+}
+
+.social-media i {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.contact .head {
+    font-weight: bold;
+    color: #067351;
+}
+
+.contact .head p {
+    color: #000000;
+    font-weight: 400;
+    cursor: pointer;
+}
