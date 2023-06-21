@@ -1,0 +1,140 @@
+#body-paysite {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px - 204px - 120px);
+    padding: 10px 50px;
+}
+
+.shopping-cart {
+    padding: 10px;
+}
+
+.shopping-cart-header {
+    font-weight: bold;
+}
+
+.number-of-course {}
+
+.keepShopping {
+    border: 1px solid #F2F6F8;
+    text-align: center;
+
+}
+
+.keepShopping video {
+    height: 160px;
+}
+
+.keepShopping .description-img {
+    height: 160px;
+    aspect-ratio: 1;
+}
+
+.keepShopping .keepshopping-btn {
+    background-color: #0D8D15;
+    width: 140px;
+    padding: 10px;
+    border-radius: 16px;
+    margin: 10px auto;
+}
+
+.keepShopping .keepshopping-btn a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.popup-checkout {
+    border: 3px solid #F2F6F8;
+    padding: 20px;
+    width: 300px;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px 1px #ccc;
+    position: fixed;
+    z-index: 10;
+    top: 100px;
+    right: 32px;
+    display: none;
+    background-color: #ffffff;
+}
+
+.popup-checkout h4 {
+    text-align: center;
+    border-bottom: 2px solid #F2F6F8;
+    padding-bottom: 10px;
+}
+
+.popup-checkout span {
+    font-weight: 500;
+}
+
+.popup-checkout>i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.popup-checkout .component {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-checkout .totalCost {
+    border-bottom: 2px solid #F2F6F8;
+    border-top: 2px solid #F2F6F8;
+    padding: 5px 0;
+}
+
+.popup-checkout .totalCost p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.popup-checkout .totalCost span {
+    font-weight: bold;
+}
+
+.popup-checkout .promotionCode {
+    margin-top: 10px;
+}
+
+.popup-checkout .promotionCode input[type=text] {
+    padding: 2px 4px;
+    border-radius: 6px;
+}
+
+.popup-checkout .promotionCode form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-checkout .promotionCode input[type=submit] {
+    padding: 2px 4px;
+    border-radius: 6px;
+    background-color: #0D8D15;
+    color: #ffffff;
+    font-weight: 500;
+    border: none;
+}
+
+.popup-checkout .checkout-btn {
+    padding:5px 10px;
+    background-color:#0D8D15;
+    width: 100px;
+    border-radius: 12px;
+    margin: 10px auto 0;
+
+}
+
+.popup-checkout .checkout-btn a {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.popup-checkout.open {
+    display: flex;
+}

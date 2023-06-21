@@ -1,0 +1,86 @@
+
+#footer {
+    padding: 20px 0 0px;
+    overflow: hidden;
+}
+
+.collaborate p {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.collaborate p span {
+    color: #2970DB;
+}
+
+.collaborateLogos {
+    display: flex;
+    justify-content: center;
+}
+
+.collaborate img {
+    height: 60px;
+    margin: 0 10px;
+}
+
+.advertisement.ads2 {
+    background-color: #F2F6F8;
+}
+
+.contentBox.ads2 p{
+    background: unset;
+    color: #000000;
+}
+
+.copyright {
+    font-weight: bold;
+    text-align: center;
+    padding:40px 10px;
+    color: #fff;
+    background: linear-gradient(90deg,#0097B2, #7ED957);
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    padding:10px 80px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name img {
+    width: 60px;
+}
+.logo-name h2 {
+    color: #067351;
+}
+
+.social-media {
+    color: #000000;
+    font-size: 24px;
+}
+
+.social-media i {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.contact .head {
+    font-weight: bold;
+    color: #067351;
+}
+
+.contact .head p {
+    color: #000000;
+    font-weight: 400;
+    cursor: pointer;
+}
+
