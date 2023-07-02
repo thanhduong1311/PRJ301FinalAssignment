@@ -74,6 +74,8 @@ html a {
 
 #header .right-side .user a img {
     height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 #header .right-side .user a span {
