@@ -134,6 +134,36 @@ body {
     opacity: 0.8;
 }
 
+.box form p {
+    color: red;
+    margin-top: 10px;
+    font-weight: 400;
+    padding: 5px;
+    animation: shake .5s linear;
+}
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    
+    25% {
+      transform: translateX(-10px);
+    }
+    
+    50% {
+      transform: translateX(10px);
+    }
+    
+    75% {
+      transform: translateX(-10px);
+    }
+    
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 
 .box::before {
     content: '';

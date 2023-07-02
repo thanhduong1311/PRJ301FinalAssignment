@@ -34,7 +34,17 @@
                     <a href="#">Signup</a>
                 </div>
                 <input type="submit" value="Login">
+
+                <p id="message">Userame or Password is incorrect!</p>
+
             </form>
+            <script>
+                // Đợi 10 giây trước khi xóa div
+                setTimeout(function() {
+                    var messageDiv = document.getElementById('message');
+                    messageDiv.parentNode.removeChild(messageDiv);
+                }, 10000);
+            </script>
 
         </div>
     </div>
