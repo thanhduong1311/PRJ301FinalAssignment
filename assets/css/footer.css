@@ -89,3 +89,6 @@
     cursor: pointer;
 }
 
+.col-md-2 {
+    padding: 0;
+}

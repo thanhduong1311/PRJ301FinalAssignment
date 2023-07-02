@@ -12,13 +12,15 @@ html a {
 }
 /* start body css */
 #body {
-    margin-top: 80px;
+    margin: 80px 0 0 0;
+    padding: 20px;
 }
 /* first ads */
 .advertisement {
     background: #067351;
     min-height: 400px;
     padding: 20px 20px 0 20px;
+    margin: 0 -20px;
 }
 
 .contentBox p {
@@ -53,6 +55,10 @@ html a {
     font-size: 26px;
     margin: 100px auto 0;
     max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .popularCourse {
@@ -261,4 +267,10 @@ i.active {
     margin-left: 5px;
 }
 
+.content.col-md-8 {
+    padding: 0;
+}
 
+.teamWorkImg  {
+    margin: 0 -12px;
+}
