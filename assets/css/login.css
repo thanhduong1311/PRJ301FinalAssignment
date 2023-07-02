@@ -17,7 +17,7 @@ body {
     position: relative;
     width: 380px;
     height: 420px;
-    background-color: #7ED957;
+    background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -27,7 +27,7 @@ body {
 .box form {
     position: absolute;
     inset: 4px;
-    background-color: #b6f9af;
+    background-color: #96f08b;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -37,7 +37,7 @@ body {
 
 .box form h2 {
     color: #000;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     letter-spacing: 0.1em;
 }
@@ -76,7 +76,7 @@ body {
 .box form .inputBox input:valid ~ span,
 .box form .inputBox input:focus ~ span 
 {
-    color: #000;
+    color: #fff;
     font-size: 0.75em;
     transform: translateY(-34px);
 }
@@ -114,7 +114,7 @@ body {
 
 .box form .links a:hover, 
 .box form .links a:nth-child(2) {
-    color: #000;
+    color: #fff;
 } 
 
 .box form input[type="submit"] {
@@ -165,6 +165,7 @@ body {
   }
 
 
+
 .box::before {
     content: '';
     position: absolute;
@@ -172,7 +173,8 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
+    /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -185,7 +187,8 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
+    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;

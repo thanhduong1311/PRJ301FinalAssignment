@@ -36,16 +36,16 @@
                 <input type="submit" value="Login">
 
                 <p id="message">Userame or Password is incorrect!</p>
-
+                
             </form>
+
             <script>
                 // Đợi 10 giây trước khi xóa div
-                setTimeout(function() {
+                setTimeout(function () {
                     var messageDiv = document.getElementById('message');
                     messageDiv.parentNode.removeChild(messageDiv);
-                }, 10000);
+                }, 5000);
             </script>
-
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
