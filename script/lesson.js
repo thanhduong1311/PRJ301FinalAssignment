@@ -30,3 +30,34 @@ function openTab(evt, tabname) {
           window.location.href = pageURL; // Chuyển hướng đến trang tương ứng
       });
   }
+
+  var paragraphs = document.querySelectorAll('.answer p');
+
+paragraphs.forEach(function(paragraph) {
+  paragraph.addEventListener('click', function() {
+    // Loại bỏ lớp active từ tất cả các phần tử p
+    paragraphs.forEach(function(p) {
+      p.classList.remove('active');
+    });
+
+    // Thêm lớp active vào phần tử p
+    this.classList.add('active');
+  });
+});
+
+var video = document.getElementById('my-video');
+
+video.addEventListener('ended', function() {
+  console.log('End');
+});
+
+function checkVideoProgress() {
+  if (video.currentTime === video.duration) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+// Gọi hàm kiểm tra video theo một khoảng thời gian nhất định
+setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)

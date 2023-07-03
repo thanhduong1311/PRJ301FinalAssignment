@@ -74,7 +74,7 @@
         <div class="leftSide">
             <div class="lesson-main">
                 <!-- Bài giảng video -->
-                <!-- <video src="./assets/videos/baclieu.mp4" controls>
+                <!-- <video id="my-video" src="./assets/videos/baclieu.mp4" controls>
                     Trình duyệt của bạn không hỗ trợ video.
                 </video> -->
 
@@ -82,10 +82,57 @@
 
                 <!-- Quizz -->
                 <div class="quiz-type1">
-                    <p class="quizProgress">Câu hỏi </p>
+                    <div class="leftSide">
+                        <p class="quizProgress">Question: <span>1/10</span> </p>
+                        <div class="quizContent">
+                            <div class="question">
+                                <img src="./assets/imgs/quiz/a.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>a</p>
+                                <p>u</p>
+                                <p>ka</p>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button>Continue</button>
+                            <!-- <button>Check</button> -->
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <div class="time">
+                            <h5>Time remaining</h5>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>15:00</span>
+                        </div>
+                        <div class="listQuestion">
+                            <h5>Question</h5>
+                            <ul>
+                                <li class="done">1</li>
+                                <li class="">2</li>
+                                <li class="">3</li>
+                                <li class="">4</li>
+                                <li class="">5</li>
+                                <li class="">6</li>
+                                <li class="">7</li>
+                                <li class="">8</li>
+                                <li class="">9</li>
+                                <li class="">10</li>
+                                <li class="">11</li>
+                                <li class="">12</li>
+                                <li class="">13</li>
+                                <li class="">14</li>
+                                <li class="">15</li>
+
+                            </ul>
+                        </div>
+
+                        <div class="finishBtn"><button>Finish</button></div>
+                    </div>
                 </div>
+                <!-- EndQuiz -->
             </div>
-            
+
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
                 <button class="tablinks" onclick="openTab(event, 'QandA')">Q&A</button>
