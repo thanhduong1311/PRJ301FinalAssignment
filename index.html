@@ -19,41 +19,55 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <div id="header">
-        <div class="left-side">
-            <a href="">
-                <img src="./assets/imgs/logo.png" alt="logo" class="logo">
-            </a>
-            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
-            <div class="course-opption">
-                Course
-            </div>
-            <div class="quesAndAns">
-                Expert Q&A
-            </div>
-        </div>
-
-        <div class="right-side">
-            <a href="paysite.html" class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-            <div class="user">
-                <a href="">
-                    <img src="https://scontent.fsgn13-4.fna.fbcdn.net/v/t39.30808-6/286987196_1384937328585396_7748493032904500294_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=FvJhe2ECN9UAX9fSGzN&_nc_ht=scontent.fsgn13-4.fna&oh=00_AfAUVcWrvZXla4zRAC0mPPnVmD79upxbEXzX8ByO6UlffA&oe=64A6A181" alt="avatar">
-                    <span class="userInfor">
-                        UserName
-                    </span>
+         <!-- HEADER -->
+         <div id="header">
+            <div class="left-side">
+                <a href="index.html">
+                    <img src="./assets/imgs/logo.png" alt="logo" class="logo">
                 </a>
+                <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+                <div class="course-opption">
+                    Course
+                </div>
+                <div class="quesAndAns">
+                    Expert Q&A
+                </div>
             </div>
 
-            <a href="" class="notification">
-                <i class="fa-sharp fa-regular fa-bell"></i>
-            </a>
+            <div class="right-side">
+                <a href="paysite.html" class="cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="quantity">3</div>
+                </a>
+                <div onclick="openMenu()" id="user" class="user">
+                    <a href="#">
+                        <img src="./assets/imgs/D1.jpg"
+                            alt="avatar">
+                        <span class="userInfor">
+                            Thanh Duong
+                        </span>
+                    </a>
 
+                    <div id="userMenu" class="userMenu close">
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Setting</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="" class="notification">
+                    <i class="fa-sharp fa-solid fa-bell"></i>
+                    <div class="quantity">3</div>
+                </a>
+
+            </div>
         </div>
-    </div>
-    <!--END HEADER -->
+        <!--END HEADER -->
 
     <!-- BODY -->
     <div id="body">
@@ -67,7 +81,7 @@
                     ₫199,000. Today only.</p>
             </div>
             <div class="teamWorkImg col-md-6">
-                <img src="./assets/imgs/bannerAds.png" alt="">
+                <img src="./assets/imgs/teamwork.png" alt="">
             </div>
         </div>
 
@@ -95,7 +109,7 @@
                 <ul class="courseList">
                     <li class="listItem">
                         <a href="#">
-                            <img src="./assets/imgs/pyEx.png" alt="" class="courseImg">
+                            <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
                             <h4 class="courseName">Python for beginner</h4>
                             <div class="courseDescription">
                                 <span class="type">
@@ -115,7 +129,7 @@
                     </li>
                     <li class="listItem">
                         <a href="#">
-                            <img src="./assets/imgs/pyEx.png" alt="" class="courseImg">
+                            <img src="./assets/imgs/nodejs.jpg" alt="" class="courseImg">
                             <h4 class="courseName">Python for beginner</h4>
                             <div class="courseDescription">
                                 <span class="type">
@@ -135,7 +149,7 @@
                     </li>
                     <li class="listItem">
                         <a href="#">
-                            <img src="./assets/imgs/pyEx.png" alt="" class="courseImg">
+                            <img src="./assets/imgs/c++.jpg" alt="" class="courseImg">
                             <h4 class="courseName">Python for beginner</h4>
                             <div class="courseDescription">
                                 <span class="type">
@@ -175,7 +189,7 @@
         </div>
 
         <div class="advantageAds row">
-            <img src="./assets/imgs/side.jpg" alt="" class="ads col-md-4">
+            <img src="./assets/imgs/screen.jpg" alt="" class="ads col-md-4">
             <div class="content col-md-8">
                 <h4>Outstanding advantages</h4>
                 <ul>
@@ -280,7 +294,7 @@
 
         <div class="advertisement ads2 row">
             <div class="teamWorkImg col-md-6">
-                <img src="./assets/imgs/bannerAds.png" alt="">
+                <img src="./assets/imgs/teamwork.png" alt="">
             </div>
             <div class="contentBox ads2 col-md-6">
                 <p>
@@ -339,6 +353,7 @@
     </div>
 
     <script src="script/toast.js"></script>
+    <script src="script/option.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
