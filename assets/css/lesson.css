@@ -6,23 +6,30 @@
 }
 
 .main {
-    height: 100vh;
+    margin-top: 80px;
     display: flex;
-}
-
-.rightSide {
-    width: 75%;
+    min-height:100vh;
 }
 
 .leftSide {
+    width: 75%;
+}
+
+.rightSide {
     width: 25%;
+    max-height: calc(100vh);
+    overflow-y: scroll;
+}
+
+.rightSide::-webkit-scrollbar {
+    display: none;
 }
 
 video {
     width: 100%;
 }
 
-.leftSide h2 {
+.rightSide h2 {
     padding: 10px;
     height: 59px;
     font-weight: 700;
@@ -30,17 +37,316 @@ video {
     margin: 0;
 }
 
-.leftSide .part .partHeader {
+.rightSide .part .partHeader {
     padding: 10px;
     height: 59px;
     font-weight: 700;
-    background-color: #ccc;
+    background-color: #cccccc77;
     display: flex;
     justify-content: space-between;
 }
 
-.leftSide .part .partHeader i {
+.rightSide .part .partHeader h5 {
+    margin: 0;
+    line-height: 39px;
+}
+
+.rightSide .part .partHeader i {
     padding: 5px;
     font-size: 20px;
-    line-height: 8px;
+    line-height: 21px;
 }
+
+.partBody {
+    max-height: calc(100vh-344px);
+    overflow-y: scroll;
+}
+
+.partBody::-webkit-scrollbar {
+    display: none;
+}
+
+.lesson {
+    display: flex;
+    padding: 5px 10px;
+
+}
+
+.lesson .lesson-status {
+    display: block;
+    border: none;
+    outline: none;
+    margin: 10px;
+}
+
+.lesson .lesson-status i {
+    font-size: 14px;
+}
+
+.lesson-content {
+    line-height: 20px;
+    flex-shrink: 1;
+}
+
+.lesson-content .title {
+    margin: 0;
+    font-weight: 500;
+}
+
+.lesson-content .description {
+    font-size: 12px;
+}
+
+.lesson-content .description .time {
+    margin-left: 4px;
+    color: #ccc;
+
+}
+
+.lesson-content .description .type i {
+    color: #ccc;
+    width: 12px;
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #b6f9af;
+}
+
+.tab button.active {
+    background-color: #b6f9af7c;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+#Overview .content,
+#QandA .content {
+    padding: 10px;
+}
+
+#QandA .content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#QandA .content .writeComment form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#QandA .content .writeComment form input[type="text"] {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#QandA .content .writeComment form input[type="submit"] {
+    min-width: 80px;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #b6f9af;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#QandA .content .comments .comment {
+    display: flex;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
+}
+
+#QandA .content .comments .comment img, .rating-content .rateUserImg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+#QandA .content .comments .comment .commentContent {
+    width: 100%;
+}
+
+#QandA .content .comments .comment .commentContent .userName {
+    margin: 0;
+    font-weight: 500;
+}
+
+#QandA .content .comments .comment .commentContent .content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#QandA .content .comments .comment .commentContent .option {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#QandA .content .comments .comment .commentContent .option span:nth-child(2) {
+    color: #00848b;
+    cursor: pointer;
+}
+
+#QandA .content .menu {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    user-select: none;
+
+}
+#QandA .content .menu li {
+    border: 1px solid #ccc;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#QandA .content .menu li:hover {
+    background-color: #b6f9af;
+}
+
+#QandA .content .menu li.active {
+    background-color: #b6f9af;
+}
+
+#QandA .content .menu li a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rating-left {
+    width: 20%;
+    text-align: center;
+}
+
+.rating-left h1 {
+    font-size: 60px;
+}
+
+.rating-right {
+    width: 80%;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.star {
+    color: gold;
+}
+
+.rating-detail {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-detail span:nth-child(2) {
+    display: block;
+    width: 200px;
+}
+
+.rating-detail span:nth-child(3) {
+    display: block;
+    width: 40px;
+}
+
+.rating-detail span i:first-child{
+    margin-left: 5px;
+}
+
+.rating-content {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+
+.rating-content .UserRateName {
+    font-weight: 500;
+    margin: 0;
+}
+
+.rating-content .UserRateComment {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rating-content .rateOption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-content .rateOption span{
+    font-size: 12px;
+ }
+ .rating-content .rateOption .like i {
+    margin: 0 8px;
+ }
+
+ .rating-content .rateOption .like i:hover {
+    color: #4caf50;
+    cursor: pointer;
+ }
+
+ .rating-content .rateOption span:nth-child(2) {
+    color: rgba(255, 0, 0, 0.738);
+ }
+
+
