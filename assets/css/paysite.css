@@ -1,6 +1,6 @@
 #body-paysite {
     margin-top: 60px;
-    min-height: calc(100vh - 325px);
+    min-height: calc(100vh - 305px);
     padding: 10px 50px;
 }
 
@@ -12,9 +12,10 @@
     font-weight: bold;
 }
 
-.number-of-course {}
+
 
 .keepShopping {
+    display: none;
     border: 1px solid #F2F6F8;
     text-align: center;
 
@@ -122,8 +123,8 @@
 }
 
 .popup-checkout .checkout-btn {
-    padding:5px 10px;
-    background-color:#0D8D15;
+    padding: 5px 10px;
+    background-color: #0D8D15;
     width: 100px;
     border-radius: 12px;
     margin: 10px auto 0;
@@ -137,4 +138,82 @@
 
 .popup-checkout.open {
     display: flex;
+}
+
+.item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+.item input {
+    margin: 0 20px;
+    width: 5%;
+}
+
+.item .itemImg {
+    width: 10%;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.item .itemName {
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 55%;
+    margin: 0;
+}
+
+.item .itemRating {
+    width: 20%;
+font-size: 12px;
+font-weight: 500;
+
+}
+
+.item .itemRating i {
+    color: gold;
+}
+
+
+.item .itemPrice {
+    width: 10%;
+    font-weight: 500;
+    margin: 0;
+}
+
+.item .itemQuantity {
+    font-weight: 500;
+    width: 15%;
+}
+
+
+
+.item .itemEdit {
+    width: 3%;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+
+.courseInCart input[type="submit"] {
+    margin: 0 auto;
+    text-align: center;
+    background-color:#b6f9af;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.courseInCart .pay:hover {
+    opacity: 0.9;
 }

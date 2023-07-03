@@ -16,3 +16,13 @@ function openMenu() {
 
     }
 }
+
+function addItem(thisID) {
+    var id = parseInt(thisID.split('-')[1]);
+
+
+}
+
+function removeItem() {
+
+}
