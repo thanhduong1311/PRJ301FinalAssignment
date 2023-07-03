@@ -44,6 +44,8 @@
 }
 
 .popup-checkout {
+    width: 30%;
+    height: 350px;
     border: 3px solid #F2F6F8;
     padding: 20px;
     width: 300px;
@@ -51,11 +53,6 @@
     margin: 10px;
     border-radius: 16px;
     box-shadow: 2px 2px 2px 1px #ccc;
-    position: fixed;
-    z-index: 10;
-    top: 100px;
-    right: 32px;
-    display: none;
     background-color: #ffffff;
 }
 
@@ -111,15 +108,17 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .popup-checkout .promotionCode input[type=submit] {
-    padding: 2px 4px;
+    padding:0px 4px;
     border-radius: 6px;
     background-color: #0D8D15;
     color: #ffffff;
     font-weight: 500;
     border: none;
+    margin: 0;
 }
 
 .popup-checkout .checkout-btn {
@@ -160,15 +159,18 @@
     margin-right: 20px;
 }
 
-.item .itemName {
+.item .itemInformation {
     font-size: 16px;
     font-weight: 500;
     min-width: 55%;
     margin: 0;
 }
 
+.item .itemName {
+    margin: 0;
+}
+
 .item .itemRating {
-    width: 20%;
 font-size: 12px;
 font-weight: 500;
 
@@ -180,20 +182,14 @@ font-weight: 500;
 
 
 .item .itemPrice {
-    width: 10%;
+    width: 15%;
     font-weight: 500;
     margin: 0;
 }
 
-.item .itemQuantity {
-    font-weight: 500;
-    width: 15%;
-}
-
-
 
 .item .itemEdit {
-    width: 3%;
+    width: 10%;
     cursor: pointer;
     padding: 5px;
     text-align: center;
@@ -213,7 +209,11 @@ font-weight: 500;
     float: right;
     margin-bottom: 20px;
 }
+.courseInCart {
+    display: flex;
+    justify-content: space-between;
+}
 
-.courseInCart .pay:hover {
-    opacity: 0.9;
+.courseInCart .items {
+    width: 70%    ;
 }
