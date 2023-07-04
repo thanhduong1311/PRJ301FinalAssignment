@@ -48,6 +48,7 @@ video {
 .rightSide .part {
     transition: 0.5s;
 }
+
 .rightSide .part .partHeader {
     padding: 10px;
     height: 59px;
@@ -166,6 +167,7 @@ video {
 .tabcontent.active {
     display: block;
 }
+
 #LessonContent .content,
 #Overview .content,
 #QandA .content {
@@ -389,7 +391,7 @@ video {
 }
 
 .lesson-main .quiz-type1 form {
-    display: flex;
+    display: contents;
 }
 
 .lesson-main .quiz-type1 .leftSide {
@@ -431,17 +433,17 @@ video {
     padding: 20px;
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer p{
+.lesson-main .quiz-type1 .leftSide .quizContent .answer p {
     padding: 10px;
     width: 80%;
     margin: 10px auto 0 auto;
-    background-color:#ccc;
+    background-color: #ccc;
     cursor: pointer;
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p.active {
     background-color: #b6f9af;
-  }
+}
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p:hover {
     background-color: #b6f9af;
@@ -458,7 +460,7 @@ video {
     outline: none;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color:#4c9daf;
+    background-color: #4c9daf;
     color: #fff;
     font-weight: bold;
 }
@@ -487,6 +489,7 @@ video {
     font-weight: 700;
     font-size: 30px;
 }
+
 .lesson-main .quiz-type1 .rightSide .listQuestion {
     text-align: center;
 }
@@ -525,7 +528,8 @@ video {
 .finishBtn {
     text-align: center;
 }
-.finishBtn input{
+
+.finishBtn input {
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;
@@ -544,22 +548,22 @@ table {
     width: 600px;
     border-radius: 5px;
     overflow: hidden;
-  }
+}
 
-  th,
-  td {
+th,
+td {
     padding: 10px;
-  }
+}
 
-  th {
+th {
     background-color: #f2f2f2;
-  }
+}
 
-  td {
+td {
     text-align: center;
     border-bottom: 1px solid #ddd;
-  }
+}
 
-  tr:last-child td {
+tr:last-child td {
     border-bottom: none;
-  }
+}
