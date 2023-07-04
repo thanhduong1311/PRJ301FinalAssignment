@@ -45,7 +45,7 @@ paragraphs.forEach(function (paragraph) {
   });
 });
 
-// var video = document.getElementById('my-video');
+var video = document.getElementById('my-video');
 
 if (video) {
   video.addEventListener('ended', function () {
