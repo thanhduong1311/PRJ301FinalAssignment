@@ -77,11 +77,15 @@ body {
 .listItem:hover {
     transform: scale(1.005);
 }
+.rateAndPrice {
+    text-align: right;
+}
 
- .rate {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+.rateAndPrice .rate {
+    font-size: 13px;
+}
+
+ .rate i {
     color: gold;
 }
 
