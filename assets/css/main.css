@@ -14,6 +14,7 @@ html a {
 #body {
     margin: 60px 0 0 0;
     padding:0 20px 20px 20px;
+    background-color: #fafafa;
 }
 /* first ads */
 .advertisement {
@@ -68,6 +69,7 @@ html a {
 
 .popularCourse h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .courseSlider {
@@ -77,26 +79,53 @@ html a {
     align-items: center;
 }
 
-.courseSlider .courseList {
+.courseList {
     display: flex;
     list-style-type: none;
     width: 100%;
+    padding: 0;
 }
 
-.courseSlider .listItem {
-    width: 30%;
+.courseList {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ .listItem {
+    /* flex-basis: 20%; */
+    width: calc(25% - 10px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
     display: block;
     position: relative;
-    margin: 0 1.5%;
+    padding: 0;
+    margin: 5px;
+    transition: transform 0.5s;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
 }
-.courseSlider .rate {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+
+.listItem  a{
+    border-radius: 12px;
+}
+.listItem:hover {
+    transform: scale(1.005);
+}
+.rateAndPrice {
+    text-align: right;
+}
+
+.rateAndPrice .rate {
+    font-size: 13px;
+}
+
+ .rate i {
     color: gold;
 }
 
-.courseSlider .listItem a{
+ .listItem a{
     display: block;
     text-decoration: none;
     color: black;
@@ -104,20 +133,20 @@ html a {
     height: 436px;
 }
 
-.courseSlider .listItem a .courseImg{
+ .listItem a .courseImg{
     width: 100%;
     height: 315px;
     object-fit: contain;
 }
 
-.courseSlider .listItem a .courseName{
+ .listItem a .courseName{
     background-color: #60D2A4;
     padding: 10px;
     color: #ffffff;
     width: 100%;
 }
 
-.courseSlider .listItem a .courseDescription{
+ .listItem a .courseDescription{
     display: flex;
     padding: 10px;
     justify-content: space-between;
@@ -144,6 +173,104 @@ html a {
     display: block;
     font-size: 14px;
 }
+
+
+
+.carousel-indicators {
+    margin-bottom: 0rem;
+}
+
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -30px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #067351;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+.carousel-indicators li {
+    background-color: #7ED957;
+}
+
+.carousel-indicators .active {
+    background-color: #067351;
+}
+/* 
+.listItem {
+    width: 25%;
+    display: block;
+    position: relative;
+    margin: 0 1.5%;
+    border: 1px solid #ccc;
+}
+.rate {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gold;
+}
+
+.listItem a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    box-shadow: 1px 2px 2px 2px #cccccc;
+    height: 436px;
+}
+
+.listItem a .courseImg{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.listItem a .courseName{
+    background-color: #60D2A4;
+    padding: 10px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.listItem a .courseDescription{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courseDescription .price {
+    font-weight: bold;
+}
+
+.courseDescription .type {
+    font-weight: bold;
+}
+.courseDescription .type span{
+    display: block;
+}
+
+.courseDescription .type span:first-child{
+    color:#60D2A4;
+    display: block;
+}
+
+.courseDescription .type span:nth-child(2){
+    display: block;
+    font-size: 14px;
+} */
+
+
 
 
 
@@ -235,6 +362,8 @@ i.active {
 .feedbackListItem {
     width: 100%;
     display: flex;
+    overflow: unset;
+    padding: 20px 0;
 }
 
 .feedbackItem {
@@ -243,7 +372,18 @@ i.active {
     padding: 10px;
     width: 25%;
     margin: 0 5px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+    transform: scale(0.9);
+    opacity: 0.9;
 }
+
+.feedbackItem:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
 
 .headerItem {
     color: #067351;

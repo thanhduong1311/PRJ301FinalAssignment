@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -19,55 +21,54 @@
 </head>
 
 <body>
-         <!-- HEADER -->
-         <div id="header">
-            <div class="left-side">
-                <a href="index.html">
-                    <img src="./assets/imgs/logo.png" alt="logo" class="logo">
-                </a>
-                <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
-                <div class="course-opption">
-                    Course
-                </div>
-                <div class="quesAndAns">
-                    Expert Q&A
-                </div>
+    <!-- HEADER -->
+    <div id="header">
+        <div class="left-side">
+            <a href="index.html">
+                <img src="./assets/imgs/logo.png" alt="logo" class="logo">
+            </a>
+            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+            <div class="course-opption">
+                Course
             </div>
-
-            <div class="right-side">
-                <a href="paysite.html" class="cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <div class="quantity">3</div>
-                </a>
-                <div onclick="openMenu()" id="user" class="user">
-                    <a href="#">
-                        <img src="./assets/imgs/D1.jpg"
-                            alt="avatar">
-                        <span class="userInfor">
-                            Thanh Duong
-                        </span>
-                    </a>
-
-                    <div id="userMenu" class="userMenu close">
-                        <a href="#">
-                            <i class="fa-solid fa-gear"></i>
-                            <span>Setting</span>
-                        </a>
-                        <a href="#">
-                            <i class="fa-solid fa-right-from-bracket"></i>
-                            <span>Logout</span>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="" class="notification">
-                    <i class="fa-sharp fa-solid fa-bell"></i>
-                    <div class="quantity">3</div>
-                </a>
-
+            <div class="quesAndAns">
+                Expert Q&A
             </div>
         </div>
-        <!--END HEADER -->
+
+        <div class="right-side">
+            <a href="paysite.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="quantity">3</div>
+            </a>
+            <div onclick="openMenu()" id="user" class="user">
+                <a href="#">
+                    <img src="./assets/imgs/D1.jpg" alt="avatar">
+                    <span class="userInfor">
+                        Thanh Duong
+                    </span>
+                </a>
+
+                <div id="userMenu" class="userMenu close">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Setting</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="" class="notification">
+                <i class="fa-sharp fa-solid fa-bell"></i>
+                <div class="quantity">3</div>
+            </a>
+
+        </div>
+    </div>
+    <!--END HEADER -->
 
     <!-- BODY -->
     <div id="body">
@@ -76,9 +77,10 @@
             <div class="contentBox col-md-6">
                 <p>
                     <b>Sales end. Dreams go on.</b><br>
-                    Get a second chance at the best prices 
-                    of the season. Courses start at just 
-                    ₫199,000. Today only.</p>
+                    Get a second chance at the best prices
+                    of the season. Courses start at just
+                    ₫199,000. Today only.
+                </p>
             </div>
             <div class="teamWorkImg col-md-6">
                 <img src="./assets/imgs/teamwork.png" alt="">
@@ -90,7 +92,8 @@
             <div class="boxContent col-md-6">
                 <div class="content">
                     <h4>Become an instructor</h4>
-                    <p>Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.
+                    <p>Instructors from around the world teach millions of students on Udemy. We provide the tools and
+                        skills to teach what you love.
                     </p>
                 </div>
             </div>
@@ -99,93 +102,329 @@
             </div>
         </div>
 
+        <!-- Popular Course -->
         <div class="popularCourse">
             <h2>Some popular courses</h2>
-            <div class="courseSlider">
-                <div class="previousBtn">
-                    <i class="fa-solid fa-chevron-left"></i>
+            <!-- Bootstrap Carousel -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <ul class="courseList">
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="courseList">
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+                        </ul>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="courseList">
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+
+                            <!-- course -->
+                            <li class="listItem">
+                                <a href="courseInfo.html">
+                                    <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                                    <h4 class="courseName">Python for beginner</h4>
+                                    <div class="courseDescription">
+                                        <span class="type">
+                                            <span>Programing</span>
+                                            <span>20h</span>
+                                        </span>
+                                        <div class="rateAndPrice">
+                                            <div class="rate">
+                                                <span>4.5</span>
+                                                <i class="fa-solid fa-star"></i>
+                                                <span>(2423 reviewer)</span>
+                                            </div>
+                                            <span class="price">200$</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </li>
+                            <!-- end course -->
+                        </ul>
+                    </div>
                 </div>
-        
-                <ul class="courseList">
-                    <li class="listItem">
-                        <a href="#">
-                            <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
-                            <h4 class="courseName">Python for beginner</h4>
-                            <div class="courseDescription">
-                                <span class="type">
-                                    <span>Programing</span>
-                                    <span>20h</span>
-                                </span>
-                                <span class="price">200$</span>
-                            </div>
-                        </a>
-                        <div class="rate">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </li>
-                    <li class="listItem">
-                        <a href="#">
-                            <img src="./assets/imgs/nodejs.jpg" alt="" class="courseImg">
-                            <h4 class="courseName">Python for beginner</h4>
-                            <div class="courseDescription">
-                                <span class="type">
-                                    <span>Programing</span>
-                                    <span>20h</span>
-                                </span>
-                                <span class="price">200$</span>
-                            </div>
-                        </a>
-                        <div class="rate">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </li>
-                    <li class="listItem">
-                        <a href="#">
-                            <img src="./assets/imgs/c++.jpg" alt="" class="courseImg">
-                            <h4 class="courseName">Python for beginner</h4>
-                            <div class="courseDescription">
-                                <span class="type">
-                                    <span>Programing</span>
-                                    <span>20h</span>
-                                </span>
-                                <span class="price">200$</span>
-                            </div>
-                        </a>
-                        <div class="rate">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                    </li>
-                </ul>
-        
-                <div class="nextBtn">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-        
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-            <div  class="seperatePage">
-                <i class="fa-solid fa-circle active"></i>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle"></i>
-            </div>
+            <!-- End  Bootstrap Carousel-->
             <div class="viewCourseBtn">
                 <button class="viewCourseBtn">
-                    <a href="">View All Course</a>
+                    <a href="courseShopping.html">View All Course</a>
                 </button>
             </div>
-            
+
         </div>
 
         <div class="advantageAds row">
@@ -193,10 +432,15 @@
             <div class="content col-md-8">
                 <h4>Outstanding advantages</h4>
                 <ul>
-                    <li> <b> Expert Instruction:</b> Learn from industry professionals who have real-world experience and can provide valuable insights to help you succeed.</li>
-                    <li> <b> Flexible, On-Demand Learning:</b> Take courses whenever and wherever it's convenient for you. Our platform allows you to learn at your own pace, on your own schedule.</li>
-                    <li> <b> Affordable Prices:</b> Get high-quality education at an affordable price. We believe everyone should have access to quality learning opportunities without breaking the bank.</li>
-                    <li> <b> Certification and Credentials:</b> Earn certificates and credentials that demonstrate your mastery of the course material. Our programs are designed to help you get ahead in your career or start a new one.</li>
+                    <li> <b> Expert Instruction:</b> Learn from industry professionals who have real-world experience
+                        and can provide valuable insights to help you succeed.</li>
+                    <li> <b> Flexible, On-Demand Learning:</b> Take courses whenever and wherever it's convenient for
+                        you. Our platform allows you to learn at your own pace, on your own schedule.</li>
+                    <li> <b> Affordable Prices:</b> Get high-quality education at an affordable price. We believe
+                        everyone should have access to quality learning opportunities without breaking the bank.</li>
+                    <li> <b> Certification and Credentials:</b> Earn certificates and credentials that demonstrate your
+                        mastery of the course material. Our programs are designed to help you get ahead in your career
+                        or start a new one.</li>
                 </ul>
             </div>
         </div>
@@ -204,76 +448,237 @@
         <div class="feedBack">
             <h2>What our learners say...</h2>
             <div class="feedBackSlider">
-                <div class="nextBtn">
-                    <i class="fa-solid fa-chevron-left"></i>
+
+
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <ul class="feedbackListItem">
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="carousel-item">
+                            <ul class="feedbackListItem">
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="carousel-item">
+                            <ul class="feedbackListItem">
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+
+                                <li class="feedbackItem">
+                                    <div class="headerItem">
+                                        <i class="fa-solid fa-quote-left"></i>
+                                    </div>
+                                    <div class="bodyItem">
+                                        Thanks u guys for the website which delivered me an opportunity to enhance my
+                                        English in a
+                                        quite short period of time, because of you I succeeded in getting overall band
+                                        8, with L-9
+                                        and R-8
+                                    </div>
+                                    <div class="footerItem">
+                                        <img src="./assets/imgs/logo.png" alt="" class="userImg">
+                                        <span class="userInfor">Someone Else</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <ul class="feedbackListItem">
-        
-                    <li class="feedbackItem">
-                        <div class="headerItem">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <div class="bodyItem">
-                            Thanks u guys for the website which delivered me an opportunity to enhance my English in a quite short period of time, because of you I succeeded in getting overall band 8, with L-9 and R-8
-                        </div>
-                        <div class="footerItem">
-                            <img src="./assets/imgs/logo.png" alt="" class="userImg">
-                            <span class="userInfor">Someone Else</span>
-                        </div>
-                    </li>
-        
-                    <li class="feedbackItem">
-                        <div class="headerItem">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <div class="bodyItem">
-                            Thanks u guys for the website which delivered me an opportunity to enhance my English in a quite short period of time, because of you I succeeded in getting overall band 8, with L-9 and R-8
-                        </div>
-                        <div class="footerItem">
-                            <img src="./assets/imgs/logo.png" alt="" class="userImg">
-                            <span class="userInfor">Someone Else</span>
-                        </div>
-                    </li>
-        
-                    <li class="feedbackItem">
-                        <div class="headerItem">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <div class="bodyItem">
-                            Thanks u guys for the website which delivered me an opportunity to enhance my English in a quite short period of time, because of you I succeeded in getting overall band 8, with L-9 and R-8
-                        </div>
-                        <div class="footerItem">
-                            <img src="./assets/imgs/logo.png" alt="" class="userImg">
-                            <span class="userInfor">Someone Else</span>
-                        </div>
-                    </li>
-        
-                    <li class="feedbackItem">
-                        <div class="headerItem">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <div class="bodyItem">
-                            Thanks u guys for the website which delivered me an opportunity to enhance my English in a quite short period of time, because of you I succeeded in getting overall band 8, with L-9 and R-8
-                        </div>
-                        <div class="footerItem">
-                            <img src="./assets/imgs/logo.png" alt="" class="userImg">
-                            <span class="userInfor">Someone Else</span>
-                        </div>
-                    </li>
-        
-                    
-        
-                </ul>
-                <div class="nextBtn">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
+
             </div>
-            <div  class="seperatePage">
-                <i class="fa-solid fa-circle active"></i>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle"></i>
-                <i class="fa-solid fa-circle"></i>
-            </div>
+
             <div class="viewCourseBtn">
                 <button class="viewCourseBtn">
                     <a href="">View All</a>
@@ -299,14 +704,15 @@
             <div class="contentBox ads2 col-md-6">
                 <p>
                     <b>Sales end. Dreams go on.</b><br>
-                    Get a second chance at the best prices 
-                    of the season. Courses start at just 
-                    ₫199,000. Today only.</p>
+                    Get a second chance at the best prices
+                    of the season. Courses start at just
+                    ₫199,000. Today only.
+                </p>
             </div>
-            
+
         </div>
 
-       
+
     </div>
     <!-- END BODY -->
 
@@ -319,7 +725,8 @@
                     <h2>Yojihan</h2>
                 </div>
                 <p>
-                    Instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.
+                    Instructors from around the world teach millions of students on Udemy. We provide the tools and
+                    skills to teach what you love.
                 </p>
                 <div class="social-media">
                     <i class="fa-brands fa-instagram"></i>
@@ -359,6 +766,15 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
 </body>
