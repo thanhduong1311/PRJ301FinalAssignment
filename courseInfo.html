@@ -11,12 +11,65 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/courseInfo.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+
     <title>Course Information</title>
 </head>
 
 <body>
+    <!-- HEADER -->
+    <div id="header">
+        <div class="left-side">
+            <a href="index.html">
+                <img src="./assets/imgs/logo.png" alt="logo" class="logo">
+            </a>
+            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+            <div class="course-opption">
+                Course
+            </div>
+            <div class="quesAndAns">
+                Expert Q&A
+            </div>
+        </div>
+
+        <div class="right-side">
+            <a href="paysite.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="quantity">3</div>
+            </a>
+            <div onclick="openMenu()" id="user" class="user">
+                <a href="#">
+                    <img src="./assets/imgs/D1.jpg" alt="avatar">
+                    <span class="userInfor">
+                        Thanh Duong
+                    </span>
+                </a>
+
+                <div id="userMenu" class="userMenu">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Setting</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="" class="notification">
+                <i class="fa-sharp fa-solid fa-bell"></i>
+                <div class="quantity">3</div>
+            </a>
+
+        </div>
+    </div>
+    <!--END HEADER -->
+
     <div id="main">
-        <div class="introduction">
+        <div class="courseIntroduction">
             <div class="orgranization">
                 <img src="./assets/imgs/jonhHopkin.png" alt="">
             </div>
@@ -251,6 +304,46 @@
 
     </div>
 
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="contact row">
+            <div class="introduction col-md-6">
+                <div class="logo-name">
+                    <img src="./assets/imgs/logo.png" alt="">
+                    <h2>Yojihan</h2>
+                </div>
+                <p>
+                    Instructors from around the world teach millions of students on Udemy. We provide the tools and
+                    skills to teach what you love.
+                </p>
+                <div class="social-media">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div class="head help col-md-2">HELP
+                <p>Help</p>
+                <p>Discuss</p>
+                <p>Contact us</p>
+
+            </div>
+            <div class="head pay col-md-2">PAYMENT METHODS
+                <p>Paypal</p>
+                <p>Visa</p>
+            </div>
+            <div class="head info col-md-2">INFORMATION
+                <p>About us</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Powered by GR2 © 2023. All Rights Reserved. rev 25/05/2023 02:25:34 PM</p>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <script src="./script/option.js"></script>
 </body>
 
 </html>
