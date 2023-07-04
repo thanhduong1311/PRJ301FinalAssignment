@@ -1,0 +1,135 @@
+body {
+    margin: 60px 0 0 0 ;
+    padding: 0;
+    box-sizing: border-box;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.advertisement {
+    background: #067351;
+    padding: 20px 20px 20px 20px;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.contentBox h1 {
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    max-width: 80%;
+
+}
+
+.teamWorkImg {
+    text-align: right;
+}
+
+.teamWorkImg img {
+    margin-right: 100px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.allCourse {
+    padding: 20px;
+}
+
+.package {
+    margin: 20px 0;
+}
+
+.package .packageHeader {
+    margin-left: 10px;
+}
+
+
+ .courseList {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ .listItem {
+    /* flex-basis: 20%; */
+    width: calc(25% - 10px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
+    display: block;
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    transition: transform 0.5s;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+}
+
+.listItem  a{
+    border-radius: 12px;
+}
+.listItem:hover {
+    transform: scale(1.005);
+}
+
+ .rate {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: gold;
+}
+
+ .listItem a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    box-shadow: 1px 2px 2px 2px #cccccc;
+    height: 436px;
+}
+
+ .listItem a .courseImg{
+    width: 100%;
+    height: 315px;
+    object-fit: contain;
+}
+
+ .listItem a .courseName{
+    background-color: #60D2A4;
+    padding: 10px;
+    color: #ffffff;
+    width: 100%;
+}
+
+ .listItem a .courseDescription{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.courseDescription .price {
+    font-weight: bold;
+}
+
+.courseDescription .type {
+    font-weight: bold;
+}
+.courseDescription .type span{
+    display: block;
+}
+
+.courseDescription .type span:first-child{
+    color:#60D2A4;
+    display: block;
+}
+
+.courseDescription .type span:nth-child(2){
+    display: block;
+    font-size: 14px;
+}
