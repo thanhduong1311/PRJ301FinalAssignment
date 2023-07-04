@@ -69,6 +69,16 @@ a:hover {
 
 }
 
+.price {
+    font-weight: 700;
+    margin-left: 20px;
+    margin: 10px 20px 10px 10px;
+}
+
+.price span {
+    color: rgb(255, 0, 0);
+}
+
 .addCartBnt a {
     display: block;
     padding: 15px;
@@ -167,4 +177,128 @@ a:hover {
 
 .navigationBar ul li:hover {
     background-color: #4cf0787d;
+}
+
+.information {
+    padding: 30px;
+}
+
+.tabcontent {
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 80%;
+    margin: 20px auto 20px;
+}
+
+.rating-left {
+    width: 20%;
+    text-align: center;
+}
+
+.rating-left h1 {
+    font-size: 60px;
+}
+
+.rating-right {
+    width: 80%;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+}
+
+.star {
+    color: gold;
+}
+
+.rating-detail {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-detail span:nth-child(2) {
+    display: block;
+    width: 200px;
+}
+
+.rating-detail span:nth-child(3) {
+    display: block;
+    width: 40px;
+}
+
+.rating-detail span i:first-child {
+    margin-left: 5px;
+}
+
+#about,
+#outcome,
+#modules,
+#review {
+    margin-top: 60px;
+}
+
+.rating-content {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+}
+
+.rating-content img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 10px 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.rating-content .UserRateName {
+    font-weight: 500;
+    margin: 0;
+}
+
+.rating-content .UserRateComment {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.rating-content .rateOption {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-content .rateOption span {
+    font-size: 12px;
+}
+
+.rating-content .rateOption .like i {
+    margin: 0 8px;
+}
+
+.rating-content .rateOption .like i:hover {
+    color: #4caf50;
+    cursor: pointer;
+}
+
+.rating-content .rateOption span:nth-child(2) {
+    color: rgba(255, 0, 0, 0.738);
 }
