@@ -388,6 +388,10 @@ video {
     display: flex;
 }
 
+.lesson-main .quiz-type1 form {
+    display: flex;
+}
+
 .lesson-main .quiz-type1 .leftSide {
     width: 75%;
     padding: 10px;
@@ -521,7 +525,7 @@ video {
 .finishBtn {
     text-align: center;
 }
-.finishBtn button{
+.finishBtn input{
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;

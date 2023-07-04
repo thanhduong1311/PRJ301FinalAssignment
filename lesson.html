@@ -83,66 +83,68 @@
 
                 <!-- Quizz -->
                 <div class="quiz-type1">
-                    <div class="leftSide">
-                        <p class="quizProgress">Question: <span>1/10</span> </p>
+                    <form action="" method="post">
+                        <div class="leftSide">
+                            <p class="quizProgress">Question: <span>1/10</span> </p>
 
-                        <div class="quizContent" id="question1">
-                            <div class="question">
-                                <img src="./assets/imgs/quiz/a.png" alt="">
+                            <div class="quizContent" id="question1">
+                                <div class="question">
+                                    <img src="./assets/imgs/quiz/a.png" alt="">
+                                </div>
+                                <div class="answer">
+                                    <p>a</p>
+                                    <p>u</p>
+                                    <p>ka</p>
+                                </div>
                             </div>
-                            <div class="answer">
-                                <p>a</p>
-                                <p>u</p>
-                                <p>ka</p>
+
+                            <div class="quizContent" id="question2">
+                                <div class="question">
+                                    <img src="./assets/imgs/quiz/a.png" alt="">
+                                </div>
+                                <div class="answer">
+                                    <p>ka</p>
+                                    <p>a</p>
+                                    <p>u</p>
+                                </div>
+                            </div>
+
+                            <div class="btns">
+                                <button>Continue</button>
+                                <!-- <button>Check</button> -->
                             </div>
                         </div>
-
-                        <div class="quizContent" id="question2">
-                            <div class="question">
-                                <img src="./assets/imgs/quiz/a.png" alt="">
+                        <div class="rightSide">
+                            <div class="time">
+                                <h5>Time remaining</h5>
+                                <i class="fa-regular fa-clock"></i>
+                                <span>15:00</span>
                             </div>
-                            <div class="answer">
-                                <p>ka</p>
-                                <p>a</p>
-                                <p>u</p>
+                            <div class="listQuestion">
+                                <h5>Question</h5>
+                                <ul>
+                                    <li class="done">1</li>
+                                    <li class="">2</li>
+                                    <li class="">3</li>
+                                    <li class="">4</li>
+                                    <li class="">5</li>
+                                    <li class="">6</li>
+                                    <li class="">7</li>
+                                    <li class="">8</li>
+                                    <li class="">9</li>
+                                    <li class="">10</li>
+                                    <li class="">11</li>
+                                    <li class="">12</li>
+                                    <li class="">13</li>
+                                    <li class="">14</li>
+                                    <li class="">15</li>
+
+                                </ul>
                             </div>
-                        </div>
 
-                        <div class="btns">
-                            <button>Continue</button>
-                            <!-- <button>Check</button> -->
+                            <div class="finishBtn"><input type="submit" value="Finish"></div>
                         </div>
-                    </div>
-                    <div class="rightSide">
-                        <div class="time">
-                            <h5>Time remaining</h5>
-                            <i class="fa-regular fa-clock"></i>
-                            <span>15:00</span>
-                        </div>
-                        <div class="listQuestion">
-                            <h5>Question</h5>
-                            <ul>
-                                <li class="done">1</li>
-                                <li class="">2</li>
-                                <li class="">3</li>
-                                <li class="">4</li>
-                                <li class="">5</li>
-                                <li class="">6</li>
-                                <li class="">7</li>
-                                <li class="">8</li>
-                                <li class="">9</li>
-                                <li class="">10</li>
-                                <li class="">11</li>
-                                <li class="">12</li>
-                                <li class="">13</li>
-                                <li class="">14</li>
-                                <li class="">15</li>
-
-                            </ul>
-                        </div>
-
-                        <div class="finishBtn"><button>Finish</button></div>
-                    </div>
+                    </form>
                 </div>
                 <!-- EndQuiz -->
             </div>
@@ -155,7 +157,7 @@
             </div>
 
             <!-- Tab content -->
-           
+
 
             <div id="Overview" class="tabcontent ">
                 <div class="content">
@@ -177,65 +179,65 @@
                 <div class="content">
                     <table>
                         <thead>
-                          <tr>
-                            <th>Characters</th>
-                            <th>Romaji</th>
-                            <th>Pronunciation tips</th>
-                          </tr>
+                            <tr>
+                                <th>Characters</th>
+                                <th>Romaji</th>
+                                <th>Pronunciation tips</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>あ</td>
-                            <td>a</td>
-                            <td>あ is pronounced as "a" in "car" but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>い</td>
-                            <td>i</td>
-                            <td>い is pronounced as "ee" in "meet", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>う</td>
-                            <td>u</td>
-                            <td>う is pronounced as "u" in "hula", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>え</td>
-                            <td>e</td>
-                            <td>え is pronounced as "e" in "get"</td>
-                          </tr>
-                          <tr>
-                            <td>お</td>
-                            <td>o</td>
-                            <td>お is pronounced as "o" in "or", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>か</td>
-                            <td>ka</td>
-                            <td>か is pronounced as "ca" in "car", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>き</td>
-                            <td>ki</td>
-                            <td>き is pronounced as "ki" in "keep", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>く</td>
-                            <td>ku</td>
-                            <td>く is pronounced as "ku" in "Kuwait", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>け</td>
-                            <td>ke</td>
-                            <td>け is pronounced as "ke" in "Kevin"</td>
-                          </tr>
-                          <tr>
-                            <td>こ</td>
-                            <td>ko</td>
-                            <td>こ is pronounced as "ko" in "koala"</td>
-                          </tr>
+                            <tr>
+                                <td>あ</td>
+                                <td>a</td>
+                                <td>あ is pronounced as "a" in "car" but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>い</td>
+                                <td>i</td>
+                                <td>い is pronounced as "ee" in "meet", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>う</td>
+                                <td>u</td>
+                                <td>う is pronounced as "u" in "hula", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>え</td>
+                                <td>e</td>
+                                <td>え is pronounced as "e" in "get"</td>
+                            </tr>
+                            <tr>
+                                <td>お</td>
+                                <td>o</td>
+                                <td>お is pronounced as "o" in "or", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>か</td>
+                                <td>ka</td>
+                                <td>か is pronounced as "ca" in "car", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>き</td>
+                                <td>ki</td>
+                                <td>き is pronounced as "ki" in "keep", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>く</td>
+                                <td>ku</td>
+                                <td>く is pronounced as "ku" in "Kuwait", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>け</td>
+                                <td>ke</td>
+                                <td>け is pronounced as "ke" in "Kevin"</td>
+                            </tr>
+                            <tr>
+                                <td>こ</td>
+                                <td>ko</td>
+                                <td>こ is pronounced as "ko" in "koala"</td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
 
