@@ -21,52 +21,7 @@
 
     <!-- HEADER -->
     <!-- HEADER -->
-    <div id="header">
-        <div class="left-side">
-            <a href="index.html">
-                <img src="./assets/imgs/logo.png" alt="logo" class="logo">
-            </a>
-            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
-            <div class="course-opption">
-                Course
-            </div>
-            <div class="quesAndAns">
-                Expert Q&A
-            </div>
-        </div>
 
-        <div class="right-side">
-            <a href="paysite.html" class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div class="quantity">3</div>
-            </a>
-            <div onclick="openMenu()" id="user" class="user">
-                <a href="#">
-                    <img src="./assets/imgs/D1.jpg" alt="avatar">
-                    <span class="userInfor">
-                        Thanh Duong
-                    </span>
-                </a>
-
-                <div id="userMenu" class="userMenu close">
-                    <a href="#">
-                        <i class="fa-solid fa-gear"></i>
-                        <span>Setting</span>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Logout</span>
-                    </a>
-                </div>
-            </div>
-
-            <a href="" class="notification">
-                <i class="fa-sharp fa-solid fa-bell"></i>
-                <div class="quantity">3</div>
-            </a>
-
-        </div>
-    </div>
     <!--END HEADER -->
     <!--END HEADER -->
 
@@ -91,9 +46,13 @@
                                 <img src="./assets/imgs/quiz/a.png" alt="">
                             </div>
                             <div class="answer">
-                                <p>a</p>
-                                <p>u</p>
-                                <p>ka</p>
+                                <p><b>Choose 1 answer:</b></p>
+                                <span> <input type="radio" id="option1" name="answer" value="a">
+                                    <label for="option1">a</label><br></span>
+                                <span> <input type="radio" id="option2" name="answer" value="u">
+                                    <label for="option2">u</label><br></span>
+                                <span> <input type="radio" id="option3" name="answer" value="ka">
+                                    <label for="option3">ka</label><br></span>
                             </div>
                         </div>
 
@@ -102,9 +61,13 @@
                                 <img src="./assets/imgs/quiz/a.png" alt="">
                             </div>
                             <div class="answer">
-                                <p>ka</p>
-                                <p>a</p>
-                                <p>u</p>
+                                <p><b>Choose n answer:</b></p>
+                                <span> <input type="checkbox" id="option1" name="answer" value="a">
+                                    <label for="option1">a</label><br></span>
+                                <span> <input type="checkbox" id="option2" name="answer" value="u">
+                                    <label for="option2">u</label><br></span>
+                                <span> <input type="checkbox" id="option3" name="answer" value="ka">
+                                    <label for="option3">ka</label><br></span>
                             </div>
                         </div>
 
@@ -122,11 +85,11 @@
                         <div class="listQuestion">
                             <h5>Question</h5>
                             <ul>
-                                <li class="done">1</li>
-                                <li class="">2</li>
-                                <li class="">3</li>
+                                <li class="active">1</li>
+                                <li class="correct">2</li>
+                                <li class="incorrect">3</li>
                                 <li class="">4</li>
-                                <li class="">5</li>
+                                <li class="done">5</li>
                                 <li class="">6</li>
                                 <li class="">7</li>
                                 <li class="">8</li>
@@ -155,7 +118,7 @@
             </div>
 
             <!-- Tab content -->
-           
+
 
             <div id="Overview" class="tabcontent ">
                 <div class="content">
@@ -177,65 +140,65 @@
                 <div class="content">
                     <table>
                         <thead>
-                          <tr>
-                            <th>Characters</th>
-                            <th>Romaji</th>
-                            <th>Pronunciation tips</th>
-                          </tr>
+                            <tr>
+                                <th>Characters</th>
+                                <th>Romaji</th>
+                                <th>Pronunciation tips</th>
+                            </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>あ</td>
-                            <td>a</td>
-                            <td>あ is pronounced as "a" in "car" but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>い</td>
-                            <td>i</td>
-                            <td>い is pronounced as "ee" in "meet", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>う</td>
-                            <td>u</td>
-                            <td>う is pronounced as "u" in "hula", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>え</td>
-                            <td>e</td>
-                            <td>え is pronounced as "e" in "get"</td>
-                          </tr>
-                          <tr>
-                            <td>お</td>
-                            <td>o</td>
-                            <td>お is pronounced as "o" in "or", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>か</td>
-                            <td>ka</td>
-                            <td>か is pronounced as "ca" in "car", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>き</td>
-                            <td>ki</td>
-                            <td>き is pronounced as "ki" in "keep", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>く</td>
-                            <td>ku</td>
-                            <td>く is pronounced as "ku" in "Kuwait", but shorter</td>
-                          </tr>
-                          <tr>
-                            <td>け</td>
-                            <td>ke</td>
-                            <td>け is pronounced as "ke" in "Kevin"</td>
-                          </tr>
-                          <tr>
-                            <td>こ</td>
-                            <td>ko</td>
-                            <td>こ is pronounced as "ko" in "koala"</td>
-                          </tr>
+                            <tr>
+                                <td>あ</td>
+                                <td>a</td>
+                                <td>あ is pronounced as "a" in "car" but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>い</td>
+                                <td>i</td>
+                                <td>い is pronounced as "ee" in "meet", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>う</td>
+                                <td>u</td>
+                                <td>う is pronounced as "u" in "hula", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>え</td>
+                                <td>e</td>
+                                <td>え is pronounced as "e" in "get"</td>
+                            </tr>
+                            <tr>
+                                <td>お</td>
+                                <td>o</td>
+                                <td>お is pronounced as "o" in "or", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>か</td>
+                                <td>ka</td>
+                                <td>か is pronounced as "ca" in "car", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>き</td>
+                                <td>ki</td>
+                                <td>き is pronounced as "ki" in "keep", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>く</td>
+                                <td>ku</td>
+                                <td>く is pronounced as "ku" in "Kuwait", but shorter</td>
+                            </tr>
+                            <tr>
+                                <td>け</td>
+                                <td>ke</td>
+                                <td>け is pronounced as "ke" in "Kevin"</td>
+                            </tr>
+                            <tr>
+                                <td>こ</td>
+                                <td>ko</td>
+                                <td>こ is pronounced as "ko" in "koala"</td>
+                            </tr>
                         </tbody>
-                      </table>
+                    </table>
                 </div>
             </div>
 
@@ -585,42 +548,7 @@
     </div>
 
     <!-- FOOTER -->
-    <div id="footer">
-        <div class="contact row">
-            <div class="introduction col-md-6">
-                <div class="logo-name">
-                    <img src="./assets/imgs/logo.png" alt="">
-                    <h2>Yojihan</h2>
-                </div>
-                <p>
-                    Instructors from around the world teach millions of students on Udemy. We provide the tools and
-                    skills to teach what you love.
-                </p>
-                <div class="social-media">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-github"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                </div>
-            </div>
-            <div class="head help col-md-2">HELP
-                <p>Help</p>
-                <p>Discuss</p>
-                <p>Contact us</p>
 
-            </div>
-            <div class="head pay col-md-2">PAYMENT METHODS
-                <p>Paypal</p>
-                <p>Visa</p>
-            </div>
-            <div class="head info col-md-2">INFORMATION
-                <p>About us</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>Powered by GR2 © 2023. All Rights Reserved. rev 25/05/2023 02:25:34 PM</p>
-        </div>
-    </div>
     <!-- END FOOTER -->
 
 

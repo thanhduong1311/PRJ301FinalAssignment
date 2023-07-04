@@ -425,14 +425,30 @@ video {
 .lesson-main .quiz-type1 .leftSide .quizContent .answer {
     width: 40%;
     padding: 20px;
+    margin-top: 35px;
+    user-select: none;
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer p{
+.lesson-main .quiz-type1 .leftSide .quizContent .answer span {
+    display: block;
+    background-color: #ccc;
+    padding: 5px 15px;
+    margin-top: 10px;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer span:hover {
+    background-color: #b6f9af;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer input{
     padding: 10px;
-    width: 80%;
-    margin: 10px auto 0 auto;
-    background-color:#ccc;
-    cursor: pointer;
+    font-size: 20px;
+}
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label {
+    margin-left: 5px;
+    font-size: 20px;
+    display: inline-block;
+    width: 70%;
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p.active {
@@ -513,10 +529,20 @@ video {
     font-weight: 500;
 }
 
+.lesson-main .quiz-type1 .rightSide .listQuestion li.active {
+    border: 2px solid #000000;
+}
+.lesson-main .quiz-type1 .rightSide .listQuestion li.correct {
+    background-color: #68f658a0;
+}
+.lesson-main .quiz-type1 .rightSide .listQuestion li.incorrect {
+    background-color: #f85953b0;
+}
 .lesson-main .quiz-type1 .rightSide .listQuestion li.done {
-    background-color: #b6f9af;
+        background-color: #55bef2b3;
 
 }
+
 
 .finishBtn {
     text-align: center;

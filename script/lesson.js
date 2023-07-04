@@ -60,17 +60,21 @@ function checkVideoProgress() {
     return 0;
   }
 }
-
 // Gọi hàm kiểm tra video theo một khoảng thời gian nhất định
 setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)
 
+// Hide all questions except first question
+let questions = $(".quizContent");
+for (let i = 1; i < questions.length; i++) {
+  questions[i].hidden = true;
+}
 // add listener to questionsLabels
 var questionsLabels = $(".listQuestion li");
 for (var i = 0; i < questionsLabels.length; i++) {
   questionsLabels[i].addEventListener('click', function (e) {
     //hide all questions
     let questions = $(".quizContent");
-    for(let j = 0; j < questions.length; j++){
+    for (let j = 0; j < questions.length; j++) {
       questions[j].hidden = true;
     }
     //show question
