@@ -64,9 +64,7 @@ a:hover {
     color: #fff;
     border-radius: 12px;
     text-align: center;
-    width: 120px;
-
-
+    width: fit-content;
 }
 
 .price {
