@@ -191,6 +191,9 @@
     text-align: center;
 }
 
+.item .itemEdit a{
+    color: crimson;
+}
 
 .courseInCart input[type="submit"] {
     margin: 0 auto;
