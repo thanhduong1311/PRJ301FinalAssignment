@@ -45,7 +45,7 @@ paragraphs.forEach(function (paragraph) {
   });
 });
 
-var video = document.getElementById('my-video');
+// var video = document.getElementById('my-video');
 
 if (video) {
   video.addEventListener('ended', function () {
@@ -79,3 +79,22 @@ for (var i = 0; i < questionsLabels.length; i++) {
     question.hidden = false;
   });
 }
+
+// Lấy danh sách các phần
+const parts = document.querySelectorAll('.partHeader');
+
+// Lặp qua từng phần và gắn sự kiện cho biểu tượng trong phần đó
+parts.forEach(part => {
+  const icon = part.querySelector('i');
+  const partBody = part.nextElementSibling;
+
+  if (icon && partBody) {
+    icon.addEventListener('click', function () {
+      if (partBody.classList.contains('hidden')) {
+        partBody.classList.remove('hidden');
+      } else {
+        partBody.classList.add('hidden');
+      }
+    });
+  }
+});

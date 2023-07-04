@@ -149,12 +149,15 @@
 
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+                <button class="tablinks" onclick="openTab(event, 'LessonContent')">Lesson Content</button>
                 <button class="tablinks" onclick="openTab(event, 'QandA')">Q&A</button>
                 <button class="tablinks" onclick="openTab(event, 'Rating')">Rating</button>
             </div>
 
             <!-- Tab content -->
-            <div id="Overview" class="tabcontent active">
+           
+
+            <div id="Overview" class="tabcontent ">
                 <div class="content">
                     <ul>
                         <li>Fluently master the Hiragana and Katakana alphabets, over 100 Kanji characters, and the
@@ -170,7 +173,73 @@
                 </div>
             </div>
 
-            <div id="QandA" class="tabcontent">
+            <div id="LessonContent" class="tabcontent active">
+                <div class="content">
+                    <table>
+                        <thead>
+                          <tr>
+                            <th>Characters</th>
+                            <th>Romaji</th>
+                            <th>Pronunciation tips</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>あ</td>
+                            <td>a</td>
+                            <td>あ is pronounced as "a" in "car" but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>い</td>
+                            <td>i</td>
+                            <td>い is pronounced as "ee" in "meet", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>う</td>
+                            <td>u</td>
+                            <td>う is pronounced as "u" in "hula", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>え</td>
+                            <td>e</td>
+                            <td>え is pronounced as "e" in "get"</td>
+                          </tr>
+                          <tr>
+                            <td>お</td>
+                            <td>o</td>
+                            <td>お is pronounced as "o" in "or", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>か</td>
+                            <td>ka</td>
+                            <td>か is pronounced as "ca" in "car", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>き</td>
+                            <td>ki</td>
+                            <td>き is pronounced as "ki" in "keep", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>く</td>
+                            <td>ku</td>
+                            <td>く is pronounced as "ku" in "Kuwait", but shorter</td>
+                          </tr>
+                          <tr>
+                            <td>け</td>
+                            <td>ke</td>
+                            <td>け is pronounced as "ke" in "Kevin"</td>
+                          </tr>
+                          <tr>
+                            <td>こ</td>
+                            <td>ko</td>
+                            <td>こ is pronounced as "ko" in "koala"</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+            <div id="QandA" class="tabcontent ">
                 <div class="content">
                     <div class="writeComment">
                         <form action="">
@@ -261,7 +330,7 @@
                 </div>
             </div>
 
-            <div id="Rating" class="tabcontent active">
+            <div id="Rating" class="tabcontent ">
                 <div class="rating-container">
                     <div class="rating-left">
                         <h1>4.5</h1>
@@ -412,7 +481,7 @@
             <h4>Get Started with Font Awesome Pro</h4>
 
             <!-- part -->
-            <div class="part open">
+            <div class="part">
                 <div class="partHeader">
                     <h5>Part 1: Hiragana 。ひらがな</h5>
                     <i class="fa-solid fa-sort-down"></i>
@@ -421,137 +490,86 @@
                 <div class="partBody">
                     <!-- each lesson is a div -->
                     <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <i class="fa-solid fa-square-check">
-                                <!-- unchecked -->
-                                <!-- <i class="fa-regular fa-square"></i> -->
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <!-- type text -->
-                                    <!-- <i class="fa-solid fa-file-lines"></i> -->
+                    <a href="#">
+                        <div class="lesson">
+                            <span class="lesson-status">
+                                <!-- checked -->
+                                <i class="fa-solid fa-square-check">
+                                    <!-- unchecked -->
+                                    <!-- <i class="fa-regular fa-square"></i> -->
+                                </i></span>
+                            <div class="lesson-content">
+                                <p class="title">1. Row A, Ka</p>
+                                <span class="description">
+                                    <span class="type">
+                                        <!-- type video -->
+                                        <i class="fa-brands fa-youtube"></i>
+                                        <!-- type text -->
+                                        <!-- <i class="fa-solid fa-file-lines"></i> -->
+                                        <!-- Test -->
+                                        <!-- <i class="fa-solid fa-pen"></i> -->
+                                    </span>
+                                    <span class="time">13 minute</span>
                                 </span>
-                                <span class="time">13 minute</span>
-                            </span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- End lesson -->
 
                     <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
+                    <a href="#">
+                        <div class="lesson">
+                            <span class="lesson-status">
+                                <!-- checked -->
+                                <i class="fa-solid fa-square-check">
+                                    <!-- unchecked -->
+                                    <!-- <i class="fa-regular fa-square"></i> -->
+                                </i></span>
+                            <div class="lesson-content">
+                                <p class="title">1. Row A, Ka</p>
+                                <span class="description">
+                                    <span class="type">
+                                        <!-- type video -->
+                                        <!-- <i class="fa-brands fa-youtube"></i> -->
+                                        <!-- type text -->
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        <!-- Test -->
+                                        <!-- <i class="fa-solid fa-pen"></i> -->
+                                    </span>
+                                    <span class="time">13 minute</span>
                                 </span>
-                                <span class="time">13 minute</span>
-                            </span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- End lesson -->
+
                     <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
+                    <a href="#">
+                        <div class="lesson active">
+                            <span class="lesson-status">
+                                <!-- checked -->
+                                <i class="fa-solid fa-square-check">
+                                    <!-- unchecked -->
+                                    <!-- <i class="fa-regular fa-square"></i> -->
+                                </i></span>
+                            <div class="lesson-content">
+                                <p class="title">1. Row A, Ka</p>
+                                <span class="description">
+                                    <span class="type">
+                                        <!-- type video -->
+                                        <!-- <i class="fa-brands fa-youtube"></i> -->
+                                        <!-- type text -->
+                                        <!-- <i class="fa-solid fa-file-lines"></i> -->
+                                        <!-- Test -->
+                                        <i class="fa-solid fa-pen"></i>
+                                    </span>
+                                    <span class="time">15 minute</span>
                                 </span>
-                                <span class="time">13 minute</span>
-                            </span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson --><!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
+
 
 
                 </div>
@@ -559,301 +577,7 @@
             </div>
             <!-- end part -->
 
-            <!-- part -->
-            <div class="part open">
-                <div class="partHeader">
-                    <h5>Part 1: Hiragana 。ひらがな</h5>
-                    <i class="fa-solid fa-sort-down"></i>
-                </div>
 
-                <div class="partBody">
-                    <!-- each lesson is a div -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <i class="fa-solid fa-square-check">
-                                <!-- unchecked -->
-                                <!-- <i class="fa-regular fa-square"></i> -->
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <!-- type text -->
-                                    <!-- <i class="fa-solid fa-file-lines"></i> -->
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson --><!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-
-
-                </div>
-
-            </div>
-            <!-- end part -->
-
-            <!-- part -->
-            <div class="part open">
-                <div class="partHeader">
-                    <h5>Part 1: Hiragana 。ひらがな</h5>
-                    <i class="fa-solid fa-sort-down"></i>
-                </div>
-
-                <div class="partBody">
-                    <!-- each lesson is a div -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <i class="fa-solid fa-square-check">
-                                <!-- unchecked -->
-                                <!-- <i class="fa-regular fa-square"></i> -->
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <i class="fa-brands fa-youtube"></i>
-                                    <!-- type text -->
-                                    <!-- <i class="fa-solid fa-file-lines"></i> -->
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-                    <!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson --><!-- Start lesson -->
-                    <div class="lesson">
-                        <span class="lesson-status">
-                            <!-- checked -->
-                            <!-- <i class="fa-solid fa-square-check"> -->
-                            <!-- unchecked -->
-                            <i class="fa-regular fa-square"></i>
-                            </i></span>
-                        <div class="lesson-content">
-                            <p class="title">1. Row A, Ka</p>
-                            <span class="description">
-                                <span class="type">
-                                    <!-- type video -->
-                                    <!-- <i class="fa-brands fa-youtube"></i> -->
-                                    <!-- type text -->
-                                    <i class="fa-solid fa-file-lines"></i>
-                                </span>
-                                <span class="time">13 minute</span>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- End lesson -->
-
-
-                </div>
-
-            </div>
-            <!-- end part -->
 
         </div>
 
