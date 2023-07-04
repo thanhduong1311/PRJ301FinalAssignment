@@ -48,6 +48,7 @@ video {
 .rightSide .part {
     transition: 0.5s;
 }
+
 .rightSide .part .partHeader {
     padding: 10px;
     height: 59px;
@@ -166,6 +167,7 @@ video {
 .tabcontent.active {
     display: block;
 }
+
 #LessonContent .content,
 #Overview .content,
 #QandA .content {
@@ -388,6 +390,10 @@ video {
     display: flex;
 }
 
+.lesson-main .quiz-type1 form {
+    display: contents;
+}
+
 .lesson-main .quiz-type1 .leftSide {
     width: 75%;
     padding: 10px;
@@ -440,10 +446,11 @@ video {
     background-color: #b6f9af;
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer input{
+.lesson-main .quiz-type1 .leftSide .quizContent .answer input {
     padding: 10px;
     font-size: 20px;
 }
+
 .lesson-main .quiz-type1 .leftSide .quizContent .answer label {
     margin-left: 5px;
     font-size: 20px;
@@ -451,9 +458,17 @@ video {
     width: 70%;
 }
 
+.lesson-main .quiz-type1 .leftSide .quizContent .answer p {
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto 0 auto;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p.active {
     background-color: #b6f9af;
-  }
+}
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p:hover {
     background-color: #b6f9af;
@@ -470,7 +485,7 @@ video {
     outline: none;
     padding: 10px 20px;
     border-radius: 12px;
-    background-color:#4c9daf;
+    background-color: #4c9daf;
     color: #fff;
     font-weight: bold;
 }
@@ -499,6 +514,7 @@ video {
     font-weight: 700;
     font-size: 30px;
 }
+
 .lesson-main .quiz-type1 .rightSide .listQuestion {
     text-align: center;
 }
@@ -532,14 +548,17 @@ video {
 .lesson-main .quiz-type1 .rightSide .listQuestion li.active {
     border: 2px solid #000000;
 }
+
 .lesson-main .quiz-type1 .rightSide .listQuestion li.correct {
     background-color: #68f658a0;
 }
+
 .lesson-main .quiz-type1 .rightSide .listQuestion li.incorrect {
     background-color: #f85953b0;
 }
+
 .lesson-main .quiz-type1 .rightSide .listQuestion li.done {
-        background-color: #55bef2b3;
+    background-color: #55bef2b3;
 
 }
 
@@ -547,7 +566,8 @@ video {
 .finishBtn {
     text-align: center;
 }
-.finishBtn button{
+
+.finishBtn input {
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;
@@ -566,22 +586,22 @@ table {
     width: 600px;
     border-radius: 5px;
     overflow: hidden;
-  }
+}
 
-  th,
-  td {
+th,
+td {
     padding: 10px;
-  }
+}
 
-  th {
+th {
     background-color: #f2f2f2;
-  }
+}
 
-  td {
+td {
     text-align: center;
     border-bottom: 1px solid #ddd;
-  }
+}
 
-  tr:last-child td {
+tr:last-child td {
     border-bottom: none;
-  }
+}

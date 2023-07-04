@@ -38,74 +38,76 @@
 
                 <!-- Quizz -->
                 <div class="quiz-type1">
-                    <div class="leftSide">
-                        <p class="quizProgress">Question: <span>1/10</span> </p>
+                    <form action="" method="post">
+                        <div class="leftSide">
+                            <p class="quizProgress">Question: <span>1/10</span> </p>
 
-                        <div class="quizContent" id="question1">
-                            <div class="question">
-                                <img src="./assets/imgs/quiz/a.png" alt="">
+                            <div class="quizContent" id="question1">
+                                <div class="question">
+                                    <img src="./assets/imgs/quiz/a.png" alt="">
+                                </div>
+                                <div class="answer">
+                                    <p><b>Choose 1 answer:</b></p>
+                                    <span> <input type="radio" id="option1" name="answer" value="a">
+                                        <label for="option1">a</label><br></span>
+                                    <span> <input type="radio" id="option2" name="answer" value="u">
+                                        <label for="option2">u</label><br></span>
+                                    <span> <input type="radio" id="option3" name="answer" value="ka">
+                                        <label for="option3">ka</label><br></span>
+                                </div>
                             </div>
-                            <div class="answer">
-                                <p><b>Choose 1 answer:</b></p>
-                                <span> <input type="radio" id="option1" name="answer" value="a">
-                                    <label for="option1">a</label><br></span>
-                                <span> <input type="radio" id="option2" name="answer" value="u">
-                                    <label for="option2">u</label><br></span>
-                                <span> <input type="radio" id="option3" name="answer" value="ka">
-                                    <label for="option3">ka</label><br></span>
+
+                            <div class="quizContent" id="question2">
+                                <div class="question">
+                                    <img src="./assets/imgs/quiz/a.png" alt="">
+                                </div>
+                                <div class="answer">
+                                    <p><b>Choose n answer:</b></p>
+                                    <span> <input type="checkbox" id="option1" name="answer" value="a">
+                                        <label for="option1">a</label><br></span>
+                                    <span> <input type="checkbox" id="option2" name="answer" value="u">
+                                        <label for="option2">u</label><br></span>
+                                    <span> <input type="checkbox" id="option3" name="answer" value="ka">
+                                        <label for="option3">ka</label><br></span>
+                                </div>
+                            </div>
+
+                            <div class="btns">
+                                <button>Continue</button>
+                                <!-- <button>Check</button> -->
                             </div>
                         </div>
-
-                        <div class="quizContent" id="question2">
-                            <div class="question">
-                                <img src="./assets/imgs/quiz/a.png" alt="">
+                        <div class="rightSide">
+                            <div class="time">
+                                <h5>Time remaining</h5>
+                                <i class="fa-regular fa-clock"></i>
+                                <span>15:00</span>
                             </div>
-                            <div class="answer">
-                                <p><b>Choose n answer:</b></p>
-                                <span> <input type="checkbox" id="option1" name="answer" value="a">
-                                    <label for="option1">a</label><br></span>
-                                <span> <input type="checkbox" id="option2" name="answer" value="u">
-                                    <label for="option2">u</label><br></span>
-                                <span> <input type="checkbox" id="option3" name="answer" value="ka">
-                                    <label for="option3">ka</label><br></span>
+                            <div class="listQuestion">
+                                <h5>Question</h5>
+                                <ul>
+                                    <li class="active">1</li>
+                                    <li class="correct">2</li>
+                                    <li class="incorrect">3</li>
+                                    <li class="">4</li>
+                                    <li class="done">5</li>
+                                    <li class="">6</li>
+                                    <li class="">7</li>
+                                    <li class="">8</li>
+                                    <li class="">9</li>
+                                    <li class="">10</li>
+                                    <li class="">11</li>
+                                    <li class="">12</li>
+                                    <li class="">13</li>
+                                    <li class="">14</li>
+                                    <li class="">15</li>
+
+                                </ul>
                             </div>
-                        </div>
 
-                        <div class="btns">
-                            <button>Continue</button>
-                            <!-- <button>Check</button> -->
+                            <div class="finishBtn"><input type="submit" value="Finish"></div>
                         </div>
-                    </div>
-                    <div class="rightSide">
-                        <div class="time">
-                            <h5>Time remaining</h5>
-                            <i class="fa-regular fa-clock"></i>
-                            <span>15:00</span>
-                        </div>
-                        <div class="listQuestion">
-                            <h5>Question</h5>
-                            <ul>
-                                <li class="active">1</li>
-                                <li class="correct">2</li>
-                                <li class="incorrect">3</li>
-                                <li class="">4</li>
-                                <li class="done">5</li>
-                                <li class="">6</li>
-                                <li class="">7</li>
-                                <li class="">8</li>
-                                <li class="">9</li>
-                                <li class="">10</li>
-                                <li class="">11</li>
-                                <li class="">12</li>
-                                <li class="">13</li>
-                                <li class="">14</li>
-                                <li class="">15</li>
-
-                            </ul>
-                        </div>
-
-                        <div class="finishBtn"><button>Finish</button></div>
-                    </div>
+                    </form>
                 </div>
                 <!-- EndQuiz -->
             </div>
