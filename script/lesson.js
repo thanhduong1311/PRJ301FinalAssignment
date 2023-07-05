@@ -91,7 +91,6 @@ for (var i = 0; i < questionsLabels.length; i++) {
     this.classList.add("active");
   });
 }
-activeQuestion(1);
 
 
 
