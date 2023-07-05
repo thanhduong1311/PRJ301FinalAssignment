@@ -50,24 +50,33 @@ video {
 }
 
 .rightSide .part .partHeader {
-    padding: 10px;
-    height: 59px;
     font-weight: 700;
     background-color: #cccccc77;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     user-select: none;
+    border-bottom: 1px solid #ccc;padding-right: 10px;
+    padding-top: 5px;
+}
+
+.rightSide .part .partHeader div {
+    padding:5px 10px;
+}
+
+.rightSide .part .partHeader div p{
+    margin: 0;
+    font-weight: 500;
+    font-size: 12px;
+    margin-left: 10px;
 }
 
 .rightSide .part .partHeader h5 {
     margin: 0;
-    line-height: 39px;
 }
 
 .rightSide .part .partHeader i {
     padding: 5px;
-    font-size: 20px;
     line-height: 21px;
     user-select: none;
 }
