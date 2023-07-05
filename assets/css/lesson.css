@@ -453,9 +453,6 @@ video {
     margin-top: 10px;
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer span:hover {
-    background-color: #b6f9af;
-}
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer input {
     /* display:block; */
@@ -463,6 +460,10 @@ video {
     font-size: 20px;
     margin-right: 10px;
 
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label:hover {
+    background-color: #b6f9af;
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer label {
