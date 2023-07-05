@@ -24,12 +24,14 @@
             <a href="index.html">
                 <img src="./assets/imgs/logo.png" alt="logo" class="logo">
             </a>
-            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+            <form action="">
+                <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+            </form>
             <div class="course-opption">
-                Course
+                <a href="courseShopping.html">Course</a>
             </div>
             <div class="quesAndAns">
-                Expert Q&A
+                <a href="#">Expert Q&A</a>
             </div>
         </div>
 
@@ -47,6 +49,10 @@
                 </a>
 
                 <div id="userMenu" class="userMenu close">
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Profile</span>
+                    </a>
                     <a href="#">
                         <i class="fa-solid fa-gear"></i>
                         <span>Setting</span>
@@ -88,20 +94,39 @@
                 <div class="items">
 
                     <!-- an item -->
+                    <a href="courseInfo.html">
                     <div class="item">
-                        <input type="checkbox"  id="course5" name="course5" value="5">
-                        <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
-                        <div class="itemInformation">
-                            <p class="itemName">Python for beginner</p>
-                            <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
-                        </div>
-                        <p class="itemPrice">50$</p>
+                            <input type="checkbox" id="course5" name="course5" value="5">
+                            <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
+                            <div class="itemInformation">
+                                <p class="itemName">Python for beginner</p>
+                                <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
+                            </div>
+                            <p class="itemPrice">50$</p>
 
-                        <div class="itemEdit"><a href="#"><i class="fa-solid fa-trash"></i></a></div>
-                    </div>
+                            <div class="itemEdit"><a href="#"><i class="fa-solid fa-trash"></i></a></div>
+                        </div>
+                    </a>
                     <!-- end item -->
 
+                     <!-- an item -->
+                     <a href="courseInfo.html">
+                        <div class="item">
+                                <input type="checkbox" id="course5" name="course5" value="5">
+                                <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
+                                <div class="itemInformation">
+                                    <p class="itemName">Python for beginner</p>
+                                    <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
+                                </div>
+                                <p class="itemPrice">50$</p>
+    
+                                <div class="itemEdit"><a href="#"><i class="fa-solid fa-trash"></i></a></div>
+                            </div>
+                        </a>
+                        <!-- end item -->
+
                 </div>
+
                 <div class="popup-checkout">
                     <i class="fa-solid fa-xmark close"></i>
                     <h4>Order Summary</h4>

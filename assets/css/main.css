@@ -7,8 +7,14 @@ html {
     font-family: 'Muli',sans-serif;
 }
 
-html a {
+a {
     text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset;
 }
 /* start body css */
 #body {

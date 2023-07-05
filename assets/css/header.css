@@ -7,8 +7,14 @@ html {
     font-family: 'Roboto';
 }
 
-html a {
+a {
     text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    text-decoration: none;
+    color: unset;
 }
 #header{
     padding: 0 20px;

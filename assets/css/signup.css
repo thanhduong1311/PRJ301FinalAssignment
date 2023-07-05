@@ -16,7 +16,7 @@ body {
 .box {
     position: relative;
     width: 380px;
-    height: 500px;
+    height: 545px;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -126,8 +126,8 @@ body {
     font-size: 0.9em;
     border-radius: 4px;
     font-weight: 600;
-    width: 100px;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .box form input[type="submit"]:active {
@@ -208,7 +208,7 @@ body {
 .accountLogin {
     position: absolute;
     z-index: 10;
-    top: 380px;
+    bottom: 30px;
     right: 0;
     left: 0;
     text-align: center;

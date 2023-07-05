@@ -93,6 +93,7 @@ a:hover {
 .userTags .inforTag .avatar img {
     width: 95%;
     height: 95%;
+    object-fit: cover;
     border-radius: 50%;
 }
 

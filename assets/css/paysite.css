@@ -135,6 +135,11 @@
     display: flex;
 }
 
+.items a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
 .item {
     display: flex;
     width: 100%;
