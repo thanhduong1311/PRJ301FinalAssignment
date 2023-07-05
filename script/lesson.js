@@ -102,3 +102,42 @@ parts.forEach(part => {
     }
   });
 });
+
+
+// form api youtube
+// --------------------------------------------------------------------------------------------
+ // Global variable for the player
+ var player;
+
+ var IDVideo = 'h0z8Qt32nVU'
+
+ // Function called when the YouTube Player API is loaded
+ function onYouTubeIframeAPIReady() {
+   // Create a new instance of the player
+   player = new YT.Player('player', {
+     videoId: IDVideo, // Replace VIDEO_ID with the ID of the video you want to embed
+     events: {
+       'onStateChange': onPlayerStateChange
+     }
+   });
+ }
+
+ // Event handler for player state change
+ function onPlayerStateChange(event) {
+   if (event.data === YT.PlayerState.ENDED) {
+     console.log('Video has ended');
+     checkVideoProgress();
+   }
+ }
+
+ // Check the video progress
+ function checkVideoProgress() {
+   var duration = player.getDuration(); // Get the duration of the video
+   var currentTime = player.getCurrentTime(); // Get the current time of the video
+
+   if (currentTime >= duration) {
+     console.log('User has watched the entire video');
+   } else {
+     console.log('User has not watched the entire video yet');
+   }
+ }
