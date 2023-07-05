@@ -447,9 +447,9 @@ video {
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer span {
-    display: block;
+    display: flex;
     background-color: #ccc;
-    padding: 5px 15px;
+    /* padding: 5px 15px; */
     margin-top: 10px;
 }
 
@@ -458,15 +458,22 @@ video {
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer input {
-    padding: 10px;
+    /* display:block; */
+    padding-left: 15px;
     font-size: 20px;
+    margin-right: 10px;
+
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer label {
-    margin-left: 5px;
     font-size: 20px;
     display: inline-block;
-    width: 70%;
+    padding: 5px 15px;
+    width: 80%;
+    background-color: #ccc;
+    margin-top: 10px;
+
+
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p {
