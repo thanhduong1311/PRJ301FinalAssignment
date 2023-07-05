@@ -457,8 +457,14 @@
             <h2>What our learners say...</h2>
             <div class="feedBackSlider">
 
+                <!-- Bootstrap Carousel -->
 
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                    </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <ul class="feedbackListItem">
@@ -677,13 +683,14 @@
                             </ul>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
                         <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
                         <span class="sr-only">Next</span>
-                    </a>
+                      </a>
                 </div>
+                <!-- End  Bootstrap Carousel-->
 
             </div>
 

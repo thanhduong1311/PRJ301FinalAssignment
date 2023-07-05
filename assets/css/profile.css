@@ -1,5 +1,5 @@
 body {
-    margin-top: 60px;
+    margin-top: 94px;
     box-sizing: border-box;
     background-color: #b6f9af9c;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -168,6 +168,10 @@ a:hover {
     /* Màu nền của thanh tiến trình */
 }
 
+.courseTaken .courseInfor span {
+    font-weight: 500;
+}
+
 /* Áp dụng CSS cho thanh tiến trình đã được điền */
 .courseInfor progress::-webkit-progress-value {
     background-color: #4caf50;
@@ -316,6 +320,10 @@ justify-content: space-between;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
     background-color: #fff;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
 }
 
 .tab button {
@@ -327,6 +335,7 @@ justify-content: space-between;
     cursor: pointer;
     padding: 5px 20px;
     transition: 0.3s;
+    background-color: #fff;
 }
 
 .tab button:hover {
