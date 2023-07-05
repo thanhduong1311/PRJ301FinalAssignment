@@ -56,6 +56,8 @@ video {
     background-color: #cccccc77;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
 }
 
 .rightSide .part .partHeader h5 {
@@ -464,6 +466,15 @@ video {
     margin: 10px auto 0 auto;
     background-color: #ccc;
     cursor: pointer;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer p:first-child {
+    background-color: #fff;
+    margin: 0;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer p:first-child:hover {
+    background-color: #fff;
 }
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p.active {

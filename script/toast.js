@@ -43,7 +43,7 @@ function toast({ title = '', message = '', type = "success", duration = 3000 }) 
 
 
 
-function showSuccesToast (message) {
+function showSuccessToast (message) {
     toast({
         title: 'Success',
         message: message,

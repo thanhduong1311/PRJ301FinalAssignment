@@ -87,18 +87,18 @@ for (var i = 0; i < questionsLabels.length; i++) {
 // Lấy danh sách các phần
 const parts = document.querySelectorAll('.partHeader');
 
-// Lặp qua từng phần và gắn sự kiện cho biểu tượng trong phần đó
+// Lặp qua từng phần và gắn sự kiện cho phần tiêu đề
 parts.forEach(part => {
-  const icon = part.querySelector('i');
-  const partBody = part.nextElementSibling;
+  part.addEventListener('click', function () {
+    const icon = this.querySelector('i');
+    const partBody = this.nextElementSibling;
 
-  if (icon && partBody) {
-    icon.addEventListener('click', function () {
+    if (icon && partBody) {
       if (partBody.classList.contains('hidden')) {
         partBody.classList.remove('hidden');
       } else {
         partBody.classList.add('hidden');
       }
-    });
-  }
+    }
+  });
 });
