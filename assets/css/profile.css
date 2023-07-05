@@ -1,0 +1,347 @@
+body {
+    margin-top: 60px;
+    box-sizing: border-box;
+    background-color: #b6f9af9c;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    color: unset;
+}
+
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.navigation .navTab {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    padding: 0;
+}
+
+.navTab li {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navTab li:hover {
+    background-color: #b6f9af;
+}
+
+#main .infor {
+    display: flex;
+    align-items: flex-start;
+}
+
+.infor .userTags {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infor .purchasedCourse {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.userTags .inforTag,
+.userTags .expTag {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.userTags .inforTag .avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid #b6f9af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.userTags .inforTag .avatar img {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+}
+
+.inforTag .name h4 {
+    text-align: center;
+}
+
+.expTag p {
+    width: 100%;
+    font-weight: 500;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.expTag p:last-child {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expTag p span {
+    float: right;
+    font-weight: 700;
+
+}
+
+.expTag p i {
+    color: #18930a;
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    text-align: left
+}
+
+.infor .purchasedCourse {
+    padding: 20px;
+}
+
+.purchasedCourse .courseTaken {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.courseTaken img {
+    max-width: 15%;
+    padding: 10px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.courseTaken .courseInfor {
+    padding: 10px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.courseTaken .courseInfor .courseName {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.courseTaken .courseInfor progress {
+    width: 100%;
+    /* Định rộng thanh tiến trình */
+    height: 4px;
+    /* Định chiều cao thanh tiến trình */
+    background-color: #ccc;
+    border-radius: 2px;
+    /* Màu nền của thanh tiến trình */
+}
+
+/* Áp dụng CSS cho thanh tiến trình đã được điền */
+.courseInfor progress::-webkit-progress-value {
+    background-color: #4caf50;
+    /* Màu của phần tiến trình đã điền */
+}
+#main .personal {
+    padding:10px 30px ;
+}
+
+.personal .header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #4caf50;
+    padding:10px 0 ;
+}
+
+.personal .header button {
+    border: none;
+    background-color: #18930a;
+    color: #fff;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.personal p {
+    font-weight: 500;
+}
+
+.personal form {
+    width: 100%;
+    padding: 0 350px;
+}
+
+.personal form label{
+    font-weight: 500;
+}
+
+.personal form input {
+    padding: 0 10px;
+    border: none;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.personal div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.personal div.gender {
+    display: flex;
+}
+
+.personal div.gender span {
+    display: block;
+    width: 120px;
+}
+
+.personal div.gender span input {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.personal div.gender span label {
+    margin: 0;
+}
+
+.personal input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: calc(50% - 20px);
+}
+
+.personal select {
+    width: 50%;
+    border: none;
+}
+
+.personal .upload label:last-child {
+    font-size: 12px;
+    padding: 0 20px;
+}
+
+#profile-photo {
+    width: 65%;
+    text-align: right;    
+}
+
+.personal div img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-left: 20px;
+}
+
+.personal .upload {
+display: flex;
+justify-content: space-between;
+}
+
+.saveInfor button {
+    padding:5px 10px;
+    border: none;
+    background-color: #18930a;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.changePassword {
+    display: block;
+    padding: 20px 30px;
+    margin-left: 30px;
+}
+
+.changePassword h3 {
+    margin-bottom: 10px;
+}
+
+.changePassword label {
+    font-weight: 500;
+    width: 180px;
+}
+
+.changePassword input {
+    padding: 0 10px;
+    width: 300px;
+}
+
+.changePassword input[type="submit"] {
+    width: 90px;
+    border: none;
+    border-radius: 8px;
+    background-color: #18930a;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px ;
+}
+
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.tab button {
+    width: 50%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #b6f9af;
+}
+
+.tab button.active {
+    background-color: #b6f9af7c;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
