@@ -139,7 +139,7 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.courseTaken img {
+.courseTaken  img {
     max-width: 15%;
     padding: 10px;
     height: 90px;
@@ -150,6 +150,7 @@ a:hover {
     padding: 10px;
     padding-right: 20px;
     width: 100%;
+    position: relative;
 }
 
 .courseTaken .courseInfor .courseName {
@@ -354,4 +355,13 @@ justify-content: space-between;
 
 .tabcontent.active {
     display: block;
+}
+
+.courseTaken .completed {
+    justify-content: space-between;
+    display: flex;
+}
+
+.courseTaken .completed a{
+    color: rgb(0, 64, 255);
 }

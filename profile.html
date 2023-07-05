@@ -99,11 +99,12 @@
                     </div>
                     <div class="expTag">
                         <h4>Experience</h4>
-                        <p class="element"><i class="fa-sharp fa-regular fa-clock"></i>Total learning housr
+                        <p class="element"><i class="fa-sharp fa-regular fa-clock"></i>Total learning hours
                             <span>25</span>
                         </p>
                         <p class="element"><i class="fa-solid fa-cart-shopping"></i>Courses purchased<span>10</span></p>
-                        <p class="element"><i class="fa-regular fa-circle-check"></i>Course completed <span>3</span></p>
+                        <p class="element"><i class="fa-regular fa-circle-check"></i>Courses completed <span>3</span>
+                        </p>
                         <p class="element"><i class="fa-sharp fa-solid fa-certificate"></i>Professional certificate
                             <span>2</span>
                         </p>
@@ -113,25 +114,47 @@
 
                 <div class="purchasedCourse">
                     <h3>All course taken</h3>
-                    <a href="courseInfo.html">
-                        <div class="courseTaken">
-                            <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
-                            <div class="courseInfor">
-                                <p class="courseName">Python for beginner</p>
-                                <progress value="80" max="100"></progress> <span>In progress 80%</span>
-                            </div>
-                        </div>
-                    </a>
 
-                    <a href="courseInfo.html">
-                        <div class="courseTaken">
-                            <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
-                            <div class="courseInfor">
+                    <!-- a course -->
+                    <div class="courseTaken">
+                        <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                        <div class="courseInfor">
+                            <a href="courseInfo.html">
                                 <p class="courseName">Python for beginner</p>
-                                <progress value="100" max="100"></progress> <span>Completed</span>
+                            </a>
+                            <progress class="courseProgress" value="80" max="100"></progress>
+                            <div class="notCompleted">
+                                <p>In progress <span>80</span>%</p>
+                            </div>
+
+                            <div class="completed">
+                                <p>Complete</p>
+                                <a href="#">View certificate</a>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    <!-- end course -->
+
+                    <!-- a course -->
+                    <div class="courseTaken">
+                        <img src="./assets/imgs/py.jpg" alt="" class="courseImg">
+                        <div class="courseInfor">
+                            <a href="courseInfo.html">
+                                <p class="courseName">Python for beginner</p>
+                            </a>
+                            <progress class="courseProgress" value="100" max="100"></progress>
+                            <div class="notCompleted">
+                                <p>In progress <span>80</span>%</p>
+                            </div>
+
+                            <div class="completed">
+                                <p>Complete</p>
+                                <a href="#">View certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end course -->
+
 
                 </div>
             </div>

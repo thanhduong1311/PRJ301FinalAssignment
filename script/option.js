@@ -26,3 +26,19 @@ function addItem(thisID) {
 function removeItem() {
 
 }
+
+var courseTakenDivs = document.getElementsByClassName("courseTaken");
+
+for (var i = 0; i < courseTakenDivs.length; i++) {
+    var progress = courseTakenDivs[i].querySelector("progress").value;
+    var notCompletedDiv = courseTakenDivs[i].querySelector(".notCompleted");
+    var completedDiv = courseTakenDivs[i].querySelector(".completed");
+
+    if (progress === "100") {
+        notCompletedDiv.style.display = "none";
+        completedDiv.style.display = "block";
+    } else {
+        notCompletedDiv.style.display = "block";
+        completedDiv.style.display = "none";
+    }
+}

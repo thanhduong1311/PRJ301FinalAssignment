@@ -183,7 +183,8 @@
 
 
 .item .itemPrice {
-    width: 15%;
+    text-align: center;
+    width: 45%;
     font-weight: 500;
     margin: 0;
 }
@@ -221,3 +222,4 @@
 .courseInCart .items {
     width: 70%;
 }
+
