@@ -45,7 +45,7 @@
 
 .popup-checkout {
     width: 30%;
-    height: 350px;
+    height: 270px;
     border: 3px solid #F2F6F8;
     padding: 20px;
     width: 300px;
@@ -95,7 +95,7 @@
     font-weight: bold;
 }
 
-.popup-checkout .promotionCode {
+/* .popup-checkout .promotionCode {
     margin-top: 10px;
 }
 
@@ -119,18 +119,14 @@
     font-weight: 500;
     border: none;
     margin: 0;
-}
+} */
 
 .popup-checkout .checkout-btn {
-    padding: 5px 10px;
-    background-color: #0D8D15;
-    width: 100px;
-    border-radius: 12px;
-    margin: 10px auto 0;
-
+    display: flex;
+    padding-top: 15px;
 }
 
-.popup-checkout .checkout-btn a {
+.popup-checkout .checkout-btn input {
     color: #ffffff;
     font-weight: 500;
 }
@@ -171,8 +167,8 @@
 }
 
 .item .itemRating {
-font-size: 12px;
-font-weight: 500;
+    font-size: 12px;
+    font-weight: 500;
 
 }
 
@@ -195,25 +191,28 @@ font-weight: 500;
     text-align: center;
 }
 
+.item .itemEdit a{
+    color: crimson;
+}
 
 .courseInCart input[type="submit"] {
     margin: 0 auto;
     text-align: center;
-    background-color:#b6f9af;
+    background-color: #0D8D15;
     font-weight: 700;
     cursor: pointer;
     user-select: none;
     border: none;
     padding: 10px 20px;
     border-radius: 8px;
-    float: right;
     margin-bottom: 20px;
 }
+
 .courseInCart {
     display: flex;
     justify-content: space-between;
 }
 
 .courseInCart .items {
-    width: 70%    ;
+    width: 70%;
 }

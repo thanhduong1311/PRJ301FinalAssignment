@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/paysite.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Paysite</title>
 </head>
 
@@ -85,11 +86,10 @@
             <form class="courseInCart">
 
                 <div class="items">
-                   
 
                     <!-- an item -->
                     <div class="item">
-                        <input type="checkbox">
+                        <input type="checkbox"  id="course5" name="course5" value="5">
                         <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
                         <div class="itemInformation">
                             <p class="itemName">Python for beginner</p>
@@ -97,63 +97,7 @@
                         </div>
                         <p class="itemPrice">50$</p>
 
-                        <div class="itemEdit"><i class="fa-solid fa-trash"></i></div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- an item -->
-                    <div class="item">
-                        <input type="checkbox">
-                        <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
-                        <div class="itemInformation">
-                            <p class="itemName">Python for beginner</p>
-                            <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
-                        </div>
-                        <p class="itemPrice">50$</p>
-
-                        <div class="itemEdit"><i class="fa-solid fa-trash"></i></div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- an item -->
-                    <div class="item">
-                        <input type="checkbox">
-                        <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
-                        <div class="itemInformation">
-                            <p class="itemName">Python for beginner</p>
-                            <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
-                        </div>
-                        <p class="itemPrice">50$</p>
-
-                        <div class="itemEdit"><i class="fa-solid fa-trash"></i></div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- an item -->
-                    <div class="item">
-                        <input type="checkbox">
-                        <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
-                        <div class="itemInformation">
-                            <p class="itemName">Python for beginner</p>
-                            <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
-                        </div>
-                        <p class="itemPrice">50$</p>
-
-                        <div class="itemEdit"><i class="fa-solid fa-trash"></i></div>
-                    </div>
-                    <!-- end item -->
-
-                    <!-- an item -->
-                    <div class="item">
-                        <input type="checkbox">
-                        <img src="./assets/imgs/py.jpg" class="itemImg" alt="">
-                        <div class="itemInformation">
-                            <p class="itemName">Python for beginner</p>
-                            <div class="itemRating">4.5<i class="fa-solid fa-star"></i> (2503 reviewer)</div>
-                        </div>
-                        <p class="itemPrice">50$</p>
-
-                        <div class="itemEdit"><i class="fa-solid fa-trash"></i></div>
+                        <div class="itemEdit"><a href="#"><i class="fa-solid fa-trash"></i></a></div>
                     </div>
                     <!-- end item -->
 
@@ -162,24 +106,24 @@
                     <i class="fa-solid fa-xmark close"></i>
                     <h4>Order Summary</h4>
                     <div class="component balance">
-                        <p>Available Balance</p><span>$20</span>
+                        <p>Total Price</p><span>$0</span>
                     </div>
                     <div class="component price">
-                        <p>Subtotal Price</p><span>$20</span>
+                        <p>Sale Amount</p><span>$0</span>
                     </div>
-                    <div class="component remainBalance">
-                        <p>Remaining Balance</p><span>$20</span>
-                    </div>
+                    <!-- <div class="component remainBalance">
+                        <p>Remaining Balance</p><span>$0</span>
+                    </div> -->
                     <div class="component totalCost">
-                        <p>Total Cost</p> <span>$20</span>
+                        <p>Total Cost</p> <span>$0</span>
                     </div>
-                    <div class="component promotionCode">
-                        <form action="">
+                    <!-- <div class="component promotionCode">
+                        <form action="" method="post">
                             <input type="text" placeholder="Promotion Code">
                             <input type="submit" value="Apply">
                         </form>
-                    </div>
-                    <div class="checkout-btn"><a href="">Check out</a></div>
+                    </div> -->
+                    <div class="checkout-btn"><input type="submit" value="Check out"></div>
                 </div>
             </form>
         </div>
@@ -222,8 +166,7 @@
         </div>
     </div>
 
-
-
+    <script src="script/cart.js"></script>
 
     <!-- END FOOTER -->
 
