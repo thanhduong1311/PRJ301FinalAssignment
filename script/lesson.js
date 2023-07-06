@@ -112,7 +112,9 @@ function remarkQuestionLabel() {
       questionsLabels[questionIndex - 1].classList.remove("done");
     }
     //for each question, check if question are showing, mark select question label
-    if (!questions[i].hidden) {
+    if (questions[i].hidden) {
+      questionsLabels[questionIndex - 1].classList.remove("active");
+    } else {
       questionsLabels[questionIndex - 1].classList.add("active");
     }
   }
@@ -125,7 +127,7 @@ let answers = $(".answer input");
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener('click', function (e) {
     //send new answer to questionResult
-    if(typeof sendUpdateAnswer === 'function'){
+    if (typeof sendUpdateAnswer === 'function') {
       sendUpdateAnswer(this.name);
     }
     let question = this.parentElement.parentElement.parentElement;
@@ -158,6 +160,17 @@ for (let i = 0; i < answers.length; i++) {
 
 //add event next question in quiz
 let continueQuestionBtn = $(".quiz-type1 .btns")[0];
+continueQuestionBtn.addEventListener('click', function (e) {
+  let showIndex = 0;
+  for (let i = 0; i < questions.length; i++) {
+    if (!questions[i].hidden) {
+      showIndex = i;
+      questions[i].hidden = true;
+    }
+  }
+  questions[(showIndex + 1) % questions.length].hidden = false;
+  remarkQuestionLabel();
+});
 
 
 // Lấy danh sách các phần

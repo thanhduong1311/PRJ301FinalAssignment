@@ -536,6 +536,7 @@ video {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 .lesson-main .quiz-type1 .rightSide {
