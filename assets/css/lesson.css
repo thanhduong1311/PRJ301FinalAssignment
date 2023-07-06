@@ -616,7 +616,7 @@ video {
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;
-    width: 90px;
+    width: auto;
     border: none;
     border-radius: 8px;
 }
