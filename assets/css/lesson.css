@@ -427,11 +427,8 @@ video {
 .lesson-main .quiz-type1 .leftSide .leftSideContent {
     display: flex;
     align-items: center;
-}
-
-.lesson-main .quiz-type1 .leftSide .leftSideContent h1 {
-    text-align: center;
     height: 100%;
+    text-align: center;
 }
 
 .lesson-main .quiz-type1 .leftSide .quizProgress {
