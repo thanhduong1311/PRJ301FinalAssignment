@@ -525,7 +525,7 @@ video {
     margin-bottom: 10px;
 }
 
-.lesson-main .quiz-type1 .leftSide .btns button {
+.lesson-main .quiz-type1 .leftSide .btns p {
     border: none;
     outline: none;
     padding: 10px 20px;
@@ -533,6 +533,9 @@ video {
     background-color: #4c9daf;
     color: #fff;
     font-weight: bold;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .lesson-main .quiz-type1 .rightSide {

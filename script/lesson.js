@@ -156,6 +156,10 @@ for (let i = 0; i < answers.length; i++) {
   });
 }
 
+//add event next question in quiz
+let continueQuestionBtn = $(".quiz-type1 .btns")[0];
+
+
 // Lấy danh sách các phần
 const parts = document.querySelectorAll('.partHeader');
 
