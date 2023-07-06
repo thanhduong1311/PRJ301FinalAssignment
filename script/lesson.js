@@ -261,6 +261,7 @@ function countdown(timer) {
   }, 1000);
 }
 
-if (quizTimeRemain) {
+//It will countdown if contain class countdown
+if (quizTimeRemain.classList.contains("countdown")) {
   countdown(quizTimeRemain.innerHTML);
 }
