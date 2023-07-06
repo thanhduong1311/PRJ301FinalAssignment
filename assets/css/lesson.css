@@ -613,7 +613,8 @@ video {
     text-align: center;
 }
 
-.finishBtn input {
+.finishBtn input,
+button {
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;
