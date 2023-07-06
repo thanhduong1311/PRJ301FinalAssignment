@@ -91,6 +91,31 @@ for (var i = 0; i < questionsLabels.length; i++) {
   });
 }
 
+function remarkQuestionLabel() {
+  for (let i = 0; i < questions.length; i++) {
+    //for each question, check if any answer check, mark done question label
+    let questionID = questions[i].id.slice(8);
+    let answers = $(questions[i]).find("input");
+    let anyChecked = false;
+    for (let i = 0; i < answers.length; i++) {
+      if (answers[i].checked) {
+        anyChecked = true;
+        break;
+      }
+    }
+    if (anyChecked) {
+      questionsLabels[questionID - 1].classList.add("done");
+    } else {
+      questionsLabels[questionID - 1].classList.remove("done");
+    }
+    //for each question, check if question are showing, mark select question label
+    if (!questions[i].hidden) {
+      questionsLabels[questionID - 1].classList.add("active");
+    }
+  }
+}
+setInterval(remarkQuestionLabel, 1000);
+
 // check done when select answer
 // add listener to questions
 let answers = $(".answer input");
