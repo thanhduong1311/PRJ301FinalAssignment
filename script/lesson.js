@@ -206,9 +206,11 @@ function checkVideoProgress() {
   var duration = player.getDuration(); // Get the duration of the video
   var currentTime = player.getCurrentTime(); // Get the current time of the video
 
-  if (currentTime >= duration) {
-    console.log('User has watched the entire video');
-  } else {
-    console.log('User has not watched the entire video yet');
-  }
-}
+   if (currentTime >= duration) {
+     console.log('User has watched the entire video');
+   } else {
+     console.log('User has not watched the entire video yet');
+   }
+ }
+
+

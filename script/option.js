@@ -42,3 +42,20 @@ for (var i = 0; i < courseTakenDivs.length; i++) {
         completedDiv.style.display = "none";
     }
 }
+
+
+// send email
+document.getElementById("sendEmailButton").addEventListener("click", function() {
+    // Lấy các giá trị cần thiết từ người dùng (ví dụ: địa chỉ email, nội dung)
+    var emailAddress = 'thanhduongjnguyen@gmail.com';
+    var subject = "Test";
+    var content = "Something";
+
+    // Tạo URL mailto chứa các thông tin đã lấy được
+    var mailtoUrl = "mailto:" + encodeURIComponent(emailAddress) +
+                    "?subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(content);
+
+    // Mở link mailto trong cửa sổ mới hoặc trong cùng tab (tùy thuộc vào trình duyệt)
+    window.open(mailtoUrl);
+  });
