@@ -124,6 +124,10 @@ setInterval(remarkQuestionLabel, 1000);
 let answers = $(".answer input");
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener('click', function (e) {
+    //send new answer to questionResult
+    if(typeof sendUpdateAnswer === 'function'){
+      sendUpdateAnswer(this.name);
+    }
     let question = this.parentElement.parentElement.parentElement;
     let questionIndex = 0;
     for (let i = 0; i < questions.length; i++) {
