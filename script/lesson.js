@@ -45,21 +45,21 @@ paragraphs.forEach(function (paragraph) {
   });
 });
 
-var video = document.getElementById('my-video');
+// var video = document.getElementById('my-video');
 
-if (video) {
-  video.addEventListener('ended', function () {
-    console.log('End');
-  });
-}
+// if (video) {
+//   video.addEventListener('ended', function () {
+//     console.log('End');
+//   });
+// }
 
-function checkVideoProgress() {
-  if (video && video.currentTime === video.duration) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
+// function checkVideoProgress() {
+//   if (video && video.currentTime === video.duration) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// }
 // Gọi hàm kiểm tra video theo một khoảng thời gian nhất định
 // setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)
 
