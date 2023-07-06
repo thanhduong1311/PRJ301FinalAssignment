@@ -28,34 +28,51 @@ function removeItem() {
 }
 
 var courseTakenDivs = document.getElementsByClassName("courseTaken");
+console.log(courseTakenDivs)
 
 for (var i = 0; i < courseTakenDivs.length; i++) {
     var progress = courseTakenDivs[i].querySelector("progress").value;
     var notCompletedDiv = courseTakenDivs[i].querySelector(".notCompleted");
     var completedDiv = courseTakenDivs[i].querySelector(".completed");
 
-    if (progress === "100") {
+    if (progress === 100) {
         notCompletedDiv.style.display = "none";
-        completedDiv.style.display = "block";
+        completedDiv.style.display = "flex";
     } else {
-        notCompletedDiv.style.display = "block";
+        notCompletedDiv.style.display = "flex";
         completedDiv.style.display = "none";
     }
 }
 
 
-// send email
-document.getElementById("sendEmailButton").addEventListener("click", function() {
-    // Lấy các giá trị cần thiết từ người dùng (ví dụ: địa chỉ email, nội dung)
-    var emailAddress = 'thanhduongjnguyen@gmail.com';
-    var subject = "Test";
-    var content = "Something";
 
-    // Tạo URL mailto chứa các thông tin đã lấy được
-    var mailtoUrl = "mailto:" + encodeURIComponent(emailAddress) +
-                    "?subject=" + encodeURIComponent(subject) +
-                    "&body=" + encodeURIComponent(content);
+// console.log(tabHidden, progressView);
 
-    // Mở link mailto trong cửa sổ mới hoặc trong cùng tab (tùy thuộc vào trình duyệt)
-    window.open(mailtoUrl);
-  });
+
+function strangeMode(mode) {
+
+    var tabHidden = document.querySelector(".tabStranger")
+    var progressView = document.querySelectorAll(".ProgressviewMode")
+    var rateView = document.querySelectorAll(".rate");
+
+    if (mode == 'off') {
+        tabHidden.classList.add("hidden")
+        progressView.forEach(element => {
+            element.classList.remove("hidden")
+        });
+        rateView.forEach(element => {
+            element.classList.add("hidden")
+        });
+    }
+    else {
+        tabHidden.classList.remove("hidden")
+        progressView.forEach(element => {
+            element.classList.add("hidden")
+        });
+        rateView.forEach(element => {
+            element.classList.remove("hidden")
+        });
+    }
+}
+
+// strangeMode('on')

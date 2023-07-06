@@ -101,6 +101,19 @@ a:hover {
     text-align: center;
 }
 
+.infor .orgranization {
+    text-align: center;
+}
+
+.infor .orgranization p {
+    font-weight: 500;
+}
+
+.infor .orgranization img {
+    width: 70px;
+    object-fit: contain;
+}
+
 .expTag p {
     width: 100%;
     font-weight: 500;
@@ -137,6 +150,7 @@ a:hover {
     border: 1px solid #ccc;
     border-radius: 12px;
     margin-bottom: 20px;
+    transition: display 0.5s;
 }
 
 .courseTaken  img {
@@ -161,22 +175,22 @@ a:hover {
 
 .courseTaken .courseInfor progress {
     width: 100%;
-    /* Định rộng thanh tiến trình */
-    height: 4px;
-    /* Định chiều cao thanh tiến trình */
-    background-color: #ccc;
-    border-radius: 2px;
-    /* Màu nền của thanh tiến trình */
+    height: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 0.5px solid #00000068;
 }
 
 .courseTaken .courseInfor span {
     font-weight: 500;
 }
 
-/* Áp dụng CSS cho thanh tiến trình đã được điền */
 .courseInfor progress::-webkit-progress-value {
     background-color: #4caf50;
-    /* Màu của phần tiến trình đã điền */
+}
+
+.courseInfor progress::-webkit-progress-bar {
+    background-color: #ffffff;
 }
 #main .personal {
     padding:10px 30px ;
@@ -316,8 +330,17 @@ justify-content: space-between;
     padding: 5px ;
 }
 
+.tabStranger {
+    z-index: 10;
+    /* display: none; */
+}
 
-.tab {
+.tabStranger.hidden ,.tab.hidden{
+    display: none;
+}
+
+
+.tab ,.tabStranger  {
     overflow: hidden;
     border-bottom: 1px solid #ccc;
     background-color: #fff;
@@ -325,6 +348,19 @@ justify-content: space-between;
     top: 60px;
     right: 0;
     left: 0;
+    display: block;
+}
+
+.tabStranger button {
+    width: 100%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.3s;
+    background-color: #fff;
 }
 
 .tab button {
@@ -364,4 +400,23 @@ justify-content: space-between;
 
 .courseTaken .completed a{
     color: rgb(0, 64, 255);
+}
+
+.courseTaken .completed p, .courseTaken .notCompleted p{
+    margin: 0;
+}
+
+
+.ProgressviewMode.hidden ,.rate.hidden {
+    display: none;
+    transition: all 0.5s;
+}
+
+.rate i {
+    color: gold;
+}
+
+.rate span:last-child {
+    font-weight: 300;
+    font-size: 12px;
 }

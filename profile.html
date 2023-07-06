@@ -74,11 +74,18 @@
     <!--END HEADER -->
 
     <div id="main">
-
+        <!-- display one of two tab follow the mode -->
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'info')">Purchased Courses</button>
             <button class="tablinks" onclick="openTab(event, 'personal')">Personal Information</button>
         </div>
+
+        <div  class="tabStranger hidden">
+            <button class="tablinks" onclick="openTab(event, 'info')">Personal Information</button>
+        </div>
+
+        <button onclick="strangeMode('on')">Stranger mode on</button>
+        <button onclick="strangeMode('off')">Stranger mode off</button>
 
         <div id="info" class="tabcontent active">
             <div class="infor">
@@ -89,6 +96,11 @@
                         </div>
                         <div class="name">
                             <h4>Edogawa Conan</h4>
+                        </div>
+
+                        <div class="orgranization">
+                            <p>VietNam</p>
+                            <img class="org" src="./assets/imgs/jonhHopkin.png" alt="">
                         </div>
                         <!-- <div class="socialMedia" content="Comming Soon">
                         <i class="fa-brands fa-facebook"></i>
@@ -121,16 +133,27 @@
                         <div class="courseInfor">
                             <a href="courseInfo.html">
                                 <p class="courseName">Python for beginner</p>
+                                <div class="rate hidden">
+                                    <span>4.5</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(2423 reviewer)</span>
+                                </div>
                             </a>
-                            <progress class="courseProgress" value="80" max="100"></progress>
-                            <div class="notCompleted">
-                                <p>In progress <span>80</span>%</p>
+                            <div class="ProgressviewMode">
+
+                                <progress class="courseProgress" value="100" max="100"></progress>
+                                <div class="notCompleted ">
+                                    <p>In progress <span>80</span>%</p>
+                                </div>
+
+                                <div class="completed">
+                                    <p>Completed</p>
+                                    <a href="#">View certificate</a>
+                                </div>
+
                             </div>
 
-                            <div class="completed">
-                                <p>Complete</p>
-                                <a href="#">View certificate</a>
-                            </div>
+
                         </div>
                     </div>
                     <!-- end course -->
@@ -141,20 +164,30 @@
                         <div class="courseInfor">
                             <a href="courseInfo.html">
                                 <p class="courseName">Python for beginner</p>
+                                <div class="rate hidden">
+                                    <span>4.5</span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(2423 reviewer)</span>
+                                </div>
                             </a>
-                            <progress class="courseProgress" value="100" max="100"></progress>
-                            <div class="notCompleted">
-                                <p>In progress <span>80</span>%</p>
+                            <div class="ProgressviewMode">
+
+                                <progress class="courseProgress" value="80" max="100"></progress>
+                                <div class="notCompleted ">
+                                    <p>In progress <span>80</span>%</p>
+                                </div>
+
+                                <div class="completed">
+                                    <p>Completed</p>
+                                    <a href="#">View certificate</a>
+                                </div>
+
                             </div>
 
-                            <div class="completed">
-                                <p>Complete</p>
-                                <a href="#">View certificate</a>
-                            </div>
+
                         </div>
                     </div>
                     <!-- end course -->
-
 
                 </div>
             </div>
@@ -350,8 +383,8 @@
     <!-- END FOOTER -->
 
 
-    <script src="./script/option.js"></script>
     <script src="./script/lesson.js"></script>
+    <script src="./script/option.js"></script>
 </body>
 
 </html>
