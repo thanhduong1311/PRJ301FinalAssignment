@@ -84,7 +84,7 @@ for (var i = 0; i < questionsLabels.length; i++) {
     let question = $("#question" + questionIndex)[0];
     question.hidden = false;
     //remove active all of question label
-    for (var i = 0; i < questionsLabels.length; i++){
+    for (var i = 0; i < questionsLabels.length; i++) {
       questionsLabels[i].classList.remove("active");
     }
     this.classList.add("active");
@@ -96,8 +96,24 @@ for (var i = 0; i < questionsLabels.length; i++) {
 let answers = $(".answer input");
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener('click', function (e) {
-    if(this.checked){
-      console.log(1);
+    let question = this.parentElement.parentElement.parentElement;
+    let questionID = question.id.slice(8);
+    //if check then mark label done
+    if (this.checked) {
+      questionsLabels[questionID - 1].classList.add("done");
+    } else {
+      //else, check if other answer
+      let answers = $(question).find("input");
+      let anyChecked = false;
+      for (let i = 0; i < answers.length; i++) {
+        if (answers[i].checked) {
+          anyChecked = true;
+          break;
+        }
+      }
+      if (!anyChecked) {
+        questionsLabels[questionID - 1].classList.remove("done");
+      }
     }
   });
 }
