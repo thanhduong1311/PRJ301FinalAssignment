@@ -84,7 +84,6 @@ for (var i = 0; i < questionsLabels.length; i++) {
     let question = $("#question" + questionIndex)[0];
     question.hidden = false;
     //remove active all of question label
-    questionsLabels = $(".listQuestion li");
     for (var i = 0; i < questionsLabels.length; i++){
       questionsLabels[i].classList.remove("active");
     }
@@ -92,7 +91,16 @@ for (var i = 0; i < questionsLabels.length; i++) {
   });
 }
 
-
+// check done when select answer
+// add listener to questions
+let answers = $(".answer input");
+for (let i = 0; i < answers.length; i++) {
+  answers[i].addEventListener('click', function (e) {
+    if(this.checked){
+      console.log(1);
+    }
+  });
+}
 
 // Lấy danh sách các phần
 const parts = document.querySelectorAll('.partHeader');
