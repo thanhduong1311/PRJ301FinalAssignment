@@ -206,11 +206,61 @@ function checkVideoProgress() {
   var duration = player.getDuration(); // Get the duration of the video
   var currentTime = player.getCurrentTime(); // Get the current time of the video
 
-   if (currentTime >= duration) {
-     console.log('User has watched the entire video');
-   } else {
-     console.log('User has not watched the entire video yet');
-   }
- }
+  if (currentTime >= duration) {
+    console.log('User has watched the entire video');
+  } else {
+    console.log('User has not watched the entire video yet');
+  }
+}
 
 
+//countdown time of quiz
+let quizTimeRemain = $(".quiz-type1 .rightSide .time span")[0];
+function countdown(timer) {
+  var timeArray = timer.split(":");
+  var hours = 0;
+  var minutes = 0;
+  var seconds = 0;
+
+  if (timeArray.length === 2) {
+    minutes = parseInt(timeArray[0], 10);
+    seconds = parseInt(timeArray[1], 10);
+  } else if (timeArray.length === 3) {
+    hours = parseInt(timeArray[0], 10);
+    minutes = parseInt(timeArray[1], 10);
+    seconds = parseInt(timeArray[2], 10);
+  } else {
+    //console.log("Invalid timer format!");
+    return;
+  }
+
+  var countdownInterval = setInterval(function () {
+    if (seconds === 0) {
+      if (minutes === 0) {
+        if (hours === 0) {
+          clearInterval(countdownInterval);
+          //console.log("Countdown finished!");
+          return;
+        }
+        hours--;
+        minutes = 59;
+        seconds = 59;
+      } else {
+        minutes--;
+        seconds = 59;
+      }
+    } else {
+      seconds--;
+    }
+
+    var displayHours = hours > 0 ? hours + ":" : "";
+    var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+    var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+    //console.log(displayHours + formattedMinutes + ":" + formattedSeconds);
+    quizTimeRemain.innerHTML = displayHours + formattedMinutes + ":" + formattedSeconds;
+  }, 1000);
+}
+
+if (quizTimeRemain) {
+  countdown(quizTimeRemain.innerHTML);
+}

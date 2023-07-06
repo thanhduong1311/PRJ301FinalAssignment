@@ -613,12 +613,13 @@ video {
     text-align: center;
 }
 
-.finishBtn a{
+.finishBtn a {
     display: flex;
     justify-content: center;
 }
 
-.finishBtn input,.finishBtn p {
+.finishBtn input,
+.finishBtn p {
     padding: 5px 15px;
     background-color: #b6f9af;
     text-align: center;
