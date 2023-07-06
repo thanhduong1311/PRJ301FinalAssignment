@@ -180,6 +180,7 @@ video {
     display: none;
     padding: 6px 12px;
     border-top: none;
+    transition: 0.5s;
 }
 
 .tabcontent.active {
@@ -406,7 +407,7 @@ video {
     height: 610px;
     border: 1px solid #ccc;
     display: flex;
-    display: none;
+    /* display: none; */
 }
 
 .lesson-main .quiz-type1 form {
@@ -419,6 +420,7 @@ video {
 }
 
 .lesson-main .quiz-type1 .rightSide {
+    position: relative;
     width: 25%;
 }
 
@@ -642,4 +644,20 @@ tr:last-child td {
     border-bottom: none;
 }
 
+
+.lesson-main .quiz-type1 .rightSide .result {
+    position: absolute;
+    bottom: 10px;
+    right: 0;left: 0;
+    padding: 10px;
+}
+
+.lesson-main .quiz-type1 .rightSide .result p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.lesson-main .quiz-type1 .rightSide .result span {
+    color: red;
+}
 

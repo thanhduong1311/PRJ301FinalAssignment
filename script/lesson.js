@@ -141,3 +141,5 @@ parts.forEach(part => {
      console.log('User has not watched the entire video yet');
    }
  }
+
+
