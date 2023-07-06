@@ -88,6 +88,9 @@ for (var i = 0; i < questionsLabels.length; i++) {
       questionsLabels[i].classList.remove("active");
     }
     this.classList.add("active");
+    //update quizProgress
+    let quizProgress = $(".quizProgress span")[0];
+    quizProgress.innerHTML = questionIndex + "/" + questions.length;
   });
 }
 
