@@ -407,7 +407,6 @@ video {
     height: 610px;
     border: 1px solid #ccc;
     display: flex;
-    /* display: none; */
 }
 
 .lesson-main .quiz-type1 form {

@@ -61,7 +61,9 @@ function checkVideoProgress() {
   }
 }
 // Gọi hàm kiểm tra video theo một khoảng thời gian nhất định
-setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)
+// setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)
+
+
 
 // Hide all questions except first question
 let questions = $(".quizContent");
@@ -72,15 +74,81 @@ for (let i = 1; i < questions.length; i++) {
 var questionsLabels = $(".listQuestion li");
 for (var i = 0; i < questionsLabels.length; i++) {
   questionsLabels[i].addEventListener('click', function (e) {
-    //hide all questions
+    // Hide all questions
     let questions = $(".quizContent");
-    for (let j = 0; j < questions.length; j++) {
-      questions[j].hidden = true;
+    for (let i = 0; i < questions.length; i++) {
+      questions[i].hidden = true;
     }
     //show question
     let questionIndex = this.innerHTML;
     let question = $("#question" + questionIndex)[0];
     question.hidden = false;
+    //remove active all of question label
+    for (var i = 0; i < questionsLabels.length; i++) {
+      questionsLabels[i].classList.remove("active");
+    }
+    this.classList.add("active");
+    //update quizProgress
+    let quizProgress = $(".quizProgress span")[0];
+    quizProgress.innerHTML = questionIndex + "/" + questions.length;
+  });
+}
+
+function remarkQuestionLabel() {
+  for (let i = 0; i < questions.length; i++) {
+    //for each question, check if any answer check, mark done question label
+    let questionIndex = i + 1;
+    let answers = $(questions[i]).find("input");
+    let anyChecked = false;
+    for (let i = 0; i < answers.length; i++) {
+      if (answers[i].checked) {
+        anyChecked = true;
+        break;
+      }
+    }
+    if (anyChecked) {
+      questionsLabels[questionIndex - 1].classList.add("done");
+    } else {
+      questionsLabels[questionIndex - 1].classList.remove("done");
+    }
+    //for each question, check if question are showing, mark select question label
+    if (!questions[i].hidden) {
+      questionsLabels[questionIndex - 1].classList.add("active");
+    }
+  }
+}
+setInterval(remarkQuestionLabel, 1000);
+
+// check done when select answer
+// add listener to questions
+let answers = $(".answer input");
+for (let i = 0; i < answers.length; i++) {
+  answers[i].addEventListener('click', function (e) {
+    let question = this.parentElement.parentElement.parentElement;
+    let questionIndex = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (questions[i].id == question.id) {
+        questionIndex = i + 1;
+        break;
+      }
+    }
+    //if check then mark label done
+    if (this.checked) {
+      questionsLabels[questionIndex - 1].classList.add("done");
+    } else {
+      //else, check if other answer
+      let answers = $(question).find("input");
+      let anyChecked = false;
+      for (let i = 0; i < answers.length; i++) {
+        if (answers[i].checked) {
+          anyChecked = true;
+          break;
+        }
+      }
+      if (!anyChecked) {
+        questionsLabels[questionIndex - 1].classList.remove("done");
+      }
+    }
   });
 }
 
@@ -106,34 +174,37 @@ parts.forEach(part => {
 
 // form api youtube
 // --------------------------------------------------------------------------------------------
- // Global variable for the player
- var player;
+// Global variable for the player
+var player;
 
- var IDVideo = 'h0z8Qt32nVU'
+var IDVideo = 'h0z8Qt32nVU'
 
- // Function called when the YouTube Player API is loaded
- function onYouTubeIframeAPIReady() {
-   // Create a new instance of the player
-   player = new YT.Player('player', {
-     videoId: IDVideo, // Replace VIDEO_ID with the ID of the video you want to embed
-     events: {
-       'onStateChange': onPlayerStateChange
-     }
-   });
- }
+// Function called when the YouTube Player API is loaded
+function onYouTubeIframeAPIReady() {
+  // Create a new instance of the player
+  player = new YT.Player('player', {
+    videoId: IDVideo, // Replace VIDEO_ID with the ID of the video you want to embed
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
 
- // Event handler for player state change
- function onPlayerStateChange(event) {
-   if (event.data === YT.PlayerState.ENDED) {
-     console.log('Video has ended');
-     checkVideoProgress();
-   }
- }
+// Event handler for player state change
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    console.log('Video has ended');
+    checkVideoProgress();
+  }
+}
 
- // Check the video progress
- function checkVideoProgress() {
-   var duration = player.getDuration(); // Get the duration of the video
-   var currentTime = player.getCurrentTime(); // Get the current time of the video
+// Check the video progress
+function checkVideoProgress() {
+  if (!player) {
+    return;
+  }
+  var duration = player.getDuration(); // Get the duration of the video
+  var currentTime = player.getCurrentTime(); // Get the current time of the video
 
    if (currentTime >= duration) {
      console.log('User has watched the entire video');
