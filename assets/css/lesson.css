@@ -658,5 +658,6 @@ tr:last-child td {
 
 .lesson-main .quiz-type1 .rightSide .result span {
     color: red;
+    font-weight: 500;
 }
 
