@@ -97,7 +97,7 @@ for (var i = 0; i < questionsLabels.length; i++) {
 function remarkQuestionLabel() {
   for (let i = 0; i < questions.length; i++) {
     //for each question, check if any answer check, mark done question label
-    let questionID = questions[i].id.slice(8);
+    let questionIndex = i + 1;
     let answers = $(questions[i]).find("input");
     let anyChecked = false;
     for (let i = 0; i < answers.length; i++) {
@@ -107,13 +107,13 @@ function remarkQuestionLabel() {
       }
     }
     if (anyChecked) {
-      questionsLabels[questionID - 1].classList.add("done");
+      questionsLabels[questionIndex - 1].classList.add("done");
     } else {
-      questionsLabels[questionID - 1].classList.remove("done");
+      questionsLabels[questionIndex - 1].classList.remove("done");
     }
     //for each question, check if question are showing, mark select question label
     if (!questions[i].hidden) {
-      questionsLabels[questionID - 1].classList.add("active");
+      questionsLabels[questionIndex - 1].classList.add("active");
     }
   }
 }
@@ -125,10 +125,16 @@ let answers = $(".answer input");
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener('click', function (e) {
     let question = this.parentElement.parentElement.parentElement;
-    let questionID = question.id.slice(8);
+    let questionIndex = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (questions[i].id == question.id) {
+        questionIndex = i + 1;
+        break;
+      }
+    }
     //if check then mark label done
     if (this.checked) {
-      questionsLabels[questionID - 1].classList.add("done");
+      questionsLabels[questionIndex - 1].classList.add("done");
     } else {
       //else, check if other answer
       let answers = $(question).find("input");
@@ -140,7 +146,7 @@ for (let i = 0; i < answers.length; i++) {
         }
       }
       if (!anyChecked) {
-        questionsLabels[questionID - 1].classList.remove("done");
+        questionsLabels[questionIndex - 1].classList.remove("done");
       }
     }
   });
