@@ -143,7 +143,6 @@ video {
 .lesson-content .description .time {
     margin-left: 4px;
     color: #ccc;
-
 }
 
 .lesson-content .description .type i {
@@ -543,6 +542,7 @@ video {
 .lesson-main .quiz-type1 .rightSide .time h5 {
     background-color: #f4efef;
     padding: 10px;
+    text-align: center;
 }
 
 .lesson-main .quiz-type1 .rightSide .time i {
@@ -566,7 +566,7 @@ video {
 
 .lesson-main .quiz-type1 .rightSide .listQuestion h5 {
     background-color: #f4efef;
-    padding: 0;
+    padding: 5px;
 }
 
 .lesson-main .quiz-type1 .rightSide .listQuestion ul {
