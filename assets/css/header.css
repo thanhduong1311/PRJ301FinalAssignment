@@ -48,10 +48,11 @@ a:hover {
     display: block;
     border: 3px solid seagreen;
     border-radius: 18px;
-    padding: 10px;
+    padding:0 10px;
     margin-right: 40px;
     background: #fff;
     color: seagreen ;
+    height: 40px;
 }
 
 #header .course-opption, #header .quesAndAns {
@@ -70,7 +71,7 @@ a:hover {
 }
 #header .right-side .cart {
     color: #000;
-    font-size: 22px;
+    font-size: 18px;
     position: relative;
 }
 
@@ -100,7 +101,7 @@ a:hover {
     color: #000;
     line-height: 60px;
     margin-left: 20px;
-    font-size: 22px;
+    font-size: 18px;
     position: relative;
 
 }
@@ -108,7 +109,7 @@ a:hover {
 .cart .quantity {
     background-color: red;
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -123,7 +124,7 @@ a:hover {
 .notification .quantity {
     background-color: red;
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;

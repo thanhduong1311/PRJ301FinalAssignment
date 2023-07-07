@@ -43,6 +43,7 @@ body {
 
 .package {
     margin: 20px 0;
+    padding: 0 30px;
 }
 
 .package .packageHeader {
@@ -60,11 +61,10 @@ body {
 
  .listItem {
     /* flex-basis: 20%; */
-    width: calc(25% - 10px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
+    width: calc(20% - 20px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
     display: block;
     position: relative;
-    padding: 0;
-    margin: 5px;
+    margin: 10px;
     transition: transform 0.5s;
     border-radius: 12px;
     margin-top: 15px;
@@ -75,7 +75,7 @@ body {
     border-radius: 12px;
 }
 .listItem:hover {
-    transform: scale(1.005);
+    transform: scale(1.05);
 }
 .rateAndPrice {
     text-align: right;

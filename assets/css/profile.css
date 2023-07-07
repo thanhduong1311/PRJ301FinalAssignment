@@ -39,7 +39,7 @@ a:hover {
 }
 
 .navTab li:hover {
-    background-color: #b6f9af;
+    background-color: #e8f8e6;
 }
 
 #main .infor {
@@ -284,6 +284,7 @@ a:hover {
     height: 80px;
     object-fit: contain;
     margin-left: 20px;
+    border: 1px solid #ccc;
 }
 
 .personal .upload {
@@ -318,6 +319,7 @@ justify-content: space-between;
 .changePassword input {
     padding: 0 10px;
     width: 300px;
+    border-radius: 8px;
 }
 
 .changePassword input[type="submit"] {
@@ -331,7 +333,7 @@ justify-content: space-between;
 }
 
 .tabStranger {
-    z-index: 10;
+    z-index: 100;
     /* display: none; */
 }
 
@@ -349,6 +351,8 @@ justify-content: space-between;
     right: 0;
     left: 0;
     display: block;
+    z-index: 100;
+
 }
 
 .tabStranger button {
@@ -381,6 +385,7 @@ justify-content: space-between;
 
 .tab button.active {
     background-color: #b6f9af7c;
+    font-weight: 500;
 }
 
 .tabcontent {

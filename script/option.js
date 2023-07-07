@@ -28,7 +28,6 @@ function removeItem() {
 }
 
 var courseTakenDivs = document.getElementsByClassName("courseTaken");
-console.log(courseTakenDivs)
 
 for (var i = 0; i < courseTakenDivs.length; i++) {
     var progress = courseTakenDivs[i].querySelector("progress").value;
@@ -76,3 +75,31 @@ function strangeMode(mode) {
 }
 
 // strangeMode('on')
+
+
+var input = document.getElementById('profile-photo');
+  
+  // Kiểm tra xem người dùng đã chọn tệp tin nào chưa
+  if (input.files && input.files[0]) {
+    var file = input.files[0];
+    
+    // Tạo một đối tượng FileReader
+    var reader = new FileReader();
+    
+    // Xử lý sự kiện khi file đã được đọc
+    reader.onload = function(e) {
+      // Lấy link upload từ thuộc tính "result" của FileReader
+      var uploadLink = e.target.result;
+      
+      // Đặt link upload vào thuộc tính "src" của thẻ <img>
+      var imgPreview = document.getElementById('imgPreview');
+      imgPreview.src = uploadLink;
+    }
+    
+    // Đọc file như là một URL data
+    reader.readAsDataURL(file);
+  } else {
+    // Nếu không tìm thấy ảnh upload, sử dụng ảnh mặc định
+    var imgPreview = document.getElementById('imgPreview');
+    imgPreview.src = "./assets/imgs/logoooooo.png";
+  }
