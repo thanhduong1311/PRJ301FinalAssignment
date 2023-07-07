@@ -99,7 +99,16 @@ function remarkQuestionLabel() {
     for (let i = 0; i < answers.length; i++) {
       if (answers[i].checked) {
         anyChecked = true;
-        break;
+        if (!quizFinished) {
+          answers[i].parentElement.classList.add("done");
+          console.log(answers[i].parentElement);
+        } else {
+          break;
+        }
+      } else {
+        if (!quizFinished) {
+          answers[i].parentElement.classList.remove("done");
+        }
       }
     }
     if (!quizFinished) {
@@ -146,7 +155,7 @@ for (let i = 0; i < answers.length; i++) {
 }
 
 //add event next question in quiz
-let continueQuestionBtn = $(".quiz-type1 .btns")[0];
+let continueQuestionBtn = $(".quiz-type1 .btns p")[0];
 continueQuestionBtn.addEventListener('click', function (e) {
   let showIndex = 0;
   for (let i = 0; i < questions.length; i++) {

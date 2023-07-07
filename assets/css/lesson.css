@@ -479,10 +479,6 @@ video {
 
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer label:hover {
-    background-color: #b6f9af;
-}
-
 .lesson-main .quiz-type1 .leftSide .quizContent .answer label {
     font-size: 20px;
     display: inline-block;
@@ -490,11 +486,26 @@ video {
     width: 80%;
     background-color: #ccc;
     margin-top: 10px;
-
-
+    cursor: pointer;
 }
 
-.lesson-main .quiz-type1 .leftSide .quizContent .answer p {
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label:hover {
+    background-color: #55bef2b3;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label.done {
+    background-color: #55bef2b3;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label.correct {
+    background-color: #68f658a0;
+}
+
+.lesson-main .quiz-type1 .leftSide .quizContent .answer label.incorrect {
+    background-color: #f85953b0;
+}
+
+/* .lesson-main .quiz-type1 .leftSide .quizContent .answer p {
     padding: 10px;
     width: 80%;
     margin: 10px auto 0 auto;
@@ -517,7 +528,7 @@ video {
 
 .lesson-main .quiz-type1 .leftSide .quizContent .answer p:hover {
     background-color: #b6f9af;
-}
+} */
 
 .lesson-main .quiz-type1 .leftSide .btns {
     margin-top: 10px;
