@@ -154,7 +154,7 @@ a:hover {
 }
 
 .courseTaken  img {
-    max-width: 15%;
+    width: 25%;
     padding: 10px;
     height: 90px;
     object-fit: contain;

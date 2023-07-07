@@ -10,38 +10,6 @@
     border-top: 1px solid #cccccc5c;
 }
 
-.collaborate p {
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-
-}
-
-.collaborate p span {
-    color: #2970DB;
-}
-
-.collaborateLogos {
-    display: flex;
-    justify-content: center;
-}
-
-.collaborate img {
-    height: 60px;
-    margin: 0 10px;
-}
-
-.advertisement.ads2 {
-    background-color: #F2F6F8;
-}
-
-.contentBox.ads2 p{
-    background: unset;
-    color: #000000;
-}
 
 .copyright {
     font-weight: bold;
@@ -98,3 +66,4 @@
 .col-md-2 {
     padding: 0;
 }
+

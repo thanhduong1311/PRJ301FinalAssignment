@@ -24,20 +24,22 @@ a:hover {
 }
 /* first ads */
 .advertisement {
-    background: #067351;
+    background: #067350db;
     min-height: 400px;
     padding: 20px 20px 0 20px;
     margin: 0 -20px;
 }
 
 .contentBox p {
-    padding: 10px;
+    font-size: 1em;
+    display: block;
+    padding: 20px;
     border-radius: 6px;
     color: #ffffff;
     margin: 100px auto 0;
     max-width: 80%;
     font-size: 28px;
-    background: linear-gradient(90deg,#0097B2, #7ED957);
+    background: linear-gradient(90deg,#0097B2, #7ed957fb);
 }
 
 .teamWorkImg img {
@@ -59,7 +61,7 @@ a:hover {
 }
 
 .boxContent .content {
-    font-size: 26px;
+    font-size:2.4rem ;
     margin: 100px auto 0;
     max-width: 80%;
     display: flex;
@@ -67,6 +69,12 @@ a:hover {
     align-items: center;
     flex-direction: column;
 }
+
+.boxContent .content p {
+    font-size:1em ;
+
+}
+
 
 .popularCourse {
     margin-top: 10px;
@@ -97,16 +105,17 @@ a:hover {
     list-style-type: none;
     width: 100%;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 
  .listItem {
     /* flex-basis: 20%; */
-    width: calc(25% - 10px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
+    width: calc(25% - 20px); /* Trừ đi margin để tạo khoảng cách giữa các phần tử */
     display: block;
     position: relative;
     padding: 0;
-    margin: 5px;
+    margin: 10px;
     transition: transform 0.5s;
     border-radius: 12px;
     margin-top: 15px;
@@ -117,7 +126,7 @@ a:hover {
     border-radius: 12px;
 }
 .listItem:hover {
-    transform: scale(1.005);
+    transform: scale(1.05);
 }
 .rateAndPrice {
     text-align: right;
@@ -184,6 +193,7 @@ a:hover {
 
 .carousel-indicators {
     margin-bottom: 0rem;
+    bottom: -10px;
 }
 
 .carousel-control-next {
@@ -212,74 +222,10 @@ a:hover {
 .carousel-indicators .active {
     background-color: #067351;
 }
-/* 
-.listItem {
-    width: 25%;
-    display: block;
-    position: relative;
-    margin: 0 1.5%;
-    border: 1px solid #ccc;
+
+#carouselExampleIndicators {
+    margin: 0 auto;
 }
-.rate {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    color: gold;
-}
-
-.listItem a{
-    display: block;
-    text-decoration: none;
-    color: black;
-    box-shadow: 1px 2px 2px 2px #cccccc;
-    height: 436px;
-}
-
-.listItem a .courseImg{
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-}
-
-.listItem a .courseName{
-    background-color: #60D2A4;
-    padding: 10px;
-    color: #ffffff;
-    width: 100%;
-}
-
-.listItem a .courseDescription{
-    display: flex;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.courseDescription .price {
-    font-weight: bold;
-}
-
-.courseDescription .type {
-    font-weight: bold;
-}
-.courseDescription .type span{
-    display: block;
-}
-
-.courseDescription .type span:first-child{
-    color:#60D2A4;
-    display: block;
-}
-
-.courseDescription .type span:nth-child(2){
-    display: block;
-    font-size: 14px;
-} */
-
-
-
-
-
 
 .courseSlider .previousBtn,
  .courseSlider .nextBtn, 
@@ -418,4 +364,35 @@ i.active {
 }
 
 
+.collaborate p {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 
+}
+
+.collaborate p span {
+    color: #2970DB;
+}
+
+.collaborateLogos {
+    display: flex;
+    justify-content: center;
+}
+
+.collaborate img {
+    height: 60px;
+    margin: 0 10px;
+}
+
+.advertisement.ads2 {
+    background-color: #F2F6F8;
+}
+
+.contentBox.ads2 p{
+    background: unset;
+    color: #000000;
+}

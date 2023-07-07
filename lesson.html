@@ -14,66 +14,68 @@
     <link rel="stylesheet" href="assets/css/lesson.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>lesson</title>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <div id="header">
-        <div class="left-side">
-            <a href="index.html">
-                <img src="./assets/imgs/logo.png" alt="logo" class="logo">
-            </a>
-            <form action="">
-                <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
-            </form>
-            <div class="course-opption">
-                <a href="courseShopping.html">Course</a>
-            </div>
-            <div class="quesAndAns">
-                <a href="#">Expert Q&A</a>
-            </div>
+   <!-- HEADER -->
+   <div id="header">
+    <div class="left-side">
+        <a href="index.html">
+            <img src="./assets/imgs/logo.png" alt="logo" class="logo">
+        </a>
+        <form action="">
+            <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
+        </form>
+        <div class="course-opption">
+            <a href="courseShopping.html">Courses</a>
         </div>
-
-        <div class="right-side">
-            <a href="paysite.html" class="cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div class="quantity">3</div>
-            </a>
-            <div onclick="openMenu()" id="user" class="user">
-                <a href="#">
-                    <img src="./assets/imgs/D1.jpg" alt="avatar">
-                    <span class="userInfor">
-                        Thanh Duong
-                    </span>
-                </a>
-
-                <div id="userMenu" class="userMenu close">
-                    <a href="profile.html">
-                        <i class="fa-solid fa-user"></i>
-                        <span>Profile</span>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-gear"></i>
-                        <span>Setting</span>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        <span>Logout</span>
-                    </a>
-                </div>
-            </div>
-
-            <a href="" class="notification">
-                <i class="fa-sharp fa-solid fa-bell"></i>
-                <div class="quantity">3</div>
-            </a>
-
+        <div class="quesAndAns">
+            <a href="#">Expert Q&A</a>
         </div>
     </div>
-    <!--END HEADER -->
+
+    <div class="right-side">
+        <a href="paysite.html" class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="quantity">3</div>
+        </a>
+        <a href="" class="notification">
+            <i class="fa-sharp fa-solid fa-bell"></i>
+            <div class="quantity">3</div>
+        </a>
+        <div onclick="openMenu()" id="user" class="user">
+            <a href="#">
+                <img src="./assets/imgs/D1.jpg" alt="avatar">
+                <span class="userInfor">
+                    Thanh Duong
+                </span>
+            </a>
+
+            <div id="userMenu" class="userMenu close">
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Setting</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+<!--END HEADER -->
 
     <div class="main">
         <!-- Left Side -->

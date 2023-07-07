@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/paysite.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <title>Paysite</title>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <div id="header">
+
+     <!-- HEADER -->
+     <div id="header">
         <div class="left-side">
             <a href="index.html">
                 <img src="./assets/imgs/logo.png" alt="logo" class="logo">
@@ -28,7 +30,7 @@
                 <input type="text" class="search-course" name="headerSearch" placeholder="Searching">
             </form>
             <div class="course-opption">
-                <a href="courseShopping.html">Course</a>
+                <a href="courseShopping.html">Courses</a>
             </div>
             <div class="quesAndAns">
                 <a href="#">Expert Q&A</a>
@@ -38,6 +40,10 @@
         <div class="right-side">
             <a href="paysite.html" class="cart">
                 <i class="fa-solid fa-cart-shopping"></i>
+                <div class="quantity">3</div>
+            </a>
+            <a href="" class="notification">
+                <i class="fa-sharp fa-solid fa-bell"></i>
                 <div class="quantity">3</div>
             </a>
             <div onclick="openMenu()" id="user" class="user">
@@ -64,14 +70,12 @@
                 </div>
             </div>
 
-            <a href="" class="notification">
-                <i class="fa-sharp fa-solid fa-bell"></i>
-                <div class="quantity">3</div>
-            </a>
+            
 
         </div>
     </div>
     <!--END HEADER -->
+
     <div id="body-paysite">
         <div class="shopping-cart">
             <h2 class="shopping-cart-header">

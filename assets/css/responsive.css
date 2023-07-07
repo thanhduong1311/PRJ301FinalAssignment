@@ -1,0 +1,107 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+    .courseList .listItem {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (max-width: 768px) {
+
+    #header .course-opption,
+    #header .quesAndAns,
+    #body .popularCourse,
+    #body .feedBack ,
+    #header .right-side .userInfor,
+    #body .advantageAds img {
+        display: none;
+    }
+
+    #header #userMenu {
+        width: 100%;
+        text-align: right;
+        border-radius: 0;
+        top: 60px;
+        right: 0;
+        left: 0;
+    }
+
+
+    #body .contentBox p {
+        margin: 20px auto 0;
+        font-size: 1.3em;
+        text-align: justify;
+    }
+
+    #body .boxContent .content {
+        font-size: 1.3em;
+        text-align: justify;
+    }
+
+    #body .advantageAds .content {
+        background: linear-gradient(180deg,#0097B2, #7ED957);
+        color: #ffffff;
+        font-size: 1em;
+        padding: 20px;
+        
+    }
+    #footer .introduction {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer .head  {
+        text-align: center;
+    }
+
+    #footer .copyright {
+        width: 100%;
+    }
+
+    .courseList .listItem {
+        width: calc(33.3% - 20px);
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+    .courseList .listItem {
+        width: calc(20% - 20px);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (max-width: 1200px) {
+    .courseList .listItem {
+        width: calc(25% - 20px);
+    }
+}
+
+
+
+
+/* 
+@media screen and (min-width: 600px) {
+    .courseList .listItem {
+        width: calc(50% - 20px);
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .courseList .listItem {
+        width: calc(33.3% - 20px);
+    }
+
+
+}
+
+@media screen and (min-width: 992px) {
+    .courseList .listItem {
+        width: calc(50% - 20px);
+    }
+
+
+} */
