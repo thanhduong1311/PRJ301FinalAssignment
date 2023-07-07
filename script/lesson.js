@@ -64,6 +64,8 @@ paragraphs.forEach(function (paragraph) {
 // setInterval(checkVideoProgress, 1000); // Kiểm tra sau mỗi giây (1000 milliseconds)
 
 
+// If quiz is finished
+let quizFinished = ($(".quiz-type1")) ? $(".quiz-type1")[0].classList.contains("finished") : false;
 
 // Hide all questions except first question
 let questions = $(".quizContent");
@@ -83,14 +85,8 @@ for (var i = 0; i < questionsLabels.length; i++) {
     let questionIndex = this.innerHTML;
     let question = $("#question" + questionIndex)[0];
     question.hidden = false;
-    //remove active all of question label
-    for (var i = 0; i < questionsLabels.length; i++) {
-      questionsLabels[i].classList.remove("active");
-    }
-    this.classList.add("active");
-    //update quizProgress
-    let quizProgress = $(".quizProgress span")[0];
-    quizProgress.innerHTML = questionIndex + "/" + questions.length;
+
+    remarkQuestionLabel();
   });
 }
 
@@ -103,17 +99,33 @@ function remarkQuestionLabel() {
     for (let i = 0; i < answers.length; i++) {
       if (answers[i].checked) {
         anyChecked = true;
-        break;
+        if (!quizFinished) {
+          answers[i].parentElement.classList.add("done");
+          console.log(answers[i].parentElement);
+        } else {
+          break;
+        }
+      } else {
+        if (!quizFinished) {
+          answers[i].parentElement.classList.remove("done");
+        }
       }
     }
-    if (anyChecked) {
-      questionsLabels[questionIndex - 1].classList.add("done");
-    } else {
-      questionsLabels[questionIndex - 1].classList.remove("done");
+    if (!quizFinished) {
+      if (anyChecked) {
+        questionsLabels[questionIndex - 1].classList.add("done");
+      } else {
+        questionsLabels[questionIndex - 1].classList.remove("done");
+      }
     }
     //for each question, check if question are showing, mark select question label
-    if (!questions[i].hidden) {
+    if (questions[i].hidden) {
+      questionsLabels[questionIndex - 1].classList.remove("active");
+    } else {
       questionsLabels[questionIndex - 1].classList.add("active");
+      //update quizProgress
+      let quizProgress = $(".quizProgress span")[0];
+      quizProgress.innerHTML = questionIndex + "/" + questions.length;
     }
   }
 }
@@ -124,6 +136,11 @@ setInterval(remarkQuestionLabel, 1000);
 let answers = $(".answer input");
 for (let i = 0; i < answers.length; i++) {
   answers[i].addEventListener('click', function (e) {
+    //send new answer to questionResult
+    if (typeof sendUpdateAnswer === 'function') {
+      sendUpdateAnswer(this.name);
+    }
+
     let question = this.parentElement.parentElement.parentElement;
     let questionIndex = 0;
     for (let i = 0; i < questions.length; i++) {
@@ -132,25 +149,25 @@ for (let i = 0; i < answers.length; i++) {
         break;
       }
     }
-    //if check then mark label done
-    if (this.checked) {
-      questionsLabels[questionIndex - 1].classList.add("done");
-    } else {
-      //else, check if other answer
-      let answers = $(question).find("input");
-      let anyChecked = false;
-      for (let i = 0; i < answers.length; i++) {
-        if (answers[i].checked) {
-          anyChecked = true;
-          break;
-        }
-      }
-      if (!anyChecked) {
-        questionsLabels[questionIndex - 1].classList.remove("done");
-      }
-    }
+
+    remarkQuestionLabel();
   });
 }
+
+//add event next question in quiz
+let continueQuestionBtn = $(".quiz-type1 .btns p")[0];
+continueQuestionBtn.addEventListener('click', function (e) {
+  let showIndex = 0;
+  for (let i = 0; i < questions.length; i++) {
+    if (!questions[i].hidden) {
+      showIndex = i;
+      questions[i].hidden = true;
+    }
+  }
+  questions[(showIndex + 1) % questions.length].hidden = false;
+  remarkQuestionLabel();
+});
+
 
 // Lấy danh sách các phần
 const parts = document.querySelectorAll('.partHeader');
@@ -206,11 +223,62 @@ function checkVideoProgress() {
   var duration = player.getDuration(); // Get the duration of the video
   var currentTime = player.getCurrentTime(); // Get the current time of the video
 
-   if (currentTime >= duration) {
-     console.log('User has watched the entire video');
-   } else {
-     console.log('User has not watched the entire video yet');
-   }
- }
+  if (currentTime >= duration) {
+    console.log('User has watched the entire video');
+  } else {
+    console.log('User has not watched the entire video yet');
+  }
+}
 
 
+//countdown time of quiz
+let quizTimeRemain = $(".quiz-type1 .rightSide .time span")[0];
+function countdown(timer) {
+  var timeArray = timer.split(":");
+  var hours = 0;
+  var minutes = 0;
+  var seconds = 0;
+
+  if (timeArray.length === 2) {
+    minutes = parseInt(timeArray[0], 10);
+    seconds = parseInt(timeArray[1], 10);
+  } else if (timeArray.length === 3) {
+    hours = parseInt(timeArray[0], 10);
+    minutes = parseInt(timeArray[1], 10);
+    seconds = parseInt(timeArray[2], 10);
+  } else {
+    //console.log("Invalid timer format!");
+    return;
+  }
+
+  var countdownInterval = setInterval(function () {
+    if (seconds === 0) {
+      if (minutes === 0) {
+        if (hours === 0) {
+          clearInterval(countdownInterval);
+          //console.log("Countdown finished!");
+          return;
+        }
+        hours--;
+        minutes = 59;
+        seconds = 59;
+      } else {
+        minutes--;
+        seconds = 59;
+      }
+    } else {
+      seconds--;
+    }
+
+    var displayHours = hours > 0 ? hours + ":" : "";
+    var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+    var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+    //console.log(displayHours + formattedMinutes + ":" + formattedSeconds);
+    quizTimeRemain.innerHTML = displayHours + formattedMinutes + ":" + formattedSeconds;
+  }, 1000);
+}
+
+//It will countdown if contain class countdown
+if (quizTimeRemain.classList.contains("countdown")) {
+  countdown(quizTimeRemain.innerHTML);
+}
