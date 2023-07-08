@@ -60,8 +60,14 @@ a:hover {
     margin-left: 20%;
 }
 
+.boxContent .content h4 {
+    font-size:2rem ;
+
+}
+
 .boxContent .content {
-    font-size:2.4rem ;
+    font-size:1.2rem ;
+
     margin: 100px auto 0;
     max-width: 80%;
     display: flex;
@@ -274,13 +280,13 @@ i.active {
 .advantageAds .content {
     background: linear-gradient(180deg,#0097B2, #7ED957);
     color: #ffffff;
-    font-size: 24px;
+    font-size: 1.4em;
     padding: 20px;
     
 }
 
 .advantageAds .content h4 {
-    font-size: 40px;
+    font-size: 1.6em;
 }
 
 .advantageAds .ads {
@@ -381,10 +387,11 @@ i.active {
 .collaborateLogos {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .collaborate img {
-    height: 60px;
+    height: 100px;
     margin: 0 10px;
 }
 
@@ -395,4 +402,5 @@ i.active {
 .contentBox.ads2 p{
     background: unset;
     color: #000000;
+    font-size: 1.2em;
 }

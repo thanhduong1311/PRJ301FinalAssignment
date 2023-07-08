@@ -3,6 +3,33 @@
     .courseList .listItem {
         width: calc(50% - 20px);
     }
+
+    .personal div,
+    .personal form label {
+        display: block;
+    }
+
+    .personal .upload {
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .personal form input ,.personal form select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .changePassword input[type="submit"] {
+        width: 90px;
+        border: none;
+        border-radius: 8px;
+        background-color: #18930a;
+        color: #fff;
+        font-weight: 500;
+        padding: 5px ;
+        margin-top: 20px;
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -11,7 +38,7 @@
     #header .course-opption,
     #header .quesAndAns,
     #body .popularCourse,
-    #body .feedBack ,
+    #body .feedBack,
     #header .right-side .userInfor,
     #body .advantageAds img {
         display: none;
@@ -39,18 +66,19 @@
     }
 
     #body .advantageAds .content {
-        background: linear-gradient(180deg,#0097B2, #7ED957);
+        background: linear-gradient(180deg, #0097B2, #7ED957);
         color: #ffffff;
         font-size: 1em;
         padding: 20px;
-        
+
     }
+
     #footer .introduction {
         justify-content: center;
         align-items: center;
     }
 
-    #footer .head  {
+    #footer .head {
         text-align: center;
     }
 
@@ -62,12 +90,39 @@
         width: calc(33.3% - 20px);
     }
 
+    #personal .personal form {
+        width: 100%;
+        padding: 0 15%;
+    }
+
+    #Rating .rating-container {
+        flex-direction: column;
+    }
+
+    #Rating .rating-right{
+        display: none;
+    }
+
+    #body-paysite .courseInCart {
+        flex-direction: column;
+    }
+
+    #body-paysite .courseInCart .items,
+    #body-paysite .courseInCart .popup-checkout {
+        width: 100%;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (max-width: 992px) {
     .courseList .listItem {
         width: calc(20% - 20px);
+    }
+
+    #personal .personal form {
+        width: 100%;
+        padding: 0 20%;
     }
 }
 

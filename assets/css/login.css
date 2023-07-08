@@ -10,7 +10,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #b6f9af;
+    /* background-color: #b6f9af; */
+    background: url("/assets/imgs/logo.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 80%;
+    
 }
 
 .box {
@@ -177,7 +182,7 @@ body {
     /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
     z-index: 1;
     transform-origin: bottom right;
-    animation: animate 6s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 .box::after {
@@ -191,8 +196,8 @@ body {
     background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
     z-index: 1;
     transform-origin: bottom right;
-    animation: animate 6s linear infinite;
-    animation-delay:-3s ;
+    animation: animate 10s linear infinite;
+    animation-delay:-5s ;
 }
 
 @keyframes animate {
