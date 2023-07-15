@@ -45,10 +45,12 @@ a:hover {
 #main .infor {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .infor .userTags {
     width: 40%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,6 +58,7 @@ a:hover {
 }
 
 .infor .purchasedCourse {
+    /* width: 100%; */
     width: 50%;
     background-color: #fff;
     border-radius: 12px;
