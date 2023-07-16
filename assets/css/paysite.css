@@ -183,10 +183,18 @@
 
 
 .item .itemPrice {
-    text-align: center;
-    width: 45%;
+    width: 35%;
     font-weight: 500;
     margin: 0;
+}
+.item .itemPrice.old-price {
+    width: 10%;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    color: red;
+    text-decoration: line-through;
+
 }
 
 

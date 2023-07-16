@@ -404,3 +404,9 @@ i.active {
     color: #000000;
     font-size: 1.2em;
 }
+
+.listItem a .courseDescription .price.old-price {
+    color: red;
+    font-weight: 300;
+    text-decoration: line-through;
+}
