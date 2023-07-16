@@ -257,6 +257,7 @@ function countdown(timer) {
         if (hours === 0) {
           clearInterval(countdownInterval);
           //console.log("Countdown finished!");
+          location.reload();
           return;
         }
         hours--;
