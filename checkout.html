@@ -77,48 +77,49 @@
     <!--END HEADER -->
 
     <div id="body-checkout">
-
-        <div class="ticket">
-            <div class="ticket-header">
-                <div class="paymentInfo">
-                    <h1 class="text-center mb-4">Almost complete</h1>
-                    <h4 class="text-center">Pay for <b>2</b> courses</h4>
-                    <h4 class="text-center mb-4">Total payment: <b>200.000đ</b></h4>
-                    <h5 class="text-start me-auto">Choose your payment methods</h5>
-                </div>
-
-                <div class="paymentMethod">
-                    <div>
-                        <div class="momo-radio"><label class="label" for="momoPay"><img
-                                    src="https://test-payment.momo.vn/v2/gateway/images/logo-momo-3b8deb874c6d3b77f976f35310d8e50a.png"
-                                    alt="captureWallet" class="image">
-                                <div style="overflow:hidden">
-                                    <div class="label-title" style="white-space:nowrap">Ví MoMo</div>
-                                </div>
-                            </label><input id="momoPay" type="radio" name="paymentMethod" value="captureWallet"></div>
+        <form action="">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <div class="paymentInfo">
+                        <h1 class="text-center mb-4">Almost complete</h1>
+                        <h4 class="text-center">Pay for <b>2</b> courses</h4>
+                        <h4 class="text-center mb-4">Total payment: <b>200.000đ</b></h4>
+                        <h5 class="text-start me-auto">Choose your payment methods</h5>
                     </div>
+
+                    <div class="paymentMethod">
+                        <div>
+                            <div class="momo-radio"><label class="label" for="momoPay"><img
+                                        src="https://test-payment.momo.vn/v2/gateway/images/logo-momo-3b8deb874c6d3b77f976f35310d8e50a.png"
+                                        alt="captureWallet" class="image">
+                                    <div style="overflow:hidden">
+                                        <div class="label-title" style="white-space:nowrap">Ví MoMo</div>
+                                    </div>
+                                </label><input id="momoPay" type="radio" name="paymentMethod" value="captureWallet">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="momo-radio "><label class="label" for="atmPay"><img
+                                        src="https://test-payment.momo.vn/v2/gateway/images/credit/atm-a2eaf925d65062641bdef898d3cc0fe8.svg"
+                                        alt="payWithATM" class="image">
+                                    <div style="overflow:hidden">
+                                        <div class="label-title" style="white-space:nowrap">Thẻ ATM nội địa</div>
+                                    </div>
+                                </label><input id="atmPay" type="radio" name="paymentMethod" value="payWithATM"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-devider">
+                    <div class="ticket-norch"></div>
+                    <div class="ticket-norch ticket-norch-right"></div>
+                </div>
+                <div class="ticket-body">
                     <div>
-                        <div class="momo-radio "><label class="label" for="atmPay"><img
-                                    src="https://test-payment.momo.vn/v2/gateway/images/credit/atm-a2eaf925d65062641bdef898d3cc0fe8.svg"
-                                    alt="payWithATM" class="image">
-                                <div style="overflow:hidden">
-                                    <div class="label-title" style="white-space:nowrap">Thẻ ATM nội địa</div>
-                                </div>
-                            </label><input id="atmPay" type="radio" name="paymentMethod" value="payWithATM"></div>
+                        <button class="btn-momo active">Pay now</button>
                     </div>
                 </div>
             </div>
-            <div class="ticket-devider">
-                <div class="ticket-norch"></div>
-                <div class="ticket-norch ticket-norch-right"></div>
-            </div>
-            <div class="ticket-body">
-                <div>
-                    <button class="btn-momo active">Pay now</button>
-                </div>
-            </div>
-        </div>
-
+        </form>
 
     </div>
 
