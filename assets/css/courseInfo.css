@@ -63,12 +63,20 @@ a:hover {
 }
 
 .addCartBnt {
+    display: inline-block;
     font-weight: bold;
     background-color: #1487d4ac;
     color: #fff;
     border-radius: 12px;
     text-align: center;
     width: fit-content;
+}
+
+.viewCer {
+    font-weight: 500;
+    color: rgb(13, 105, 166);
+    color: rgb(66, 66, 241);
+
 }
 
 .price {
