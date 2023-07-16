@@ -26,3 +26,23 @@ if (allCheck.length) {
   }
 }
 
+setInterval(
+  function () {
+    let sumPrice = 0;
+    for (let i = 0; i < allCheck.length; i++) {
+      if (!allCheck[i].checked) continue;
+      //get price
+      let price = this.parentElement.getElementsByTagName("p")[1].innerHTML.slice(0, -1);
+      sumPrice += Number(price);
+    }
+
+    if (sumPrice != totalPrice) {
+      totalPrice = sumPrice;
+      //set total cost
+      let totalCostLabel = $(".component.totalCost span")[0];
+      totalCostLabel.innerHTML = "$" + totalPrice;
+      let totalPriceLabel = $(".component.balance span")[0];
+      totalPriceLabel.innerHTML = "$" + totalPrice;
+    }
+  }, 1000
+);

@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     /* background-color: #b6f9af; */
-    background: url("/assets/imgs/background\ login.png");
+    background: url("../imgs/background_login.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
