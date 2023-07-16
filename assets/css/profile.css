@@ -434,3 +434,7 @@ justify-content: space-between;
     font-weight: 300;
     font-size: 12px;
 }
+
+.mode-btn {
+    /* display: none; */
+}

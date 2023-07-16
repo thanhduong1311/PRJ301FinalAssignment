@@ -147,7 +147,12 @@ a:hover {
     top: 66px;
     right: 4px;
     overflow: hidden;
+    z-index: 20;
+}
 
+.mode-btn {
+    position: absolute;
+    left: -270px;
 }
 
 #header .userMenu a {
@@ -177,4 +182,14 @@ a:hover {
 
 .userMenu.close {
     display: none;
+}
+
+.mode-btn {
+    background-color:#fff;
+    text-align: left;
+    border: 1px solid #ccc;
+    box-shadow: -2px 2px 1px 1px #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 20;
 }

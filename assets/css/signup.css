@@ -10,16 +10,22 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #b6f9af;
+    background: url("/assets/imgs/background\ login.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    background-position: bottom;
 }
 
 .box {
     position: relative;
     width: 380px;
     height: 545px;
-    background-color: #fff;
+    background-color: #73e814;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 2px 2px 1px 1px #ccc;
+
 }
 
 
@@ -27,7 +33,7 @@ body {
 .box form {
     position: absolute;
     inset: 4px;
-    background-color: #96f08b;
+    background-color: #a5f39b;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -178,6 +184,7 @@ body {
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
+    display: none;          
 }
 
 .box::after {
@@ -192,7 +199,8 @@ body {
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
-    animation-delay:-3s ;
+    animation-delay:-3s ;        
+    display: none;  
 }
 
 @keyframes animate {

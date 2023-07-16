@@ -11,10 +11,11 @@ body {
     align-items: center;
     min-height: 100vh;
     /* background-color: #b6f9af; */
-    background: url("/assets/imgs/logo.png");
+    background: url("/assets/imgs/background\ login.png");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 80%;
+    background-size: 100%;
+    background-position: bottom;
     
 }
 
@@ -22,9 +23,11 @@ body {
     position: relative;
     width: 380px;
     height: 500px;
-    background-color: #fff;
+    background-color: #73e814;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 2px 2px 1px 1px #ccc;
+
 }
 
 
@@ -32,7 +35,7 @@ body {
 .box form {
     position: absolute;
     inset: 4px;
-    background-color: #96f08b;
+    background-color: #a5f39b;
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -41,7 +44,7 @@ body {
 }
 
 .box form h2 {
-    color: #000;
+    color: #000000;
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.1em;
@@ -178,11 +181,13 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
+    background: linear-gradient(0deg,transparent,transparent,#fbff00,#fbff00,#fbff00);
     /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 10s linear infinite;
+    display: none;
+
 }
 
 .box::after {
@@ -193,11 +198,12 @@ body {
     width: 380px;
     height: 420px;
     /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
-    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
+    background: linear-gradient(0deg,transparent,transparent,#fbff00,#fbff00,#fbff00);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 10s linear infinite;
     animation-delay:-5s ;
+    display: none;
 }
 
 @keyframes animate {
