@@ -132,7 +132,7 @@ a:hover {
     border-radius: 12px;
 }
 .listItem:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 .rateAndPrice {
     text-align: right;
@@ -151,12 +151,15 @@ a:hover {
     text-decoration: none;
     color: black;
     box-shadow: 1px 2px 2px 2px #cccccc;
-    height: 436px;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
  .listItem a .courseImg{
     width: 100%;
-    height: 315px;
+    aspect-ratio: 1/1;
+    /* height: 300px; */
     object-fit: contain;
 }
 
@@ -219,6 +222,16 @@ a:hover {
     border: 0;
     opacity: .5;
     transition: opacity .15s ease;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
 }
 
 .carousel-indicators li {
