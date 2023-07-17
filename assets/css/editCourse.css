@@ -1,0 +1,63 @@
+#body-editCourse {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    padding: 10px 50px;
+    display: flex;
+    gap: 10px;
+}
+
+#body-editCourse>.leftPane {
+    width: 20%;
+    min-width: 250px;
+}
+
+#body-editCourse>.leftPane>.accordion {
+    overflow-y: scroll;
+    max-height: calc(100vh - 60px);
+}
+
+#body-editCourse>.rightPane {
+    width: calc(80% - 10px);
+    max-width: calc(100% - 250px - 10px);
+}
+
+.accordion-header {
+    position: relative;
+    /* display: flex;
+    align-items: center; */
+}
+
+.accordion-header>div {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-header>div>i {
+    margin-left: 0px !important;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.accordion-header>button {
+    padding-left: 35px;
+}
+
+.drag-location {
+    border: 2px dashed #999;
+    background: #ede8e8;
+}
+
+.lessonTitles button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+button.chosing{
+    background-color: darkgrey;
+}

@@ -691,3 +691,7 @@ tr:last-child td {
     color: red;
     font-weight: 500;
 }
+
+.textQuestion{
+    font-size: larger;
+}
