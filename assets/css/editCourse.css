@@ -1,9 +1,10 @@
 #body-editCourse {
     margin-top: 60px;
-    height: calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
     padding: 10px 50px;
     display: flex;
     gap: 30px;
+    background-color: #e8f8e6;
 }
 
 #body-editCourse>.leftPane {
@@ -16,9 +17,16 @@
     max-height: calc(100vh - 60px);
 }
 
+#body-editCourse>.leftPane>.accordion::-webkit-scrollbar {
+    display: none;
+}
+
 #body-editCourse>.rightPane {
     width: calc(80% - 10px);
     max-width: calc(100% - 250px - 30px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .accordion-header {
@@ -60,4 +68,62 @@
 
 button.chosing{
     background-color: darkgrey;
+}
+
+#addMooc {
+    display: none;
+}
+
+#editMooc {
+    display: none;    
+}
+
+/* .rightPane select {
+    outline: none;
+    border: none;
+    padding:7px 10px ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+#lessonType_1,
+/* #lessonType_2, */
+#lessonType_3 {
+    display: none;
+}
+
+#questionType_0,
+#questionType_1,
+#questionType_2 {
+    display: none;
+}
+
+#answer_0_0_type0,
+#answer_0_0_type1 {
+    display: none;
+}
+
+/* #addRatio {
+    text-align: center;
+    width: 120px;
+    display: block;
+    padding: 5px;
+    background-color: blue;
+    color: #fff;
+    bo
+} */
+
+textarea {
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+#question_create_area {
+    display: none;
 }
