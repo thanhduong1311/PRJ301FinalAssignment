@@ -22,23 +22,61 @@
                 <h2>Sign up</h2>
                 <div class="inputBox">
                     <input type="text" required="required" name="username">
-                    <span>Email or Phone number</span>
+                    <span>Username</span>
                     <i></i>
                 </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="email">
+                    <span>Email</span>
+                    <i></i>
+                </div>
+                <div class="inputBox-name">
+                    <div class="inputBox">
+                        <input type="password" required="required" name="firstName">
+                        <span>First Name</span>
+                        <i></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" required="required" name="lastName">
+                        <span>Last Name</span>
+                        <i></i>
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <label for="">Birthday</label>
+                    <input type="date" value="2023-01-01" required="required" name="birthDay">
+                    <i></i>
+                </div>
+
+                <div class="inputBox country">
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="1">Vietnam</option>
+                        <option value="2">Japanese</option>
+                        <option value="3">China</option>
+                        <option value="4">Korean</option>
+                    </select>
+                    <i></i>
+                </div>
+
                 <div class="inputBox">
                     <input type="password" required="required" name="password">
                     <span>Password</span>
                     <i></i>
                 </div>
                 <div class="inputBox">
-                    <input type="password" required="required" name="password">
+                    <input type="password" required="required" name="confirmPassword">
                     <span>Confirm Password</span>
                     <i></i>
                 </div>
+
+
+
                 <input type="submit" value="Register">
 
                 <p id="message"></p>
-                
+
             </form>
 
             <div class="accountLogin">

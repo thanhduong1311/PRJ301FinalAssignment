@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("/assets/imgs/background\ login.png");
+    background: url("/assets/imgs/background_login.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100%;
@@ -19,8 +19,8 @@ body {
 
 .box {
     position: relative;
-    width: 380px;
-    height: 545px;
+    width: 500px;
+    height: 700px;
     background-color: #73e814;
     border-radius: 8px;
     overflow: hidden;
@@ -34,7 +34,7 @@ body {
     position: absolute;
     inset: 4px;
     background-color: #a5f39b;
-    padding: 50px 40px;
+    padding: 10px 40px;
     border-radius: 8px;
     z-index: 2;
     display: flex;
@@ -46,16 +46,32 @@ body {
     font-weight: 700;
     text-align: center;
     letter-spacing: 0.1em;
+    padding: 0;
+    margin: 0;
 }
 
 .box form .inputBox {
     position: relative;
-    width:300px;
-    margin-top: 35px;
+    /* width:100%; */
+    margin-top: 15px;
 
 }
 
 .box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 8px 10px 15px 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.box form .inputBox select {
     position: relative;
     width: 100%;
     padding: 20px 10px 10px;
@@ -79,13 +95,13 @@ body {
     transform: 0.5s;
 }
 
-.box form .inputBox input:valid ~ span,
-.box form .inputBox input:focus ~ span 
-{
+.box form .inputBox input:valid~span,
+.box form .inputBox input:focus~span {
     color: #fff;
     font-size: 0.75em;
     transform: translateY(-34px);
 }
+
 
 .box form .inputBox i {
     position: absolute;
@@ -101,9 +117,9 @@ body {
 
 }
 
-.box form .inputBox input:valid ~ i,
-.box form .inputBox input:focus ~ i  {
-    height: 44px;
+.box form .inputBox input:valid~i,
+.box form .inputBox input:focus~i {
+    height: 40px;
 }
 
 .box form .links {
@@ -112,16 +128,16 @@ body {
 }
 
 .box form .links a {
-    margin:10px 0;
+    margin: 10px 0;
     font-size: 0.75em;
     color: #000;
     text-decoration: none;
 }
 
-.box form .links a:hover, 
+.box form .links a:hover,
 .box form .links a:nth-child(2) {
     color: #767272;
-} 
+}
 
 .box form input[type="submit"] {
     border: none;
@@ -150,25 +166,25 @@ body {
 
 @keyframes shake {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-    
+
     25% {
-      transform: translateX(-10px);
+        transform: translateX(-10px);
     }
-    
+
     50% {
-      transform: translateX(10px);
+        transform: translateX(10px);
     }
-    
+
     75% {
-      transform: translateX(-10px);
+        transform: translateX(-10px);
     }
-    
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
+}
 
 
 
@@ -179,12 +195,12 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
+    background: linear-gradient(0deg, transparent, transparent, #ffc800, #ffc800, #ffc800);
     /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
-    display: none;          
+    display: none;
 }
 
 .box::after {
@@ -195,18 +211,19 @@ body {
     width: 380px;
     height: 420px;
     /* background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff); */
-    background: linear-gradient(0deg,transparent,transparent,#ffc800,#ffc800,#ffc800);
+    background: linear-gradient(0deg, transparent, transparent, #ffc800, #ffc800, #ffc800);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
-    animation-delay:-3s ;        
-    display: none;  
+    animation-delay: -3s;
+    display: none;
 }
 
 @keyframes animate {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
 
@@ -240,6 +257,7 @@ body {
 .loginWithGG a:hover {
     transform: scale(1.005);
 }
+
 .loginWithGG a img {
     width: 30px;
     height: 30px;
@@ -251,3 +269,22 @@ body {
     margin-left: 10px;
     font-weight: 600;
 }
+
+
+form .inputBox-name .inputBox {
+    display: inline-block;
+}
+
+
+form .inputBox select option:checked {
+    background-color: #a5f39b;
+}
+
+form .inputBox select option:hover {
+    background-color: #a5f39b;
+}
+
+.inputBox.country i {
+    height: 40px !important;
+}
+
