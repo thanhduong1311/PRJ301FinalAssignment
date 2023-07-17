@@ -83,14 +83,16 @@
 
                 <div class="accordion-item">
                     <h4 class="accordion-header">
-                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i></a></div>
+                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
+                                    style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Mooc #1
                         </button>
 
                     </h4>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                        style="">
 
                         <div class="accordion-body lessonTitles">
 
@@ -135,7 +137,8 @@
 
                 <div class="accordion-item">
                     <h4 class="accordion-header">
-                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i></a></div>
+                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
+                                    style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed chosing" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Mooc #2
@@ -150,7 +153,8 @@
 
                 <div class="accordion-item">
                     <h4 class="accordion-header">
-                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i></a></div>
+                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
+                                    style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Mooc #3
@@ -169,8 +173,106 @@
 
         </div>
 
-        <div class="rightPane">
+        <div class="rightPane pt-3">
+            <h1 class="text-center">Add new mooc</h1>
+            <div class="mt-4">
 
+                <form method="POST" action="" class="row g-3">
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="MoocID" class="form-label">Mooc ID</label>
+                        <input type="text" class="form-control" id="MoocID" value="A123" disabled="">
+                    </div>
+
+                    <div class="col-md-8 col-sm-6">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="MoocTitle" class="form-label">Mooc Title</label>
+                        <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
+                            placeholder="Ex: Java Introduction" required="">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="MoocDescription" class="form-label">Mooc Description</label>
+                        <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
+                            placeholder="Ex: This mooc help for newbie practice with Java code" required="">
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Add mooc</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <h1 class="text-center">Edit mooc</h1>
+            <div class="mt-4">
+
+                <form method="POST" action="" class="row g-3">
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="MoocID" class="form-label">Mooc ID</label>
+                        <input type="text" class="form-control" id="MoocID" value="A123" disabled="">
+                    </div>
+
+                    <div class="col-md-8 col-sm-6">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="MoocTitle" class="form-label">Mooc Title</label>
+                        <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
+                            placeholder="Ex: Java Introduction" required="">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="MoocDescription" class="form-label">Mooc Description</label>
+                        <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
+                            placeholder="Ex: This mooc help for newbie practice with Java code" required="">
+                    </div>
+
+                    <!-- <div class="col-12">
+                        <label for="MoocDescription" class="form-label">Mooc Description</label>
+                        <textarea class="form-control" name="MoocDescription" id="MoocDescription" cols="30" rows="3"></textarea>
+                    </div> -->
+
+<!-- 
+                    <div class="col-md-4 col-sm-6">
+                        <label for="Birthday" class="form-label">Birthday</label>
+                        <input type="date" class="form-control" id="Birthday" value="2003-03-03" name="Birthday"
+                            placeholder="Birthday" required="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="Gender" class="form-label">Gender</label>
+                        <input type="text" class="form-control" id="Gender" value="Male" name="Gender"
+                            placeholder="Gender" required="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="Email" value="nva@fpt.edu.vn" name="Email"
+                            placeholder="Email" required="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="Phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="Phone" value="0123.456.789" name="Phone"
+                            placeholder="Phone" required="">
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <label for="Address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="Address" value="Can Tho" name="Address"
+                            placeholder="Address" required="">
+                    </div> -->
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">Update mooc</button>
+                    </div>
+                </form>
+
+            </div>
         </div>
 
     </div>

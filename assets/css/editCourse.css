@@ -3,7 +3,7 @@
     height: calc(100vh - 60px);
     padding: 10px 50px;
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
 #body-editCourse>.leftPane {
@@ -18,7 +18,7 @@
 
 #body-editCourse>.rightPane {
     width: calc(80% - 10px);
-    max-width: calc(100% - 250px - 10px);
+    max-width: calc(100% - 250px - 30px);
 }
 
 .accordion-header {
