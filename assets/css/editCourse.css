@@ -85,18 +85,28 @@ button.chosing{
 
 #lessonType_1,
 #lessonType_2,
-#lessonType_3 {
+#lessonType_3,
+#lessonType_1-edit,
+#lessonType_2-edit,
+#lessonType_3-edit{
     display: none;
 }
 
 #questionType_0,
 #questionType_1,
-#questionType_2 {
+#questionType_2,
+#questionType_0-edit,
+#questionType_1-edit,
+#questionType_2-edit
+{
     display: none;
 }
 
-#answer_0_0_type0,
-#answer_0_0_type1 {
+#answer_type_0,
+#answer_type_1,
+#answer_type_0_edit,
+#answer_type_1_edit 
+{
     display: none;
 }
 

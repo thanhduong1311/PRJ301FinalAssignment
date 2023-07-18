@@ -22,14 +22,37 @@ $(function () {
 function showDiv() {
     var selectBox = document.getElementById("lessonType");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    var selectBox = document.getElementById("lessonType");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
 
     var videoDiv = document.getElementById("lessonType_1");
     var quizDiv = document.getElementById("lessonType_2");
     var readingDiv = document.getElementById("lessonType_3");
 
+    var videoDiv_Edit = document.getElementById("lessonType_1-edit");
+    var quizDiv_Edit = document.getElementById("lessonType_2-edit");
+    var readingDiv_Edit = document.getElementById("lessonType_3-edit");
+
     videoDiv.style.display = selectedValue === "0" ? "block" : "none";
     quizDiv.style.display = selectedValue === "1" ? "block" : "none";
     readingDiv.style.display = selectedValue === "2" ? "block" : "none";
+
+    videoDiv_Edit.style.display = selectedValue === "0" ? "block" : "none";
+    quizDiv_Edit.style.display = selectedValue === "1" ? "block" : "none";
+    readingDiv_Edit.style.display = selectedValue === "2" ? "block" : "none";
+}
+
+function showDivEdit() {
+    var selectBox = document.getElementById("lessonType-edit");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+   
+    var videoDiv_Edit = document.getElementById("lessonType_1-edit");
+    var quizDiv_Edit = document.getElementById("lessonType_2-edit");
+    var readingDiv_Edit = document.getElementById("lessonType_3-edit");
+
+    videoDiv_Edit.style.display = selectedValue === "0" ? "block" : "none";
+    quizDiv_Edit.style.display = selectedValue === "1" ? "block" : "none";
+    readingDiv_Edit.style.display = selectedValue === "2" ? "block" : "none";
 }
 
 function createDivQuestion() {
@@ -77,14 +100,9 @@ function showShowQuestionOfThisType() {
 function showShowAnswerOfThisType(element) {
     var selectBox = document.getElementById(element.id);
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    console.log(selectedValue)
 
-    var AnsIDType0 = "" + element.id + "0"
-    var AnsIDType1 = "" + element.id + "1"
-
-
-    var type0 = document.getElementById(AnsIDType0);
-    var type1 = document.getElementById(AnsIDType1);
+    var type0 = document.getElementById("answer_type_0");
+    var type1 = document.getElementById("answer_type_1");
 
     type0.style.display = selectedValue === "0" ? "block" : "none";
     type1.style.display = selectedValue === "1" ? "block" : "none";
@@ -100,9 +118,9 @@ function addAnswerRatio() {
     var newAnswer = document.createElement('div');
     newAnswer.innerHTML = `
     <div class="border border-dark rounded p-2 mb-1 bg-light">
-    <textarea required="required" name="ans_0_0_content" id="" cols="30" rows="2"></textarea>
-    <label for="ans_0_0_correct${numberOfAnswerRatio}">Correct</label>
-    <input type="radio" id="ans_0_0_correct${numberOfAnswerRatio}" value="" name="a1">
+    <textarea placeholder="answer_${numberOfAnswerRatio}" required="required" name="answer_${numberOfAnswerRatio}" id="answer_${numberOfAnswerRatio}" cols="30"
+    rows="2"></textarea><label for="answer_${numberOfAnswerRatio}_correct">Correct</label>
+    <input type="radio" id="answer_${numberOfAnswerRatio}_correct" value="" name="a1">
     <span class="text-danger" onclick="removeAns(this)">Remove</span>
     </div>
     `;
@@ -122,9 +140,9 @@ function addAnswerCheckbox() {
     var newAnswer = document.createElement('div');
     newAnswer.innerHTML = `
     <div class="border border-dark rounded p-2 mb-1 bg-light">
-    <textarea required="required" name="ans_0_0_content" id="" cols="30" rows="2"></textarea>
-    <label for="ans_0_0_correct${numberOfAnswerRatio}">Correct</label>
-    <input type="checkbox" id="ans_0_0_correct${numberOfAnswerRatio}" value="" name="a1">
+    <textarea placeholder="answer_${numberOfAnswerRatio}" required="required" name="answer_${numberOfAnswerRatio}" id="answer_${numberOfAnswerRatio}" cols="30"
+    rows="2"></textarea><label for="answer_${numberOfAnswerRatio}_correct">Correct</label>
+    <input type="checkbox" id="answer_${numberOfAnswerRatio}_correct" value="" name="a1">
     <span class="text-danger" onclick="removeAns(this)">Remove</span>
     </div>
     `;
@@ -184,14 +202,14 @@ function showEditMoocByID(element) {
     var moocID = element.querySelector(".accordion-header button").innerText.split("#")[1]
     console.log("Mooc: " + moocID)
     var currentWork = document.querySelector("#editMooc")
-    currentWork.style.display="block"
+    currentWork.style.display = "block"
     currentWork.querySelector("form #MoocID").value = moocID;
     console.log("Value: " + currentWork.querySelector("form #MoocID").value)
-    
-    document.querySelector("#addMooc").style.display="none"
-    document.querySelector("#editLesson").style.display="none"
-    document.querySelector("#addLesson").style.display="none"
-    
+
+    document.querySelector("#addMooc").style.display = "none"
+    document.querySelector("#editLesson").style.display = "none"
+    document.querySelector("#addLesson").style.display = "none"
+
 }
 
 function showEditLessonByID(element) {
@@ -199,49 +217,142 @@ function showEditLessonByID(element) {
     var lessonID = element.querySelector(".accordion-header button").innerText.split("#")[1]
     console.log("Lesson: " + lessonID)
     var currentWork = document.querySelector("#editLesson")
-    currentWork.style.display="block"
-    currentWork.querySelector("form #LessonID").value = lessonID;
-    console.log("Value: " + currentWork.querySelector("form #LessonID").value)
+    currentWork.style.display = "block"
+    currentWork.querySelector("form #LessonID-edit").value = lessonID;
 
-  document.querySelector("#addMooc").style.display="none"
-    document.querySelector("#editMooc").style.display="none"
-    document.querySelector("#addLesson").style.display="none"
+    document.querySelector("#addMooc").style.display = "none"
+    document.querySelector("#editMooc").style.display = "none"
+    document.querySelector("#addLesson").style.display = "none"
 }
 
 function showAddMoocArea() {
     document.querySelector("#addMooc").style.display = "block"
-    document.querySelector("#editLesson").style.display="none"
-    document.querySelector("#editMooc").style.display="none"
-    document.querySelector("#addLesson").style.display="none"
+    document.querySelector("#editLesson").style.display = "none"
+    document.querySelector("#editMooc").style.display = "none"
+    document.querySelector("#addLesson").style.display = "none"
 }
 
 function showAddLessonArea() {
     document.querySelector("#addLesson").style.display = "block"
-    document.querySelector("#editLesson").style.display="none"
-    document.querySelector("#editMooc").style.display="none"
-    document.querySelector("#addMooc").style.display="none"
+    document.querySelector("#editLesson").style.display = "none"
+    document.querySelector("#editMooc").style.display = "none"
+    document.querySelector("#addMooc").style.display = "none"
 }
 
 
 var Mooc = {
-    courseID : "1",
-    index : "1",
-    title : "Example title",
-    description : "Example des"
+    courseID: 1,
+    index: 1,
+    title: "Example title",
+    description: "Example des",
+    lesson: [
+        {
+            name: "Lesson name",
+            index: 1,
+            type: 1,
+            time: 15,
+            content: {
+                question: [
+                    {
+                        lessonID: 1,
+                        index: 1,
+                        content: "Why do we have bugs?",
+                        type: 0,
+                        point: 1,
+                    }
+                ],
+                answer: [
+                    {
+                        questionID: 1,
+                        content: "",
+                        status: "true"
+                    }
+                ]
+            }
+        }
+    ]
+};
+
+// console.log(Mooc);
+
+
+
+var Question = {
+    lessonID: 1,
+    index: 1,
+    content: "Why we have bug?",
+    type: 0,
+    point: 1,
 }
 
-var  Question = {
-    lessonID : 1,
-    index : 1,
-    content : "Why we have bug?",
-    type : {
+var Answer = [
+    {
+        content: "",
+        status: "true"
+    }
+]
 
-    },
-    point : 1
-}
+
+var questionType = document.querySelector("#addLesson #questionType").value;
+var answerType = document.querySelector("#addLesson #answerType").value;
+var questionContent = ""
+var answers = []
+
 
 
 function createQuestion() {
-    console.log("Answer type: " + document.querySelector("#answerType").value)
-    console.log("Question type: " + document.querySelector("#questionType").value)
+    questionType = document.querySelector("#addLesson #questionType").value;
+    answerType = document.querySelector("#addLesson #answerType").value;
+    questionContent = ""
+    answers = []
+
+    if (Number.parseInt(questionType) == 0) {
+        questionContent = document.querySelector("#addLesson #questionType_0_content").value
+
+    } else if (Number.parseInt(questionType) == 1) {
+        questionContent = document.querySelector("#addLesson #questionType_1_content").value
+
+    } else if (Number.parseInt(questionType) == 2) {
+        questionContent = document.querySelector("#addLesson #questionType_2_content").value
+    } else {
+        console.log("null question")
+    }
+
+
+
+    if (Number.parseInt(answerType) == 0) {
+        var ans = document.querySelectorAll('#addLesson #answer_type_0 textarea');
+        var ansCorrect = document.querySelectorAll('#addLesson #answer_type_0 input');
+        for (var i = 0; i < ans.length; i++) {
+            var ansOption = {
+                content: ans[i].value,
+                status: ansCorrect[i].checked
+            };
+
+            answers.push(ansOption);
+        }
+    } else if (Number.parseInt(answerType) == 1) {
+        var ans = document.querySelectorAll('#addLesson #answer_type_1 textarea');
+        var ansCorrect = document.querySelectorAll('#addLesson #answer_type_1 input');
+
+        for (var i = 0; i < ans.length; i++) {
+            var ansOption = {
+                content: ans[i].value,
+                status: ansCorrect[i].checked
+            };
+
+            answers.push(ansOption);
+        }
+    } else {
+        console.log("null answer")
+    }
+
+
+    Question.content = questionContent;
+    Question.type = questionType;
+
+    Answer = answers
+
+    console.log(Question)
+    console.log(Answer)
 }
