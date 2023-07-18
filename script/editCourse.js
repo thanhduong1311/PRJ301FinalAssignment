@@ -82,14 +82,9 @@ function showShowAnswerOfThisType(element) {
     var AnsIDType0 = "" + element.id + "0"
     var AnsIDType1 = "" + element.id + "1"
 
-    console.log(AnsIDType0);
-    console.log(AnsIDType1);
 
     var type0 = document.getElementById(AnsIDType0);
     var type1 = document.getElementById(AnsIDType1);
-    console.log(type0);
-    console.log(type1);
-
 
     type0.style.display = selectedValue === "0" ? "block" : "none";
     type1.style.display = selectedValue === "1" ? "block" : "none";
@@ -185,18 +180,29 @@ btnArr.forEach(element => {
 
 
 
-function showEditMoocByID() {
-    // var splitID = ID.split("collapse_").reverse()[0]
-    // var newMoocID = "editMooc" + '';
-    document.querySelector("#editMooc").style.display="block"
+function showEditMoocByID(element) {
+    var moocID = element.querySelector(".accordion-header button").innerText.split("#")[1]
+    console.log("Mooc: " + moocID)
+    var currentWork = document.querySelector("#editMooc")
+    currentWork.style.display="block"
+    currentWork.querySelector("form #MoocID").value = moocID;
+    console.log("Value: " + currentWork.querySelector("form #MoocID").value)
+    
     document.querySelector("#addMooc").style.display="none"
     document.querySelector("#editLesson").style.display="none"
     document.querySelector("#addLesson").style.display="none"
     
 }
 
-function showEditLessonByID() {
-  document.querySelector("#editLesson").style.display = "block"
+function showEditLessonByID(element) {
+
+    var lessonID = element.querySelector(".accordion-header button").innerText.split("#")[1]
+    console.log("Lesson: " + lessonID)
+    var currentWork = document.querySelector("#editLesson")
+    currentWork.style.display="block"
+    currentWork.querySelector("form #LessonID").value = lessonID;
+    console.log("Value: " + currentWork.querySelector("form #LessonID").value)
+
   document.querySelector("#addMooc").style.display="none"
     document.querySelector("#editMooc").style.display="none"
     document.querySelector("#addLesson").style.display="none"
@@ -214,4 +220,28 @@ function showAddLessonArea() {
     document.querySelector("#editLesson").style.display="none"
     document.querySelector("#editMooc").style.display="none"
     document.querySelector("#addMooc").style.display="none"
+}
+
+
+var Mooc = {
+    courseID : "1",
+    index : "1",
+    title : "Example title",
+    description : "Example des"
+}
+
+var  Question = {
+    lessonID : 1,
+    index : 1,
+    content : "Why we have bug?",
+    type : {
+
+    },
+    point : 1
+}
+
+
+function createQuestion() {
+    console.log("Answer type: " + document.querySelector("#answerType").value)
+    console.log("Question type: " + document.querySelector("#questionType").value)
 }
