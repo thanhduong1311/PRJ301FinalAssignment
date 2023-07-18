@@ -1,4 +1,3 @@
-CKEDITOR.replace('editor');
 
 $(function () {
     $(".moocTitles").sortable({
@@ -155,8 +154,64 @@ function showCreateBox() {
     console.log(document.getElementById("question_create_area"))
 }
 
-ClassicEditor
-    .create(document.querySelector('textarea[name="editor"]'))
-    .catch(error => {
-        console.error(error);
-    });
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+//get MOOC ID
+var MoocID = document.querySelectorAll(".accordion-item")[0].
+    getElementsByTagName("button")[0].innerText.slice("-1")
+
+// console.log(document.querySelectorAll(".accordion-item")[0])
+
+var MoocIDArray = document.querySelectorAll(".accordion-item")
+MoocIDArray.forEach(element => {
+    element.addEventListener("click", function (event) {
+        event.stopPropagation();
+    })
+});
+
+var btnArr = document.querySelectorAll(".accordion-btn")
+btnArr.forEach(element => {
+    element.addEventListener("click", function (event) {
+        event.stopPropagation();
+    })
+});
+
+
+
+
+function showEditMoocByID() {
+    // var splitID = ID.split("collapse_").reverse()[0]
+    // var newMoocID = "editMooc" + '';
+    document.querySelector("#editMooc").style.display="block"
+    document.querySelector("#addMooc").style.display="none"
+    document.querySelector("#editLesson").style.display="none"
+    document.querySelector("#addLesson").style.display="none"
+    
+}
+
+function showEditLessonByID() {
+  document.querySelector("#editLesson").style.display = "block"
+  document.querySelector("#addMooc").style.display="none"
+    document.querySelector("#editMooc").style.display="none"
+    document.querySelector("#addLesson").style.display="none"
+}
+
+function showAddMoocArea() {
+    document.querySelector("#addMooc").style.display = "block"
+    document.querySelector("#editLesson").style.display="none"
+    document.querySelector("#editMooc").style.display="none"
+    document.querySelector("#addLesson").style.display="none"
+}
+
+function showAddLessonArea() {
+    document.querySelector("#addLesson").style.display = "block"
+    document.querySelector("#editLesson").style.display="none"
+    document.querySelector("#editMooc").style.display="none"
+    document.querySelector("#addMooc").style.display="none"
+}

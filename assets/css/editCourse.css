@@ -70,13 +70,10 @@ button.chosing{
     background-color: darkgrey;
 }
 
-#addMooc {
+/* #editMooc {
     display: none;
-}
+} */
 
-#editMooc {
-    display: none;    
-}
 
 /* .rightPane select {
     outline: none;
@@ -87,7 +84,7 @@ button.chosing{
 } */
 
 #lessonType_1,
-/* #lessonType_2, */
+#lessonType_2,
 #lessonType_3 {
     display: none;
 }
@@ -125,5 +122,12 @@ textarea::-webkit-scrollbar {
 }
 
 #question_create_area {
+    /* display: none; */
+}
+
+#addMooc,
+#editMooc,
+#addLesson,
+#editLesson {
     display: none;
 }

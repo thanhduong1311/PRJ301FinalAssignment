@@ -82,22 +82,22 @@
 
             <div class="accordion moocTitles" id="accordionExample">
 
-                <div class="accordion-item">
+                <div class="accordion-item" onclick="showEditMoocByID()">
                     <h4 class="accordion-header">
                         <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
                                     style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            data-bs-target="#collapse_1" aria-expanded="false" aria-controls="collapseOne">
                             Mooc #1
                         </button>
 
                     </h4>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                    <div id="collapse_1" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
                         style="">
 
                         <div class="accordion-body lessonTitles">
 
-                            <div class="accordion-item">
+                            <div class="accordion-item" onclick="showEditLessonByID()">
                                 <h4 class="accordion-header">
                                     <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
                                     </div>
@@ -107,7 +107,7 @@
                                 </h4>
                             </div>
 
-                            <div class="accordion-item">
+                            <div class="accordion-item" onclick="showEditLessonByID()">
                                 <h4 class="accordion-header">
                                     <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
                                     </div>
@@ -117,7 +117,7 @@
                                 </h4>
                             </div>
 
-                            <div class="accordion-item">
+                            <div class="accordion-item" onclick="showEditLessonByID()">
                                 <h4 class="accordion-header">
                                     <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
                                     </div>
@@ -127,8 +127,9 @@
                                 </h4>
                             </div>
 
-                            <div class="accordion-item">
-                                <button class="btn btn-primary w-100 p-2 text-center">Add new lesson</button>
+                            <div class="accordion-btn">
+                                <span onclick="showAddLessonArea()" class="btn btn-primary w-100 p-2 text-center">
+                                    Add new lesson</span>
                             </div>
 
                         </div>
@@ -136,188 +137,165 @@
                     </div>
                 </div>
 
-                <div class="accordion-item">
+                <div class="accordion-item" onclick="showEditMoocByID()">
                     <h4 class="accordion-header">
                         <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
                                     style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed chosing" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            data-bs-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">
                             Mooc #2
                         </button>
                     </h4>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
+                    <div id="collapse_2" class="accordion-collapse collapse" data-bs-parent="#accordionExample"
                         style="">
                         <div class="accordion-body">
                         </div>
                     </div>
                 </div>
 
-                <div class="accordion-item">
+                <div class="accordion-item" onclick="showEditMoocByID()">
                     <h4 class="accordion-header">
                         <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
                                     style="cursor:all-scroll;"></i></a></div>
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            data-bs-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">
                             Mooc #3
                         </button>
                     </h4>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapse_3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         </div>
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <button class="btn btn-primary w-100 p-2">Add new mooc</button>
+                <!--  -->
+                <div class="accordion-btn">
+                    <button onclick="showAddMoocArea()" class="btn btn-primary w-100 p-2">Add new mooc</button>
                 </div>
             </div>
 
         </div>
 
         <div class="rightPane p-4 ">
+
             <div class="addMooc" id="addMooc">
-                <h1 class="text-center">Add new mooc</h1>
-                <div class="mt-4">
-
-
-                    <form method="POST" action="" class="row g-3">
-
-                        <div class="col-md-4 col-sm-6">
-                            <label for="MoocID" class="form-label">Mooc ID</label>
-                            <input type="text" class="form-control" id="MoocID" value="A123" disabled="">
-                        </div>
-
-                        <div class="col-md-8 col-sm-6">
-                        </div>
-
-                        <div class="col-6">
-                            <label for="MoocTitle" class="form-label">Mooc Title</label>
-                            <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
-                                placeholder="Ex: Java Introduction" required="">
-                        </div>
-
-                        <div class="col-6">
-                            <label for="MoocDescription" class="form-label">Mooc Description</label>
-                            <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
-                                placeholder="Ex: This mooc help for newbie practice with Java code" required="">
-                        </div>
-
-                        <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Add mooc</button>
-                        </div>
-                    </form>
-
-                </div>
+                <div>
+                    <h1 class="text-center">Add new mooc</h1>
+                    <div class="mt-4">
+            
+            
+                        <form method="POST" action="" class="row g-3">
+            
+                            <div class="col-md-4 col-sm-6">
+                                <label for="MoocID" class="form-label">Mooc ID</label>
+                                <input type="text" class="form-control" id="MoocID" value="Auto increasing ID" disabled="">
+                            </div>
+            
+                            <div class="col-md-8 col-sm-6">
+                            </div>
+            
+                            <div class="col-6">
+                                <label for="MoocTitle" class="form-label">Mooc Title</label>
+                                <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
+                                    placeholder="Ex: Java Introduction" required="">
+                            </div>
+            
+                            <div class="col-6">
+                                <label for="MoocDescription" class="form-label">Mooc Description</label>
+                                <input type="text" class="form-control" id="MoocDescription" value=""
+                                    name="MoocDescription"
+                                    placeholder="Ex: This mooc help for newbie practice with Java code" required="">
+                            </div>
+            
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Add mooc</button>
+                            </div>
+                        </form>
+            
+                    </div>
+            </div>
             </div>
 
             <div class="editMooc" id="editMooc">
-                <div class="mt-4">
-                    <h1 class="text-center">Edit mooc</h1>
-
-                    <form method="POST" action="" class="row g-3">
-
-                        <div class="col-md-4 col-sm-6">
-                            <label for="MoocID" class="form-label">Mooc ID</label>
-                            <input type="text" class="form-control" id="MoocID" value="A123" disabled="">
-                        </div>
-
-                        <div class="col-md-8 col-sm-6">
-                        </div>
-
-                        <div class="col-6">
-                            <label for="MoocTitle" class="form-label">Mooc Title</label>
-                            <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
-                                placeholder="Ex: Java Introduction" required="">
-                        </div>
-
-                        <div class="col-6">
-                            <label for="MoocDescription" class="form-label">Mooc Description</label>
-                            <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
-                                placeholder="Ex: This mooc help for newbie practice with Java code" required="">
-                        </div>
-
-                        <!-- <div class="col-12">
-                            <label for="MoocDescription" class="form-label">Mooc Description</label>
-                            <textarea class="form-control" name="MoocDescription" id="MoocDescription" cols="30" rows="3"></textarea>
-                        </div> -->
-
-                        <!-- 
-                        <div class="col-md-4 col-sm-6">
-                            <label for="Birthday" class="form-label">Birthday</label>
-                            <input type="date" class="form-control" id="Birthday" value="2003-03-03" name="Birthday"
-                                placeholder="Birthday" required="">
-                        </div>
-    
-                        <div class="col-md-4 col-sm-6">
-                            <label for="Gender" class="form-label">Gender</label>
-                            <input type="text" class="form-control" id="Gender" value="Male" name="Gender"
-                                placeholder="Gender" required="">
-                        </div>
-    
-                        <div class="col-md-4 col-sm-6">
-                            <label for="Email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="Email" value="nva@fpt.edu.vn" name="Email"
-                                placeholder="Email" required="">
-                        </div>
-    
-                        <div class="col-md-4 col-sm-6">
-                            <label for="Phone" class="form-label">Phone</label>
-                            <input type="text" class="form-control" id="Phone" value="0123.456.789" name="Phone"
-                                placeholder="Phone" required="">
-                        </div>
-    
-                        <div class="col-md-4 col-sm-6">
-                            <label for="Address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="Address" value="Can Tho" name="Address"
-                                placeholder="Address" required="">
-                        </div> -->
-
-                        <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Update mooc</button>
-                        </div>
-                    </form>
-
+                <div>
+                    <div class="mt-4">
+                        <h1 class="text-center">Edit mooc</h1>
+                
+                        <form method="POST" action="" class="row g-3">
+                
+                            <div class="col-md-4 col-sm-6">
+                                <label for="MoocID" class="form-label">Mooc ID</label>
+                                <input type="text" class="form-control" id="MoocID" value="${splitID}" disabled="">
+                            </div>
+                
+                            <div class="col-md-8 col-sm-6">
+                            </div>
+                
+                            <div class="col-6">
+                                <label for="MoocTitle" class="form-label">Mooc Title</label>
+                                <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
+                                    placeholder="Ex: " required="">
+                            </div>
+                
+                            <div class="col-6">
+                                <label for="MoocDescription" class="form-label">Mooc Description</label>
+                                <input type="text" class="form-control" id="MoocDescription" value=""
+                                    name="MoocDescription"
+                                    placeholder="Ex: " required="">
+                            </div>
+                
+                
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Update mooc</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 
             <div class="addLesson" id="addLesson">
-                <h1 class="text-center">Add new lesson</h1>
+                <div class="head">
+                    <h1 class="text-center">Add new lesson</h1>
 
-                <form method="POST" action="" class="row g-3">
+                    <form method="POST" action="" class="row g-3">
+    
+    
+                        <div class="col-md-8 col-sm-6">
+                        </div>
+    
+                        <div class="col-6">
+                            <label for="lessonTitle" class="form-label">Lesson name</label>
+                            <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
+                                placeholder="Ex: How to declare a variable in Java program" required="">
+                        </div>
+    
+                        <div class="col-6">
+                            <label for="lessonDescription" class="form-label">Lesson Description</label>
+                            <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
+                                placeholder="Ex: This mooc help for newbie practice with Java code" required="">
+                        </div>
+    
+                        <div class="col-6">
+                            <label for="lessonTime" class="form-label">Lesson Time learning</label>
+                            <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
+                                placeholder="Time need to complete this lesson" required="">
+                        </div>
+    
+    
+                        <div class="col-6">
+                            <label for="lessonType" class="form-label col-12">Type of lesson</label>
+                            <select value="1" required="required" onchange="showDiv()" name="typeOfLesson" id="lessonType"
+                                class="col-12 form-control">
+                                <option value=""></option>
+                                <option value="0">Video</option>
+                                <option value="1">Quiz</option>
+                                <option value="2">Reading</option>
+                            </select>
+                        </div>
+                    </form>
+                
+            </div>
 
-
-                    <div class="col-md-8 col-sm-6">
-                    </div>
-
-                    <div class="col-6">
-                        <label for="lessonTitle" class="form-label">Lesson name</label>
-                        <input type="text" class="form-control" id="MoocTitle" value="" name="MoocTitle"
-                            placeholder="Ex: How to declare a variable in Java program" required="">
-                    </div>
-
-                    <div class="col-6">
-                        <label for="lessonDescription" class="form-label">Lesson Description</label>
-                        <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
-                            placeholder="Ex: This mooc help for newbie practice with Java code" required="">
-                    </div>
-
-                    <div class="col-6">
-                        <label for="lessonTime" class="form-label">Lesson Time learning</label>
-                        <input type="text" class="form-control" id="MoocDescription" value="" name="MoocDescription"
-                            placeholder="Time need to complete this lesson" required="">
-                    </div>
-
-
-                    <div class="col-6">
-                        <label for="lessonType" class="form-label col-12">Type of lesson</label>
-                        <select value="" required="required" onchange="showDiv()" name="typeOfLesson" id="lessonType"
-                            class="col-12 form-control">
-                            <option value=""></option>
-                            <option value="0">Video</option>
-                            <option value="1">Quiz</option>
-                            <option value="2">Reading</option>
-                        </select>
-                    </div>
 
                     <div id="lessonType_1">
                         <div class="col-6">
@@ -327,101 +305,71 @@
                         </div>
                     </div>
                     <div id="lessonType_2">
-                        <!-- <span class="btn btn-primary " id="addQuestion" onclick="showCreateBox(this)">Add
-                            question</span> -->
 
-                        <!-- <div class="col-6"> -->
-                        <!--onchange="createDivQuestion()"  -->
-                        <!-- <label for="numberOfquestion" class="form-label">Number of question</label>
-                            <input type="number"  class="form-control"
-                                id="numberOfquestion" value="" name="numberOfquestion"
-                                placeholder="Please enter number of question" required="">
-                        </div> -->
+
+                        <div class="accordion moocTitles" id="accordionExample_1">
+
+                            <div class="accordion-item" onclick="showEditMoocByID()">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse_1" aria-expanded="false" aria-controls="collapseOne">
+                                        Question List
+                                    </button>
+            
+                                </h4>
+                                <div id="collapse_1" class="accordion-collapse collapse" data-bs-parent="#accordionExample_1"
+                                    style="">
+            
+                                    <div class="accordion-body lessonTitles">
+            
+                                        <div class="accordion-item" onclick="showEditLessonByID()">
+                                            <h4 class="accordion-header">
+                                                <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
+                                                </div>
+                                                <button class="btn chosing" type="button">
+                                                    Lesson #1
+                                                </button>
+                                            </h4>
+                                        </div>
+            
+                                        <div class="accordion-item" onclick="showEditLessonByID()">
+                                            <h4 class="accordion-header">
+                                                <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
+                                                </div>
+                                                <button class="btn" type="button">
+                                                    Lesson #2
+                                                </button>
+                                            </h4>
+                                        </div>
+            
+                                        <div class="accordion-item" onclick="showEditLessonByID()">
+                                            <h4 class="accordion-header">
+                                                <div><i class="lesson-handle fas fa-ellipsis-v ms-3" style="cursor:all-scroll;"></i>
+                                                </div>
+                                                <button class="btn" type="button">
+                                                    Lesson #3
+                                                </button>
+                                            </h4>
+                                        </div>
+            
+                                        <div class="accordion-btn">
+                                            <span onclick="showAddLessonArea()" class="btn btn-primary w-100 p-2 text-center">
+                                                Add new lesson</span>
+                                        </div>
+            
+                                    </div>
+            
+                                </div>
+                            </div>
+            
+
+                        </div>
+            
+                    </div>
+
 
                         <div id="questionCreated" class="row col-12">
-                            <div class="accordion moocTitles col-3" id="accordionExample2">
-
-                                <div class="accordion-item">
-                                    <h4 class="accordion-header">
-                                        <div><a href=""><i class="mooc-handle fas fa-ellipsis-v ms-3"
-                                                    style="cursor:all-scroll;"></i></a></div>
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne1"
-                                            aria-expanded="false" aria-controls="collapseOne">
-                                            Question List
-                                        </button>
-
-                                    </h4>
-                                    <div id="collapseOne1" class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample2" style="">
-
-                                        <div class="accordion-body lessonTitles">
-
-                                            <div class="accordion-item">
-                                                <h4 class="accordion-header">
-                                                    <div><i class="lesson-handle fas fa-ellipsis-v ms-3"
-                                                            style="cursor:all-scroll;"></i>
-                                                    </div>
-                                                    <button class="btn chosing" type="button">
-                                                        Question 1
-                                                    </button>
-                                                </h4>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h4 class="accordion-header">
-                                                    <div><i class="lesson-handle fas fa-ellipsis-v ms-3"
-                                                            style="cursor:all-scroll;"></i>
-                                                    </div>
-                                                    <button class="btn" type="button">
-                                                        Question 2
-                                                    </button>
-                                                </h4>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <h4 class="accordion-header">
-                                                    <div><i class="lesson-handle fas fa-ellipsis-v ms-3"
-                                                            style="cursor:all-scroll;"></i>
-                                                    </div>
-                                                    <button class="btn" type="button">
-                                                        Question 3
-                                                    </button>
-                                                </h4>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h4 class="accordion-header">
-                                                    <div><i class="lesson-handle fas fa-ellipsis-v ms-3"
-                                                            style="cursor:all-scroll;"></i>
-                                                    </div>
-                                                    <button class="btn" type="button">
-                                                        Question 4
-                                                    </button>
-                                                </h4>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h4 class="accordion-header">
-                                                    <div><i class="lesson-handle fas fa-ellipsis-v ms-3"
-                                                            style="cursor:all-scroll;"></i>
-                                                    </div>
-                                                    <button class="btn" type="button">
-                                                        Question 5
-                                                    </button>
-                                                </h4>
-                                            </div>
-
-                                            <div class="accordion-item">
-                                                <span onclick="showCreateBox()"
-                                                    class="btn btn-primary w-100 p-2 text-center">
-                                                    Add new Question</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
+                            
                             <div id="question_create_area" class=" col-9 mt-5">
                                 <div class="question row col-12">
                                     <h5>Question 1</h5>
@@ -473,7 +421,8 @@
                                         <div id="answer_0_0_type0">
                                             <p>Answer content</p>
                                             <span onclick="addAnswerRatio()" class=" btn btn-primary mt-2"
-                                                id="addRatio">Add Answer</span>
+                                                id="addRatio">Add
+                                                Answer</span>
                                         </div>
                                         <div id="answer_0_0_type1">
                                             <p>Answer content</p>
@@ -487,19 +436,18 @@
                         </div>
 
                     </div>
-                    <div id="lessonType_3">
+                    <div id="lessonType_3" class="mt-3">
                         <div id="editor">
                             <p>This is some sample content.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-primary" type="submit">Add lesson</button>
+                        <button class="btn btn-primary mt-3 col-12" type="submit">Add lesson</button>
                     </div>
-                </form>
             </div>
 
             <div class="editLesson" id="editLesson">
-
+                Edit lesson
             </div>
         </div>
 
@@ -543,13 +491,7 @@
         </div>
     </div>
 
-    <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
+
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="script/cart.js"></script>
 
@@ -557,12 +499,20 @@
 
     <script src="script/toast.js"></script>
     <script src="script/editCourse.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 </body>
 
 </html>
