@@ -201,7 +201,7 @@ a:hover {
     background-color: #ffffff;
 }
 #main .personal {
-    padding:10px 30px ;
+    padding:10px 0;
 }
 
 .personal .header {
@@ -222,6 +222,7 @@ a:hover {
 
 .personal p {
     font-weight: 500;
+    text-align: center;
 }
 
 .personal form {
@@ -310,6 +311,7 @@ justify-content: space-between;
 }
 
 .changePassword {
+    border-top: 1px solid #000;
     display: block;
     padding: 20px 30px;
     margin-left: 30px;
