@@ -3,6 +3,7 @@
     top: 100px;
     right: 32px;
     transition: all linear .5s;
+    z-index: 5000;
 }
 
 .toastMessage {

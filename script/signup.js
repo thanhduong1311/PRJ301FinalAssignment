@@ -78,7 +78,7 @@ $(document).ready(function () {
         if($('input[name="lastName"]')[0].classList.contains("is-invalid")) {
             return
         }
-        if($('input[name="birthDay"]')[0].classList.contains("is-invalid")) {
+        if($('input[name="birthday"]')[0].classList.contains("is-invalid")) {
             return
         }
 
