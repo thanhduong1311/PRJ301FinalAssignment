@@ -118,6 +118,37 @@
         width: 100%;
     }
 
+    
+    .lesson-main {
+        position: relative;
+    }
+    
+    .lesson-main .quiz-type1 .leftSide {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .lesson-main .quiz-type1 .rightSide {
+        bottom: -270px;
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        height: 400px;
+    }
+    
+    .rightSide .time i {
+        display: none !important;
+    }
+    
+    .tab {
+        margin-top: 280px;
+    }
+
+    .lesson-main .quiz-type1 .rightSide .result {
+        text-align: center;
+    }
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -135,6 +166,19 @@
     .infor .purchasedCourseAndCreatedCourse {
         width: 100%;
     }
+
+    .main > .rightSide {
+        display: none;
+    }
+    #showMenulistBtn {
+        display: block;
+    }
+
+    .leftSide {
+        width: 100%;
+    }
+
+    
     
 }
 

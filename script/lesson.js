@@ -277,3 +277,8 @@ function countdown(timer) {
 if (quizTimeRemain && quizTimeRemain.classList.contains("countdown")) {
   countdown(quizTimeRemain.innerHTML);
 }
+
+
+function showMenuList() {
+  document.querySelector(".main > .rightSide").classList.toggle("show")
+}
