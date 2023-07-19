@@ -298,7 +298,10 @@ a:hover {
 
 .personal .upload {
 display: flex;
-justify-content: space-between;
+}
+
+.personal .upload span {
+    text-align: right;
 }
 
 .saveInfor button {
@@ -308,6 +311,10 @@ justify-content: space-between;
     color: #fff;
     font-weight: 500;
     border-radius: 8px;
+}
+
+.personal input#uploadinput{
+    width: 250px;
 }
 
 
