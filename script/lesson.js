@@ -65,7 +65,7 @@ paragraphs.forEach(function (paragraph) {
 
 
 // If quiz is finished
-let quizFinished = ($(".quiz-type1")) ? $(".quiz-type1")[0].classList.contains("finished") : false;
+let quizFinished = ($(".quiz-type1")[0]) ? $(".quiz-type1")[0].classList.contains("finished") : false;
 
 // Hide all questions except first question
 let questions = $(".quizContent");
@@ -156,17 +156,20 @@ for (let i = 0; i < answers.length; i++) {
 
 //add event next question in quiz
 let continueQuestionBtn = $(".quiz-type1 .btns p")[0];
-continueQuestionBtn.addEventListener('click', function (e) {
-  let showIndex = 0;
-  for (let i = 0; i < questions.length; i++) {
-    if (!questions[i].hidden) {
-      showIndex = i;
-      questions[i].hidden = true;
+if (continueQuestionBtn) {
+  continueQuestionBtn.addEventListener('click', function (e) {
+    let showIndex = 0;
+    for (let i = 0; i < questions.length; i++) {
+      if (!questions[i].hidden) {
+        showIndex = i;
+        questions[i].hidden = true;
+      }
     }
-  }
-  questions[(showIndex + 1) % questions.length].hidden = false;
-  remarkQuestionLabel();
-});
+    questions[(showIndex + 1) % questions.length].hidden = false;
+    remarkQuestionLabel();
+  });
+}
+
 
 
 // Lấy danh sách các phần
@@ -192,44 +195,35 @@ parts.forEach(part => {
 // form api youtube
 // --------------------------------------------------------------------------------------------
 // Global variable for the player
-var player;
+// var player;
 
-var IDVideo = 'h0z8Qt32nVU'
+// // Function called when the YouTube Player API is loaded
+// function onYouTubeIframeAPIReady() {
+//   // Create a new instance of the player
+//   player = new YT.Player('player', {
+//     videoId: 'h0z8Qt32nVU'
+//   });
+// }
 
-// Function called when the YouTube Player API is loaded
-function onYouTubeIframeAPIReady() {
-  // Create a new instance of the player
-  player = new YT.Player('player', {
-    videoId: IDVideo, // Replace VIDEO_ID with the ID of the video you want to embed
-    events: {
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
+// // Check the video progress
+// function checkVideoProgress1() {
+//   if (!player) {
+//     return;
+//   }
+//   var duration = player.getDuration(); // Get the duration of the video
+//   var currentTime = player.getCurrentTime(); // Get the current time of the video
 
-// Event handler for player state change
-function onPlayerStateChange(event) {
-  if (event.data === YT.PlayerState.ENDED) {
-    console.log('Video has ended');
-    checkVideoProgress();
-  }
-}
+//   console.log(duration);
+//   console.log(currentTime);
 
-// Check the video progress
-function checkVideoProgress() {
-  if (!player) {
-    return;
-  }
-  var duration = player.getDuration(); // Get the duration of the video
-  var currentTime = player.getCurrentTime(); // Get the current time of the video
+//   if (currentTime >= duration) {
+//     console.log('User has watched the entire video');
+//   } else {
+//     console.log('User has not watched the entire video yet');
+//   }
+// }
 
-  if (currentTime >= duration) {
-    console.log('User has watched the entire video');
-  } else {
-    console.log('User has not watched the entire video yet');
-  }
-}
-
+// setInterval(checkVideoProgress1, 1000);
 
 //countdown time of quiz
 let quizTimeRemain = $(".quiz-type1 .rightSide .time span")[0];
@@ -280,6 +274,6 @@ function countdown(timer) {
 }
 
 //It will countdown if contain class countdown
-if (quizTimeRemain.classList.contains("countdown")) {
+if (quizTimeRemain && quizTimeRemain.classList.contains("countdown")) {
   countdown(quizTimeRemain.innerHTML);
 }
