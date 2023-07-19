@@ -88,10 +88,10 @@
             <button class="tablinks" onclick="openTab(event, 'info')">Personal Information</button>
         </div>
 
-        <!-- <div class="mode-btn"> -->
+        <div class="mode-btn" style="display: none;">
             <button onclick="strangeMode('on')">Stranger mode on</button>
             <button onclick="strangeMode('off')">Stranger mode off</button>
-        <!-- </div> -->
+        </div>
 
 
         <div id="info" class="tabcontent active">
@@ -281,51 +281,35 @@
 
                 <p>Let the Yojihan community of other learners and instructors know more about you!</p>
 
-                <form>
+                <form action="" method="">
                     <div>
-                        <label for="full-name">Full name:</label>
-                        <input type="text" id="full-name" placeholder="Enter your full name" required>
+                        <label for="firstName">First name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                    </div>
+
+                    <div>
+                        <label for="lastName">Last name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
                     </div>
                     <div>
                         <label for="birthday">Birthday:</label>
-                        <input type="date" id="birthday" placeholder="dd/mm/yyyy" required>
-                    </div>
-                    <div class="gender">
-                        <label>Gender:</label>
-                        <span>
-                            <input type="radio" id="male" name="gender" value="Male">
-                            <label for="male">Male</label>
-                        </span>
-                        <span>
-                            <input type="radio" id="female" name="gender" value="Female">
-                            <label for="female">Female</label>
-                        </span>
-
-                        <span>
-                            <input type="radio" id="other" name="gender" value="Other">
-                            <label for="other">Other</label>
-                        </span>
-
+                        <input type="date" id="birthday" name="birthday" placeholder="dd/mm/yyyy" required>
                     </div>
                     <div>
                         <label for="country">Country:</label>
-                        <input type="text" id="country" placeholder="Enter your country" required>
+                        <input type="text" id="country" name="country" class="form-control" placeholder="Enter your country" required>
                     </div>
                     <div>
-                        <label for="phone-number">Phone number:</label>
-                        <input type="tel" id="phone-number" placeholder="Enter your phone number" required>
-                    </div>
-                    <div>
-                        <label for="email-address">Email address:</label>
-                        <input type="email" id="email-address" placeholder="Enter your email address" required>
+                        <label for="email">Email address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                     </div>
 
                     <hr>
-                    <div>
+                    <!-- <div>
                         <label for="student-status">Are you currently a student?</label>
                         <input type="checkbox" id="student-status">
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <label for="highest-degree">Highest degree:</label>
                         <select id="highest-degree">
                             <option value="">Select your highest level of education</option>
@@ -384,13 +368,13 @@
                         </span>
 
                     </div>
+                    
+                    <hr> -->
+                    
                     <div class="saveInfor">
-                        <button type="submit">Submit</button>
+                        <button type="submit">Update</button>
                     </div>
                 </form>
-
-                <hr>
-
 
             </div>
             <div id="changePassword">
@@ -398,16 +382,16 @@
                 <div class="changePassword">
                     <h3>Change password</h3>
 
-                    <form action="">
-                        <label for="current-password">Current password:</label>
-                        <input type="password" id="current-password" placeholder="Enter your current password"
+                    <form action="" method="">
+                        <label for="currentPassword">Current password:</label>
+                        <input type="password" id="currentPassword" name="currentPassword" placeholder="Enter your current password"
                             required><br>
 
-                        <label for="new-password">New password:</label>
-                        <input type="password" id="new-password" placeholder="Enter your new password" required><br>
+                        <label for="newPassword">New password:</label>
+                        <input type="password" id="newPassword" name="newPassword" placeholder="Enter your new password" required><br>
 
-                        <label for="confirm-password">Confirm new password:</label>
-                        <input type="password" id="confirm-password" placeholder="Enter your new password again"
+                        <label for="confirmPassword">Confirm new password:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your new password again"
                             required><br>
                         <input type="submit" value="Change">
 
