@@ -20,7 +20,7 @@ body {
 .box {
     position: relative;
     width: 500px;
-    height: 620px;
+    height: 720px;
     background-color: #73e814;
     border-radius: 8px;
     overflow: hidden;
@@ -96,7 +96,7 @@ body {
     transform: 0.5s;
     color: #000;
     font-size: 0.75em;
-    transform: translateY(-34px);
+    transform: translateY(-44px);
 }
 
 label {
@@ -118,7 +118,7 @@ label {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 38px;
+    height: 44px;
     background-color: #fff;
     border-radius: 4px;
     overflow: hidden;
