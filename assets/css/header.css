@@ -147,7 +147,7 @@ a:hover {
     top: 66px;
     right: 4px;
     overflow: hidden;
-    z-index: 20;
+    z-index: 200;
 }
 
 .mode-btn {
