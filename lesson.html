@@ -80,8 +80,11 @@
     <div class="main">
         <!-- Left Side -->
         <div class="leftSide">
-            <div class="lesson-main">
+            <div onclick="showMenuList()" id="showMenulistBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
+            <div class="lesson-main">
                 <!-- Bài giảng video offline-->
                 <!-- <video id="my-video" src="./assets/videos/baclieu.mp4" controls>
                     Trình duyệt của bạn không hỗ trợ video.
@@ -95,7 +98,8 @@
                 <!-- Bài Giảng text -->
 
                 <!-- Quizz -->
-                <div class="quiz-type1">
+                <!-- style="display: none;" -->
+                <div  class="quiz-type1">
                     <form action="" method="post">
                         <div class="leftSide">
                             <p class="quizProgress">Question: <span>1/10</span> </p>
